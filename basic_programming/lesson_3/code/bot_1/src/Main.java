@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class Bot {
+public class Main {
     public static void main(String[] args) throws IOException {
         // менять в следующей строке можно только имя переменной - сейчас это br и везде должно быть br
 
