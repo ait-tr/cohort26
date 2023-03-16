@@ -37,8 +37,8 @@ String name = sc.nextLine(); // - чтение строки до символа 
 int num = sc.nextInt(); // - чтение целого числа
 int double = sc.nextDouble(); // - чтение числа c десятичной дробной частью
 
-Подробности про класс BufferedReader: https://javarush.com/groups/posts/1919-schitihvanie-s-klaviaturih--riderih
-Подробности про класс Scanner: https://javarush.com/groups/posts/klass-scanner
+* Подробности про класс BufferedReader: https://javarush.com/groups/posts/1919-schitihvanie-s-klaviaturih--riderih
+* Подробности про класс Scanner: https://javarush.com/groups/posts/klass-scanner
 
 
 ### Алгоритм организации ввода данных с клавиатуры:
