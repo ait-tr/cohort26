@@ -4,7 +4,8 @@
   "homework": "homework.md",
   "code": [
     "code/bot_1/src/Main.java",
-    "code/linked_list/src/Person.java"
+    "code/division/src/Main.java",
+    "code/ex/src/Main.java"
   ],
   "video": ""
 }
