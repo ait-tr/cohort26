@@ -2,7 +2,8 @@ import java.io.*;
 
 public class Bot {
     public static void main(String[] args) throws IOException {
-        // менять в следующей строке можно только имя переменной - сейчас это br
+        // менять в следующей строке можно только имя переменной - сейчас это br и везде должно быть br
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("Привет! Как тебя зовут?");
@@ -19,6 +20,6 @@ public class Bot {
         System.out.print("Получается, тебе будет " + targetAge + " лет через " + ageDifference + " лет. ");
         System.out.println("Ничего себе!");
 
-        System.out.println("Извини, мне пора бежать :( Пока!");
+        System.out.println("Извини, брат, мне пора бежать :( Пока!");
     }
 }
