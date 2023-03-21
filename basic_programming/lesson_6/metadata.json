@@ -4,7 +4,7 @@
   "homework": "homework.md",
   "code": [
     "code/simbols/src/Main.java",
-    "code/tickets/src/Main.java"
+    "code/ticket/src/Main.java"
   ],
   "video": ""
 }
