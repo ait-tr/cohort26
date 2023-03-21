@@ -3,9 +3,8 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
-    "code/bot_1/src/Main.java",
-    "code/division/src/Main.java",
-    "code/ex/src/Main.java"
+    "code/simbols/src/Main.java",
+    "code/tickets/src/Main.java"
   ],
   "video": ""
 }
