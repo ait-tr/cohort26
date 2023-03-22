@@ -3,8 +3,7 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
-    "code/simbols/src/Main.java",
-    "code/ticket/src/Main.java"
+    "code/string_practicum/src/Main.java"
   ],
   "video": ""
 }
