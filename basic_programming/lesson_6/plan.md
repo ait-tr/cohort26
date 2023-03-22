@@ -50,6 +50,5 @@ AIT_Java_Basic_2023
 ## 5. Практикум по символам
 simbols
 
-## 6. Классы и их методы на примере класса String: length(), charAt(), substr()
 
 
