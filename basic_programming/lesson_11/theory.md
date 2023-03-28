@@ -11,7 +11,7 @@
 // Java program to understand
 // why to avoid == operator
 
-public class Test {
+public class Test_28_03 {
 public static void main(String[] args)
 {
 String s1 = new String("HELLO");
@@ -26,7 +26,7 @@ String s2 = new String("HELLO");
 
 // Java program to show how to compare Strings
 // using library function
-public class Test
+public class Test_28_03
 { public static void main(String[] args)
 {
 String s1 = "Ram";
