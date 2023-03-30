@@ -3,10 +3,14 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
-    "code/game_guess_number/src/Main.java",
-    "code/main10/src/Main.java"
-
-
+    "code/garbage_bot/src/Main.java",
+    "code/month_year/src/Main.java",
+    "code/sq_equal/src/Main.java",
+    "code/ternary_operator/src/Main.java",
+    "code/while_loop_practice/src/Apples.java",
+    "code/while_loop_practice/src/Digits.java",
+    "code/while_loop_practice/src/Letters.java",
+    "code/while_loop_practice/src/Power3.java"
   ],
   "video": ""
 }
