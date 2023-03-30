@@ -1,0 +1,12 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "code/game_guess_number/src/Main.java",
+    "code/main10/src/Main.java"
+
+
+  ],
+  "video": ""
+}
