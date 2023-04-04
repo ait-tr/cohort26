@@ -21,6 +21,7 @@ public class Main {
         System.out.println("Average week temperature is: " + averageTemp);
 
         System.out.println("Two digits after decimal with local decimal separator ");
+
         System.out.printf("Average week temperature is: %.2f", averageTemp); // printf instead println
     }
 }

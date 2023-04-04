@@ -3,9 +3,12 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
-    "code/array_practicum/src/Main.java",
-    "code/array_practicum/src/Main1.java",
-    "code/array_practicum/src/Main2.java"
+    "code/average_temp/src/Main.java",
+    "code/average_temp/src/Main1.java",
+    "code/for_loop_practicum/src/Main1.java",
+    "code/for_loop_practicum/src/Main2.java",
+    "code/for_loop_practicum/src/Main3.java",
+    "code/for_loop_practicum/src/Main4.java"
   ],
   "video": ""
 }
