@@ -6,12 +6,14 @@ public class Main1 {
 //        Выведите массив на печать.
 //        Поменяйте местами первый и последний элементы массива и снова выведите массив на печать.
 
+        // заполняем массив
         int[] myArray = new int[20];
         for (int i = 0; i < myArray.length; i++) {
             myArray[i] = (int)(Math.random() * (20 - 10 + 1) + 10);
         }
 
-        System.out.println(Arrays.toString(myArray));
+        System.out.println(Arrays.toString(myArray)); // быстрая печать массива
+
         System.out.println();
         int temp = myArray[0]; // первый элемент массива помещаем в temp
         myArray[0] = myArray[myArray.length - 1]; // пермещаем последний элемент в первый

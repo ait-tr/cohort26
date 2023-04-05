@@ -11,6 +11,7 @@ public class Main {
         // Алгоритм:
         // пробегаем по всем элементам массива. Если нашли элемент, который больше max,
         // то max = myArray[i], то есть обновляем max значением этого элемента, сохраняем индекс в pointer.
+
         for (int i = 0; i < myArray.length; i++) {
             if (myArray[i] > max) {
             max = myArray[i];
