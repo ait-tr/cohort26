@@ -3,10 +3,9 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
-    "code/for_loop_practicum_2/src/Main4.java",
-    "code/for_loop_practicum_2/src/Main5.java",
-    "code/for_loop_practicum_2/src/Main6.java",
-    "code/for_loop_practicum_2/src/Main7.java"
+    "code/hw_for_loop_2/src/Main.java",
+    "code/hw_for_loop_2/src/Main1.java",
+    "code/methods/src/Main.java"
   ],
   "video": ""
 }
