@@ -39,7 +39,6 @@
 - звездный атлас атлас созвездий
 - ...
 
-
 ## Defeenition:
 * An array is a container object that holds a fixed number of values of a **single type**.
 * В массиве могут содержаться данные **ТОЛЬКО ОДНОГО типа**.
