@@ -12,10 +12,10 @@ public class Main {
         int sum = 0;
 
         for (int i = 2; i <= n; i++) {
-            sum = sum + i;
             if (i % 2 == 1) {
                 continue;
             }
+            sum = sum + i;
         }
         System.out.println(sum);
 
