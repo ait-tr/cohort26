@@ -5,7 +5,7 @@ Exception - исключение, особая ситуация (перевод 
 ## Major reasons why an exception Occurs
 * **Invalid user input - неправильный ввод пользователя (80-90% случаев)**
 * Device failure - сломалось устройство, выключили питание и т.д.
-* Loss of network connection - потеряли Интернет, Eternet и т.д.
+* Loss of network connection - потеряли Интернет, Ethernet и т.д.
 * Physical limitations (out of disk memory) - нехватка памяти ОЗУ, жестких дисков
 * Opening an unavailable file - открытие недоступного файла
 * * **Code errors - ошибки кода программистов**
@@ -16,12 +16,13 @@ Exception - исключение, особая ситуация (перевод 
 * **Exception:** Exception indicates **conditions** that a reasonable application
   **might try to catch**.
 
-Кострукция try ... catch используется в тот момент, когда прграмма завершает работу
+Кострукция **try ... catch** используется в тот момент, когда программа завершает работу
 некорректно, Code выхода из программы отличен от 0.
 
 ### Синтаксис
 `try { // попытаться
 //  Block of code to try
+
 }
 catch(Exception e) { // схватить
 //  Block of code to handle errors
@@ -45,3 +46,9 @@ The **try and catch keywords come in pairs**:
 
 Хорошая статья с примерами:
 https://www.geeksforgeeks.org/flow-control-in-try-catch-finally-in-java/
+
+Алгоритм применения try ... catch
+1. Ели программа падает (код окончания не равен 0) , работа с пользователем прекращается
+2. то смотрим на дигностику - то, что печатается в момент падения программы, там есть указания на номера строк
+в коде, в которых происходят ошибки
+3. На эти строки надо "одеть" конструкцию try ... catch
