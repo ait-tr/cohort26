@@ -24,7 +24,7 @@ public class Main2 {
             System.out.println("Continue? y/n ");
             choice = scanner.next();
             if (choice.equals("n")) {
-                System.out.println("Thanks! Buy-buy...");
+                System.out.println("Thanks! Bye-bye...");
                 break;
             }
         }
