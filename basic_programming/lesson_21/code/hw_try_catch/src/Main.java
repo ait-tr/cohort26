@@ -8,13 +8,13 @@ public class Main {
 //        и ввода отрицательных чисел.
 //        Запросить у пользователя длину и ширину прямоугольника.
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); // включаем сканер
 
-        while (true) {
+        while (true) { // бесконечный цикл
             System.out.println("Input length: ");
             try {
-                int a = scanner.nextInt();
-                while (a <= 0) {
+                int a = scanner.nextInt(); // ввод длины прямоугольника
+                while (a <= 0) { // защита от ввода отрицательных чисел
                     System.out.println("Incorrect input, try again.");
                     a = scanner.nextInt();
                 }
@@ -24,11 +24,13 @@ public class Main {
                     System.out.println("Incorrect input, try again.");
                     b = scanner.nextInt();
                 }
-                int p = perimeter(a, b);
+
+                int p = perimeter(a, b); // вызываем метод для расчета периметра
 
                 System.out.println("Perimeter is: " + p);
-            } catch (InputMismatchException error) {
-                System.out.println("Incorrect input " + error.getMessage());
+            } catch (InputMismatchException error) { // перехват ошибки
+                System.out.println("Incorrect input " + error.getMessage()); // сообщение для пользователя
+                scanner.nextLine(); // ждем ввода данных (!!!)
             }
             System.out.println("Continue? y/n ");
             String choice = scanner.next();

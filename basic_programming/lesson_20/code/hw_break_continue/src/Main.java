@@ -31,6 +31,7 @@ public class Main {
         int[] dumplings = new int[30];
 
         for (int i = 0; i < dumplings.length; i++) {
+            // int n = (int)(Math.random() * (b - a + 1) + a)
             dumplings[i] = (int)(Math.random() * (23 - 18 + 1) + 18); // задумываем веса пельменей в диапазоне 18-23 грамма
         }
         System.out.println(Arrays.toString(dumplings)); // напечатали для контроля веса пельменей
