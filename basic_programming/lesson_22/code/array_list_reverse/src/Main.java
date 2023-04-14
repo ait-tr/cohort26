@@ -19,9 +19,9 @@ public class Main {
 
         for (int i = 0; i < numList; i++) {
             System.out.println("Input furniture: ");
-            furnitureList.add(scanner.next());
-           // String listElement = scanner.next();
-           // furnitureList.add(i,listElement);
+            // furnitureList.add(i, scanner.next());
+           String listElement = scanner.next();
+           furnitureList.add(i,listElement);
         }
 
         System.out.println(furnitureList);
@@ -31,6 +31,17 @@ public class Main {
             furnitureList.set(i, furnitureList.get(furnitureList.size() - 1 - i)); // на место первого элемента списка кладем правый крайний
             furnitureList.set(furnitureList.size() - 1 - i, temp);
         }
+
+//        // Алгоритм разворота массива - мы это делали в 16 уроке
+//        // берем первый элемент массива и откладываем его в переменную temp
+//        // берем последний элемент массива и переносим его в первый
+//        // в последний элемент массива положить temp
+//        // двигаемся слева направо к середине массива
+//        for (int i = 0; i < myArray.length / 2; i++) {
+//            int temp = myArray[i];
+//            myArray[i] = myArray[myArray.length - 1 - i]; // первый элемент массива = последнему
+//            myArray[myArray.length - 1 - i] = temp;
+//        }
 
         System.out.println(furnitureList);
 
