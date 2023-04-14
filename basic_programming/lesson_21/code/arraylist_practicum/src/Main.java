@@ -65,5 +65,14 @@ public class Main {
         Collections.sort(autoBrandList);
         System.out.println(autoBrandList); // печатаем список
 
+        autoBrandList.add("Mersedes");
+        System.out.println(autoBrandList); // печатаем список
+        int index2 = autoBrandList.indexOf("Mersedes");
+        System.out.println(index2 + " is index of Mersedes");
+        autoBrandList.set(index2, "Mercedes");
+        System.out.println(autoBrandList); // печатаем список
+        autoBrandList.set(autoBrandList.indexOf("AUDI"), "Audi");
+        System.out.println(autoBrandList); // печатаем список
+
     }
 }
