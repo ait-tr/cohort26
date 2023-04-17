@@ -3,10 +3,13 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
-    "code/practicum/src/Main.java",
-    "code/practicum/src/Main1.java",
-    "code/practicum/src/Main2.java",
-    "code/array_list_reverse/src/Main.java"
+    "code/random_duplicates/src/Main.java",
+    "code/post_code/src/Main1.java",
+    "code/number_of_words/src/Main2.java",
+    "code/coins/src/Main.java",
+    "code/amoebas/src/Main.java",
+    "code/alphabet_hashset/src/Main.java"
+
   ],
   "video": ""
 }
