@@ -5,6 +5,40 @@ public class Main1 {
     public static void main(String[] args) {
         System.out.println("Group list with Sex");
 
+        HashMap<String,String> group26MapSex = new HashMap<>();
+
+        group26MapSex.put("Galina", "W");
+        group26MapSex.put("Oleksandr Zhurba", "M");
+        group26MapSex.put("Aleksndra", "W");
+        group26MapSex.put("Marina", "W");
+        group26MapSex.put("Luka", "M");
+        group26MapSex.put("Tetiana","W");
+        group26MapSex.put("Christian", "M");
+        group26MapSex.put("Yulia","W");
+        group26MapSex.put("Andrei","M");
+        group26MapSex.put("Egor", "M");
+        group26MapSex.put("Dmitrijs","M");
+        group26MapSex.put("Wladimir","M");
+        group26MapSex.put("Galina", "W");
+
+        int man = 0;
+        // циклом for each подсчитать кол-во мужчин
+        for (String name : group26MapSex.keySet()){
+            if(group26MapSex.get(name).equals("M")) {
+                man++;
+            }
+        }
+
+        int woman = 0;
+        // циклом for each подсчитать кол-во мужчин
+        for (String name : group26MapSex.keySet()){
+            if(group26MapSex.get(name).equals("W")) {
+                woman++;
+            }
+        }
+
+        System.out.println("Men in group: " + man);
+        System.out.println("Women in group: " + woman);
 
     }
 }
