@@ -1,0 +1,15 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "code/random_duplicates/src/Main.java",
+    "code/post_code/src/Main.java",
+    "code/number_of_words/src/Main.java",
+    "code/coins/src/Main.java",
+    "code/amoebas/src/Main.java",
+    "code/alphabet_hashset/src/Main.java"
+
+  ],
+  "video": ""
+}
