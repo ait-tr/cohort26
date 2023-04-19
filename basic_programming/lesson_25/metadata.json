@@ -1,0 +1,14 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "code/hashmap_practicum/src/Main.java",
+    "code/hashmap_practicum/src/Main1.java",
+    "code/hashmap_practicum/src/Main2.java",
+    "code/hw_task1/src/Main.java",
+    "code/hw_task2/src/Main.java"
+
+  ],
+  "video": ""
+}
