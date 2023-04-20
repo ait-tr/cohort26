@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -10,8 +11,8 @@ public class Main {
 //        - вывести(напечатать) все контакты
 //        - удалить контакт
 
-    // Шаг 1 - сделать костяк по выбору из меню и собственно меню
-    // Шаг 2 - сделаем методы для выполнения задач из меню
+// Шаг 1 - сделать костяк по выбору из меню и само меню
+// Шаг 2 - сделаем методы для выполнения задач из меню
 
         Scanner scanner = new Scanner(System.in);
         int userChoise = 0;
@@ -19,7 +20,8 @@ public class Main {
 
         do {
             printMenu();
-            userChoise = scanner.nextInt();
+            try {
+                userChoise = scanner.nextInt();
 
             switch (userChoise) {
                 case 1: {
@@ -28,34 +30,44 @@ public class Main {
                     break;
                 }
                 case 2: {
-                    // show
-                    printPhoneBook(phoneBook);
+                    // show (print contacts)
+                    printContacts(phoneBook);
                     break;
                 }
                 case 3: {
-                    // search
-                    System.out.println(searchPhoneBook(phoneBook));
-
+                    // search phone number by name
+                    String phone = searchContacts(phoneBook);
+                    if (!phone.equals(null)){
+                        System.out.println("Phone: " + phone); // печатаем результат работы метода
+                    } else {
+                        System.out.println("Contact not found.");
+                    }
                     break;
                 }
-
                 case 4: {
-                    // 4-й пункт меню
+                    // delete
+                    if (deleteContact(phoneBook)){ // если метод вернул true
+                        System.out.println("Contact deleted.");
+                    } else {
+                        System.out.println("Contact not found.");
+                    }
                     break;
                 }
-
                 case 5: {
                     // Exit
                     return;
                 }
-
+            } // конец оператора switch
+            } catch (InputMismatchException e) { // проверка на некорректный ввод
+                System.out.println("Wrong input, try again.");
+                scanner.next();
             }
 
-        } while(true);
+        } while(true); // конец цикла while
 
     }
     //_________Methods_____________________
-// печатаем меню
+    // печатаем меню
     public static void printMenu() {
         System.out.println("1 - add, 2 - show, 3 - search, 4 - delete, 5 - exit");
         System.out.println("Input your choice: ");
@@ -72,7 +84,8 @@ public class Main {
         return contacts;
     }
 
-    public static void printPhoneBook (HashMap<String, String> contacts){
+    // метод печатает все контакты
+    public static void printContacts (HashMap<String, String> contacts){
         // цикл for each переберет весь HashMap по ключу и напечатает
         for (String name: contacts.keySet()) {
             System.out.println("Name: "+ name + " | Phone number: " + contacts.get(name));
@@ -80,108 +93,26 @@ public class Main {
     }
 
     // метод для поиска телефона по имени
-    public static String searchPhoneBook(HashMap<String, String> contacts) {
+    public static String searchContacts(HashMap<String, String> contacts) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input name: ");
         String name = scanner.next();
-       // for (String n : contacts.keySet()) { // перебор всех значений
-            if (contacts.containsKey(name)) { // если совпало
-       //         System.out.println(n + " | " + contacts.get(n));
-                return contacts.get(name);
+            if (contacts.containsKey(name)) { // если имя нашлось, то
+                return contacts.get(name); // возвращаем телефон
             }
-
         return null;
     }
 
+    // метод для удаления телефона по имени
+    public static boolean deleteContact(HashMap<String, String> contacts) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input name: ");
+        String name = scanner.next();
+        if (contacts.containsKey(name)) { // если имя нашлось, то
+            contacts.remove(name); // удаляем элемент HashMap contacts
+            return true; // возвращаем true
+        }
+        return false;
+    }
     //_________end of Methods_____________________
 }
-
-
-
-
-
-/*
- Scanner scanner = new Scanner(System.in);
-       int userChoice;
-
-       HashMap<String, String> phoneBook = new HashMap<>();
-       do {
-           menu();
-           System.out.println("Input your choice:");
-           userChoice = scanner.nextInt();
-
-           switch (userChoice) {
-               case 1: {
-                   // add
-                   System.out.println("Add contact");
-                   addContact(phoneBook);
-                   break;
-               }
-               case 2: {
-                   //show
-                   System.out.println("Show contacts");
-                   printPhoneBook(phoneBook);
-                   break;
-               }
-               case 3: {
-                   //find
-                   System.out.println("Find contact");
-                   // вызов метода
-                   System.out.println("Input name: ");
-                   String name = scanner.next();
-                   findContact(phoneBook, name);
-                   break;
-               }
-               case 4: {
-                   //delete
-                   System.out.println("Delete contact");
-                   // вызов метода
-                   break;
-               }
-               case 5: {
-                   //exit
-                   System.out.println("Exit");
-                   return;
-               }
-
-           }
-       }while (true); // конец цикла
-
-     // печатаем меню
-    public static void menu() {
-        System.out.println("Menu:");
-        System.out.println("1 - add, 2 - show, 3 - find, 4 - delete contact, 5 - exit");
-
-    }
-    // добавляем контакт
-    public static HashMap<String, String> addContact( HashMap<String, String> contact) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Input name");
-        String name = scanner.next();
-        System.out.println("Input phone number");
-        String phone = scanner.next();
-        contact.put(name, phone);
-        System.out.println("Contact added");
-        return contact;
-    }
-    // печатем все контакты
-    public static void printPhoneBook (HashMap<String, String> contacts){
-        for (String name: contacts.keySet()){
-            System.out.println("Name: " + name + "| Phone: " + contacts.get(name));
-        }
-    }
-
-    // метод ищет контакт
-    public static void findContact (HashMap<String, String> contacts, String name){
-        for (String n: contacts.keySet()){
-            if(contacts.containsKey(name)) {
-                System.out.println(n + " | " + contacts.get(name));
-            } else {
-                System.out.println("Contact not found");
-            }
-        }
-
-    }
-
-
- */
