@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.HashMap;
 
-public class main3 {
+public class Main {
     public static void main(String[] args) {
         boolean repeat = true;
         System.out.println("══════════  Конвертер валют ＄€￡ ══════════");
