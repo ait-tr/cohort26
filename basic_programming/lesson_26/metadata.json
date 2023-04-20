@@ -1,0 +1,11 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "code/phone_book/src/Main.java",
+    "code/weather/src/Main.java"
+
+  ],
+  "video": ""
+}

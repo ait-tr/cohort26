@@ -57,6 +57,9 @@ public class Main {
                     // Exit
                     return;
                 }
+                default:{
+                    System.out.println("Wrong input, try again.");
+                }
             } // конец оператора switch
             } catch (InputMismatchException e) { // проверка на некорректный ввод
                 System.out.println("Wrong input, try again.");
