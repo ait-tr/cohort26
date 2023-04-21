@@ -3,10 +3,10 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
-    "code/group1/src/Main.java",
-    "code/group2/src/Main.java",
-    "code/group3/src/Main.java",
-    "code/group4/src/Main.java"
+    "code/hw_after_project/src/Main.java",
+    "code/hw_after_project/src/Main1.java",
+    "code/hw_after_project/src/Main2.java",
+    "code/hw_after_project/src/Main3.java"
 
   ],
   "video": ""
