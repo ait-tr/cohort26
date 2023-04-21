@@ -29,19 +29,28 @@ public class Main1 {
             } else {
                 sign = -1;
             }
-            nasdaqMap.put(i, 11373 + dayChange * sign);
+            nasdaqMap.put(i, ((i == 0)? 11373 : nasdaqMap.get(i - 1)) + dayChange * sign);
+            // изменения индекса стартуют от 11 373 в первый день месяца, а потом от предыдущего дня
         }
 
         // печатаем
         System.out.println(nasdaqMap);
 
+        // перекладываем в ArrayList для оценки вида графика
+
+        ArrayList<Integer> nasdaqList = new ArrayList<>();
+        for (int day : nasdaqMap.keySet()) {
+            nasdaqList.add(day, nasdaqMap.get(day));
+        }
+        System.out.println(nasdaqList);
+
         // ищем минимум за месяц
         int min = nasdaqMap.get(0);
-        int minDay = 0;
-        for (int day : nasdaqMap.keySet()){
+        int minDay = 0; // начальное значение минимума
+        for (int day : nasdaqMap.keySet()){ // цикл for each
             if (nasdaqMap.get(day) < min){
-                min = nasdaqMap.get(day);
-                minDay = day;
+                min = nasdaqMap.get(day); // найденный минимум
+                minDay = day; // это день, когда это произошло
             }
         }
         System.out.println("Min: " + min + ", it was at " + (minDay + 1) + "of March.");
@@ -51,23 +60,24 @@ public class Main1 {
         int maxDay = 0;
         for (int day : nasdaqMap.keySet()){
             if (nasdaqMap.get(day) > max){
-                max = nasdaqMap.get(day);
-                maxDay = day;
+                max = nasdaqMap.get(day); // найденный максимум
+                maxDay = day; // это день, когда это произошло
             }
         }
         System.out.println("Max: " + max + ", it was at " + (maxDay + 1) + "of March.");
 
         // суммируем за первую половину месяца
         int sum1 = 0;
-        for (int i = 0; i < nasdaqMap.size()/2; i++) {
+        for (int i = 0; i < nasdaqMap.size()/2; i++) { // nasdaqMap.size()/2 - это 31 день пополам
             sum1 = sum1 + nasdaqMap.get(i);
         }
-        double average1 = sum1 / (nasdaqMap.size()/2);
+        double average1 = sum1 / (nasdaqMap.size()/2); // среднее арифметическое за 1-ю половину месяца
         System.out.println(average1);
 
         // суммируем за вторую половину месяца
         int sum2 = 0;
-        for (int i = nasdaqMap.size()/2; i < nasdaqMap.size(); i++) {
+        for (int i = nasdaqMap.size()/2; i < nasdaqMap.size(); i++) { // от nasdaqMap.size()/2 до nasdaqMap.size()
+            // это вторая половина месяца
             sum2 = sum2 + nasdaqMap.get(i);
         }
         double average2 = sum2 / (nasdaqMap.size() - nasdaqMap.size()/2);
@@ -82,7 +92,8 @@ public class Main1 {
      }
 }
 
-/*
+/* перекладываем в ArrayList для оценки вида графика
+
         ArrayList<Integer> nasdaqList = new ArrayList<>();
 
         for (int day : nasdaqMap.keySet()) {

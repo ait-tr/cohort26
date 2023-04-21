@@ -36,13 +36,14 @@ public class Main {
         resultsList.add(10.07);
         resultsList.add(9.74);
 
-        Collections.sort(resultsList);
+        Collections.sort(resultsList); // сортируем с помощью метода класса Collections
         System.out.println(resultsList);
+
         // кто занял 1-е место
-        String firstPlace = resultsMap.get(resultsList.get(0));
+        String firstPlace = resultsMap.get(resultsList.get(0));// 0 - индекс первого элемента
         System.out.println("The winner is: " + firstPlace);
-        // кто занял посдеднее место
-        String lastPlace = resultsMap.get(resultsList.get(resultsList.size() - 1));
+        // кто занял последнее место
+        String lastPlace = resultsMap.get(resultsList.get(resultsList.size() - 1)); // тндекс последнего элементв
         System.out.println("The last place took: " + lastPlace);
      }
 }
