@@ -4,6 +4,8 @@ import java.io.InputStreamReader;
 
 public class Task2HexDigits {
 
+  private static final int RADIX = 16; // Основание системы счисления
+
   // hexadecimal - шестнадцатеричные
   // Задача:
   // Прочитать с клавиатуры десятичное число и вывести цифры его шестнадцатеричной записи
@@ -21,6 +23,15 @@ public class Task2HexDigits {
   }
 
   private static void printHexDigits(int number) {
-
+    System.out.println("Цифры числа " + number + ":");
+    number = Math.abs(number); // для целей деления и перебора чисел убрали знак
+    int order = 0;
+    while (number > 0) { // пока в числе есть цифры
+      int digit = number % RADIX; // последняя цифра - остаток от деления на основание (10)
+      System.out.println("Разряд: " + order + ", цифра: " + digit); // выводим эту последнюю цифру
+      // убираем последнюю цифру, находим целую часть от деления на основание
+      number /= RADIX; // number = number / RADIX; // +=, -=, *=, /=
+      ++order;
+    }
   }
 }
