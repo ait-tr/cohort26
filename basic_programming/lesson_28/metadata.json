@@ -3,6 +3,8 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "code/numerics/src/Task1Digits.java",
+    "code/numerics/src/Task2HexDigits.java"
   ],
   "video": ""
 }
