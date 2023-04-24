@@ -28,7 +28,32 @@ public class Task2HexDigits {
     int order = 0;
     while (number > 0) { // пока в числе есть цифры
       int digit = number % RADIX; // последняя цифра - остаток от деления на основание (10)
-      System.out.println("Разряд: " + order + ", цифра: " + digit); // выводим эту последнюю цифру
+      String digitStr = "";
+      switch (digit) {
+        case 10:
+          digitStr = "A";
+          break;
+        case 11:
+          digitStr = "B";
+          break;
+        case 12:
+          digitStr = "C";
+          break;
+        case 13:
+          digitStr = "D";
+          break;
+        case 14:
+          digitStr = "E";
+          break;
+        case 15:
+          digitStr = "F";
+          break;
+        default:
+          digitStr = Integer.toString(digit);
+          break;
+      }
+      System.out.println(
+          "Разряд: " + order + ", цифра: " + digitStr); // выводим эту последнюю цифру
       // убираем последнюю цифру, находим целую часть от деления на основание
       number /= RADIX; // number = number / RADIX; // +=, -=, *=, /=
       ++order;
