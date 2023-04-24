@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class Task1Digits {
 
   // константы - числа, которые используются в коде в разных местах
   // необходимо дать им осмысленное имя
