@@ -20,11 +20,16 @@ public class Homework28 {
   }
 
   public static String decToBin(int number) {
+    if (number == 0) {
+      return "0";
+    }
+
     String result = "";
     boolean isNegative = number < 0;
     if (isNegative) {
       number = Math.abs(number);
     }
+
     while (number > 0) {
       result = number % 2 + result;
       number /= 2;
@@ -32,6 +37,7 @@ public class Homework28 {
     if (isNegative) {
       result = "-" + result;
     }
+
     return result;
   }
 }
