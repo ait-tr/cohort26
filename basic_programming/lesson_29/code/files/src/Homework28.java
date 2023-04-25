@@ -21,7 +21,10 @@ public class Homework28 {
 
   public static String decToBin(int number) {
     String result = "";
-
+    while (number > 0) {
+      result = number % 2 + result;
+      number /= 2;
+    }
     return result;
   }
 }
