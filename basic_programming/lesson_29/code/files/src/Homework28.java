@@ -24,20 +24,20 @@ public class Homework28 {
       return "0";
     }
 
-    String result = "";
+    StringBuilder result = new StringBuilder();
     boolean isNegative = number < 0;
     if (isNegative) {
       number = Math.abs(number);
     }
 
     while (number > 0) {
-      result = number % 2 + result;
+      result.insert(0, number % 2);
       number /= 2;
     }
     if (isNegative) {
-      result = "-" + result;
+      result.insert(0, "-");
     }
 
-    return result;
+    return result.toString();
   }
 }
