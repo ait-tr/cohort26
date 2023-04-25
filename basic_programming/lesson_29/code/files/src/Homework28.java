@@ -24,18 +24,18 @@ public class Homework28 {
       return "0";
     }
 
-    StringBuilder result = new StringBuilder();
+    StringBuilder result = new StringBuilder(); // String result = "";
     boolean isNegative = number < 0;
     if (isNegative) {
       number = Math.abs(number);
     }
 
     while (number > 0) {
-      result.insert(0, number % 2);
+      result.insert(0, number % 2); // result = number % 2 + result;
       number /= 2;
     }
     if (isNegative) {
-      result.insert(0, "-");
+      result.insert(0, "-"); // result = "-" + result;
     }
 
     return result.toString();
