@@ -3,6 +3,10 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "code/files/src/Homework28.java",
+    "code/files/src/Task1Sum.java",
+    "code/files/src/Task2SumToFile.java",
+    "code/files/src/Task3Phonebook.java"
   ],
   "video": ""
 }
