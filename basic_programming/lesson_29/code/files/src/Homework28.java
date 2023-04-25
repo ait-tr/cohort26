@@ -20,6 +20,7 @@ public class Homework28 {
   }
 
   public static String decToBin(int number) {
+    final int radix = 2;
     if (number == 0) {
       return "0";
     }
@@ -31,8 +32,8 @@ public class Homework28 {
     }
 
     while (number > 0) {
-      result.insert(0, number % 2); // result = number % 2 + result;
-      number /= 2;
+      result.insert(0, number % radix); // result = number % radix + result;
+      number /= radix;
     }
     if (isNegative) {
       result.insert(0, "-"); // result = "-" + result;
