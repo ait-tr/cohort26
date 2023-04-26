@@ -1,10 +1,19 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class Homework29Scanner {
 
   // Напишите программу, которая:
   // - прочитает целое число из файла `res/in.txt`
   // - переведёт его в двоичную запись
   // - запишет его в файл `res/out.txt`
-  public static void main(String[] args) {
+  public static void main(String[] args) throws FileNotFoundException {
+    File inputFile = new File("res/in.txt");
+    Scanner inputFileScanner = new Scanner(inputFile);
+    int number = inputFileScanner.nextInt();
+    inputFileScanner.close();
+
     System.out.println("Hello world!");
   }
 
