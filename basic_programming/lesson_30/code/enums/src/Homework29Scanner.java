@@ -14,7 +14,7 @@ public class Homework29Scanner {
     int number = inputFileScanner.nextInt();
     inputFileScanner.close();
 
-    System.out.println("Hello world!");
+    String binNumber = decToBin(number);
   }
 
   // Воспользуйтесь методом `decToBin(int number)` из задачи 1 предыдущего урока или информацией
