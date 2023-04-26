@@ -26,6 +26,8 @@ public class Task2MonthsEnum {
     NOVEMBER,
     DECEMBER,
   }
+  // Для Java enum - это набор констант, идущих подряд. Все эти константы пронумерованы,
+  // начиная с нуля.
 
   public static void main(String[] args) {
     // в программе созданный enum можно использовать, как новый класс - как новый тип переменной
@@ -51,5 +53,15 @@ public class Task2MonthsEnum {
     // либо выбросит исключение IllegalArgumentException
     Month monthKey = Month.valueOf(month.toUpperCase()); // месяц "как ключ словаря"
     System.out.println(month + " has " + daysPerMonth.get(monthKey) + " days");
+    System.out.println();
+
+    System.out.println("=== Перебор через Month.values() ===");
+    // enum.values() - это массив всех значений в порядке их описания
+    // Month.values() вернёт нам Month[]
+    for (Month key : Month.values()) {
+      // перебираем ключи, по каждому ключу получаем значение через get
+      // при выводе enum превращается в строку - название значения
+      System.out.println(key);
+    }
   }
 }
