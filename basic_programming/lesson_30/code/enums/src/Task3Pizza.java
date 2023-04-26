@@ -42,6 +42,12 @@ public class Task3Pizza {
       case LARGE -> System.out.println("Вы выбрали большую пиццу");
       default -> System.out.println("Мы не должны здесь оказаться"); // этого никогда не произойдёт
     }
+
+    System.out.println("Ваш заказ:");
+    System.out.println("Пицца: " + title);
+    System.out.println("Размер: " + size);
+    System.out.println("Имя клиента: " + name);
+    System.out.println("Спасибо за заказ! Ждём вас снова!");
   }
 
   private static boolean parseYesOrNo(Scanner scanner, String question) {
