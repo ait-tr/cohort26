@@ -13,7 +13,7 @@ public class Task2MonthsEnum {
   // пишутся ЗАГЛАВНЫМИ_БУКВАМИ и могут быть любыми (но важно, что разными);
   // порядок значений важен - Java его запоминает и использует.
   private enum Month {
-    JANUARY,
+    JANUARY, // 0
     FEBRUARY,
     MARCH,
     APRIL,
@@ -52,7 +52,23 @@ public class Task2MonthsEnum {
     // enum.valueOf("ЗНАЧЕНИЕ") либо вернёт нам соответствующее значение по его названию,
     // либо выбросит исключение IllegalArgumentException
     Month monthKey = Month.valueOf(month.toUpperCase()); // месяц "как ключ словаря"
+    // enum.ordinal() возвращает индекс значения в перечислении
     System.out.println(month + " has " + daysPerMonth.get(monthKey) + " days");
+    // 0 -> 1, 1 -> 2, ..., 11 -> 12 % 12 = 0
+    int nextMonthIndex = (monthKey.ordinal() + 1) % Month.values().length;
+    Month nextMonth = Month.values()[nextMonthIndex];
+    System.out.println(
+        "The next month " + nextMonth + " has " + daysPerMonth.get(nextMonth) + " days");
+    System.out.println();
+
+    System.out.print("Enter the month number: ");
+    int monthNumber = scanner.nextInt(); // порядковый номер месяца
+    // enum.valueOf("ЗНАЧЕНИЕ") либо вернёт нам соответствующее значение по его названию,
+    // либо выбросит исключение IllegalArgumentException
+    int monthIndex = monthNumber - 1; // индекс месяца в перечислении
+    monthKey = Month.values()[monthIndex]; // месяц "как ключ словаря"
+    // при выводе вызовется enum.toString(), который выдаст название значения в виде строки
+    System.out.println(monthKey + " has " + daysPerMonth.get(monthKey) + " days");
     System.out.println();
 
     System.out.println("=== Перебор через Month.values() ===");
@@ -61,7 +77,7 @@ public class Task2MonthsEnum {
     for (Month key : Month.values()) {
       // перебираем ключи, по каждому ключу получаем значение через get
       // при выводе enum превращается в строку - название значения
-      System.out.println(key);
+      System.out.println(key + ": " + daysPerMonth.get(key));
     }
   }
 }
