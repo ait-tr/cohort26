@@ -11,17 +11,24 @@ public class Homework29Scanner {
   // - переведёт его в двоичную запись
   // - запишет его в файл `res/out.txt`
   public static void main(String[] args) throws IOException {
-    File inputFile = new File("res/in.txt");
+    int number = readInt("res/in.txt");
+    String binNumber = decToBin(number);
+    writeLine("res/out.txt", binNumber);
+  }
+
+  private static int readInt(String fileName) throws FileNotFoundException {
+    File inputFile = new File(fileName);
     Scanner inputFileScanner = new Scanner(inputFile);
     int number = inputFileScanner.nextInt();
     inputFileScanner.close();
+    return number;
+  }
 
-    String binNumber = decToBin(number);
-
-    File outputFile = new File("res/out.txt");
+  private static void writeLine(String fileName, String line) throws IOException {
+    File outputFile = new File(fileName);
     FileWriter outputFileWriter = new FileWriter(outputFile);
     // в конец строки ставим `\n` - символ конца строки
-    outputFileWriter.write(binNumber + "\n");
+    outputFileWriter.write(line + "\n");
     outputFileWriter.close();
   }
 
@@ -49,5 +56,4 @@ public class Homework29Scanner {
 
     return result.toString();
   }
-
 }
