@@ -1,26 +1,38 @@
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Homework29Scanner {
+public class Homework29 {
 
   // Напишите программу, которая:
   // - прочитает целое число из файла `res/in.txt`
   // - переведёт его в двоичную запись
   // - запишет его в файл `res/out.txt`
   public static void main(String[] args) throws IOException {
-    int number = readInt("res/in.txt");
+    int number = readIntScanner("res/in.txt");
     String binNumber = decToBin(number);
     writeLine("res/out.txt", binNumber);
   }
 
-  private static int readInt(String fileName) throws FileNotFoundException {
+  private static int readIntScanner(String fileName) throws FileNotFoundException {
     File inputFile = new File(fileName);
     Scanner inputFileScanner = new Scanner(inputFile);
     int number = inputFileScanner.nextInt();
     inputFileScanner.close();
+    return number;
+  }
+
+  private static int readIntBufferedReader(String fileName) throws IOException {
+    File inputFile = new File(fileName);
+    FileReader inputFileReader = new FileReader(inputFile);
+    BufferedReader bufferedReader = new BufferedReader(inputFileReader);
+    String numberStr = bufferedReader.readLine();
+    int number = Integer.parseInt(numberStr);
+    bufferedReader.close(); // внутри будет вызван inputFileReader.close()
     return number;
   }
 
