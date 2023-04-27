@@ -24,12 +24,15 @@ public class Homework30 {
     NOVEMBER,
     DECEMBER,
   }
-  // Для Java enum - это набор констант, идущих подряд. Все эти константы пронумерованы,
-  // начиная с нуля.
+
+  private enum Season { // в единственном числе, без -s!
+    WINTER,
+    SPRING,
+    SUMMER,
+    FALL, // AUTUMN
+  }
 
   public static void main(String[] args) {
-    // в программе созданный enum можно использовать, как новый класс - как новый тип переменной
-    // (как int, String и т.д.)
     Map<Month, Integer> daysPerMonth = new HashMap<>();
     daysPerMonth.put(Month.JANUARY, 31);
     daysPerMonth.put(Month.FEBRUARY, 28); // год не високосный
@@ -46,11 +49,8 @@ public class Homework30 {
 
     Scanner scanner = new Scanner(System.in);
     System.out.print("Enter the month: ");
-    String month = scanner.next(); // месяц "как ввели"
-    // enum.valueOf("ЗНАЧЕНИЕ") либо вернёт нам соответствующее значение по его названию,
-    // либо выбросит исключение IllegalArgumentException
-    Month monthKey = Month.valueOf(month.toUpperCase()); // месяц "как ключ словаря"
-    // enum.ordinal() возвращает индекс значения в перечислении
+    String month = scanner.next(); // месяц "как ввели (как строка)"
+    Month monthKey = Month.valueOf(month.toUpperCase()); // месяц "как enum"
     System.out.println(month + " has " + daysPerMonth.get(monthKey) + " days");
   }
 }
