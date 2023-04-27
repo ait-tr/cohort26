@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -28,20 +27,7 @@ public class Homework30Task2MonthsEnum {
   // читалось из файла `res/months.csv`
   // и сохранялось в `Map<Month, Integer>`.
   public static void main(String[] args) throws FileNotFoundException {
-    Map<Month, Integer> daysPerMonth = new HashMap<>();
-    Scanner fileScanner = new Scanner(new File("res/months.csv"));
-    while (fileScanner.hasNext()) {
-      String line = fileScanner.nextLine();
-      int sepIndex = line.indexOf(SEP);
-      if (sepIndex != -1) {
-        String monthStr = line.substring(0, sepIndex);
-        String daysStr = line.substring(sepIndex + 1);
-        Month month = Month.valueOf(monthStr);
-        int days = Integer.parseInt(daysStr);
-        daysPerMonth.put(month, days);
-      }
-    }
-    fileScanner.close();
+    Map<Month, Integer> daysPerMonth = readMonthsDays("res/months.csv");
 
     Scanner scanner = new Scanner(System.in);
     System.out.print("Enter the month: ");
@@ -65,5 +51,23 @@ public class Homework30Task2MonthsEnum {
     for (Month key : Month.values()) {
       System.out.println(key + ": " + daysPerMonth.get(key));
     }
+  }
+
+  private static Map<Month, Integer> readMonthsDays(String filename) throws FileNotFoundException {
+    Map<Month, Integer> daysPerMonth = new HashMap<>();
+    Scanner fileScanner = new Scanner(new File(filename));
+    while (fileScanner.hasNext()) {
+      String line = fileScanner.nextLine();
+      int sepIndex = line.indexOf(SEP);
+      if (sepIndex != -1) {
+        String monthStr = line.substring(0, sepIndex);
+        String daysStr = line.substring(sepIndex + 1);
+        Month month = Month.valueOf(monthStr);
+        int days = Integer.parseInt(daysStr);
+        daysPerMonth.put(month, days);
+      }
+    }
+    fileScanner.close();
+    return daysPerMonth;
   }
 }
