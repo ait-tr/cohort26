@@ -36,7 +36,9 @@ public class Homework30Task2MonthsEnum {
       if (sepIndex != -1) {
         String monthStr = line.substring(0, sepIndex);
         String daysStr = line.substring(sepIndex + 1);
-        System.out.println(monthStr + " - " + daysStr);
+        Month month = Month.valueOf(monthStr);
+        int days = Integer.parseInt(daysStr);
+        daysPerMonth.put(month, days);
       }
     }
     fileScanner.close();
