@@ -1,8 +1,13 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 public class Homework30Task2MonthsEnum {
+
+  private static final String SEP = ",";
 
   private enum Month {
     JANUARY, // 0
@@ -22,20 +27,19 @@ public class Homework30Task2MonthsEnum {
   // Усовершенствуйте программу `Task2MonthsEnums` так, чтобы число дней в месяце
   // читалось из файла `res/months.csv`
   // и сохранялось в `Map<Month, Integer>`.
-  public static void main(String[] args) {
+  public static void main(String[] args) throws FileNotFoundException {
     Map<Month, Integer> daysPerMonth = new HashMap<>();
-    daysPerMonth.put(Month.JANUARY, 31);
-    daysPerMonth.put(Month.FEBRUARY, 28); // год не високосный
-    daysPerMonth.put(Month.MARCH, 31);
-    daysPerMonth.put(Month.APRIL, 30);
-    daysPerMonth.put(Month.MAY, 31);
-    daysPerMonth.put(Month.JUNE, 30);
-    daysPerMonth.put(Month.JULY, 31);
-    daysPerMonth.put(Month.AUGUST, 31);
-    daysPerMonth.put(Month.SEPTEMBER, 30);
-    daysPerMonth.put(Month.OCTOBER, 31);
-    daysPerMonth.put(Month.NOVEMBER, 30);
-    daysPerMonth.put(Month.DECEMBER, 31);
+    Scanner fileScanner = new Scanner(new File("res/months.csv"));
+    while (fileScanner.hasNext()) {
+      String line = fileScanner.nextLine();
+      int sepIndex = line.indexOf(SEP);
+      if (sepIndex != -1) {
+        String monthStr = line.substring(0, sepIndex);
+        String daysStr = line.substring(sepIndex + 1);
+        System.out.println(monthStr + " - " + daysStr);
+      }
+    }
+    fileScanner.close();
 
     Scanner scanner = new Scanner(System.in);
     System.out.print("Enter the month: ");
