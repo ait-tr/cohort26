@@ -34,10 +34,13 @@ public class Main {
   // McCain 16
   // Obama 17
   public static void main(String[] args) throws FileNotFoundException {
-    readInput("res/in.txt");
+    Map<String, Integer> votes = calculateVotes("res/in.txt");
+    for (String lastName : votes.keySet()) {
+      System.out.println(lastName + " " + votes.get(lastName));
+    }
   }
 
-  private static void readInput(String filename) throws FileNotFoundException {
+  private static Map<String, Integer> calculateVotes(String filename) throws FileNotFoundException {
     Map<String, Integer> result = new HashMap<>();
     Scanner scanner = new Scanner(new File(filename));
     int n = scanner.nextInt(); // читаем количество строк
@@ -62,6 +65,6 @@ public class Main {
       int oldVotes = result.get(lastName); // предыдущее значение счётчика (для нового кандидата 0)
       result.put(lastName, oldVotes + newVotes);
     }
-    System.out.println(result);
+    return result;
   }
 }
