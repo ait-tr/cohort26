@@ -47,14 +47,20 @@ public class Main {
       // Метод next() читает новое слово (!) и не переходит на следующую строку.
       // Если в строке три слова через пробел, то каждое слово будет прочитано своей командой
       // next().
-      int votes = scanner.nextInt();
+      int newVotes = scanner.nextInt();
       scanner.nextLine(); // переходим на новую (следующую) строку
       // Метод nextLine() "дочитывает" строку до конца - до символа конца строки
-      if (result.containsKey(lastName)) {
-        result.put(lastName, result.get(lastName) + votes);
-      } else {
-        result.put(lastName, votes);
+//      if (result.containsKey(lastName)) {
+//        result.put(lastName, result.get(lastName) + newVotes);
+//      } else {
+//        result.put(lastName, newVotes);
+//      }
+      if (!result.containsKey(lastName)) { // если это новый кандидат и его нет в нашей базе
+        result.put(lastName, 0); // добавляем ему "нулевой" счётчик
       }
+      // теперь прочитанный кандидат точно есть в result
+      int oldVotes = result.get(lastName); // предыдущее значение счётчика (для нового кандидата 0)
+      result.put(lastName, oldVotes + newVotes);
     }
     System.out.println(result);
   }
