@@ -1,5 +1,8 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -33,11 +36,9 @@ public class Main {
   // Пример вывода:
   // McCain 16
   // Obama 17
-  public static void main(String[] args) throws FileNotFoundException {
+  public static void main(String[] args) throws IOException {
     Map<String, Integer> votes = calculateVotes("res/in.txt");
-    for (String lastName : votes.keySet()) {
-      System.out.println(lastName + " " + votes.get(lastName));
-    }
+    writeResult("res/out.txt", votes);
   }
 
   private static Map<String, Integer> calculateVotes(String filename) throws FileNotFoundException {
@@ -65,6 +66,19 @@ public class Main {
       int oldVotes = result.get(lastName); // предыдущее значение счётчика (для нового кандидата 0)
       result.put(lastName, oldVotes + newVotes);
     }
+    scanner.close();
     return result;
+  }
+
+  private static void writeResult(String filename, Map<String, Integer> result) throws IOException {
+    FileWriter fileWriter = new FileWriter(filename);
+    for (Map.Entry<String, Integer> entry : result.entrySet()) {
+      String line = String.format("%s %d%n", entry.getKey(), entry.getValue());
+      // форматированный вывод означает что-то вроде "здесь будет строка"
+      // "%s %d%n" - какая-то строка, пробел, какое-то целое число, символ конца строки
+      /// "%.2f" - дробное число с выводом ровно двух знаков после точки
+      fileWriter.write(line);
+    }
+    fileWriter.close();
   }
 }
