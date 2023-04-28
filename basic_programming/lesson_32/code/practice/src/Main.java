@@ -28,6 +28,10 @@ public class Main {
   // McCain 16
   // Obama 17
   public static void main(String[] args) {
+    readInput("res/in.txt");
+  }
+
+  private static void readInput(String filename) {
 
   }
 }
