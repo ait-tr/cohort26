@@ -1,6 +1,8 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Task3Customers {
@@ -33,10 +35,37 @@ public class Task3Customers {
   // envelope 20
   // pen 5
   public static void main(String[] args) throws IOException {
+    // Map<String, Integer> - пары "товар-количество"
+    // Map<String, ...> - пары "покупатель-..."
+    // Map<String, Map<String, Integer>> - пары "покупатель - (пары "товар-количество")"
+    Map<String, Map<String, Integer>> customers = new HashMap<>();
     Scanner scanner = new Scanner(new File("res/in3.txt"));
+    while (scanner.hasNext()) {
+      String line = scanner.nextLine();
+      int firstSpace = line.indexOf(' ');
+      int secondSpace = line.indexOf(' ', firstSpace + 1);
+      String name = line.substring(0, firstSpace);
+      String good = line.substring(firstSpace + 1, secondSpace);
+      int quantity = Integer.parseInt(line.substring(secondSpace + 1));
+      if (!customers.containsKey(name)) {
+        customers.put(name, new HashMap<>());
+      }
+      Map<String, Integer> goods = customers.get(name); // получили базу покупок пользователя
+      if (!goods.containsKey(good)) {
+        goods.put(good, 0);
+      }
+      goods.put(good, goods.get(good) + quantity);
+    }
     scanner.close();
 
     FileWriter fileWriter = new FileWriter(new File("res/out.txt"));
+    for (String name : customers.keySet()) {
+      fileWriter.write(name + ":\n");
+      Map<String, Integer> goods = customers.get(name);
+      for (String good : goods.keySet()) {
+        fileWriter.write(good + " " + goods.get(good) + "\n");
+      }
+    }
     fileWriter.close();
   }
 }
