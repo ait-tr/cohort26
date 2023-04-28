@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class Main {
 
   // сообщения о коммитах (commit messages):
@@ -27,11 +31,14 @@ public class Main {
   // Пример вывода:
   // McCain 16
   // Obama 17
-  public static void main(String[] args) {
+  public static void main(String[] args) throws FileNotFoundException {
     readInput("res/in.txt");
   }
 
-  private static void readInput(String filename) {
-
+  private static void readInput(String filename) throws FileNotFoundException {
+    Scanner scanner = new Scanner(new File(filename));
+    int n = scanner.nextInt(); // читаем количество строк
+    scanner.nextLine(); // переходим на новую строку
+    System.out.println("В файле " + filename + " будет " + n + " строк с данными");
   }
 }
