@@ -39,6 +39,12 @@ public class Main {
     Scanner scanner = new Scanner(new File(filename));
     int n = scanner.nextInt(); // читаем количество строк
     scanner.nextLine(); // переходим на новую строку
-    System.out.println("В файле " + filename + " будет " + n + " строк с данными");
+    for (int i = 0; i < n; ++i) { // читаем новые строки n раз
+      String lastName = scanner.next();
+      int votes = scanner.nextInt();
+      scanner.nextLine(); // переходим на новую (следующую) строку
+      System.out.println(
+          "Строка " + (i + 1) + ": За кандидата '" + lastName + "' отдано " + votes + " голосов");
+    }
   }
 }
