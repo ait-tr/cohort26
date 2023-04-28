@@ -27,7 +27,7 @@ public class Task2VotesLongName {
   // John McCain 16
   // Barack Obama 17
   public static void main(String[] args) throws IOException {
-    Map<String, Integer> votes = calculateVotes("res/in.txt");
+    Map<String, Integer> votes = calculateVotes("res/in2.txt");
     writeResult("res/out.txt", votes);
   }
 
@@ -37,15 +37,20 @@ public class Task2VotesLongName {
     int n = scanner.nextInt();
     scanner.nextLine();
     for (int i = 0; i < n; ++i) {
-      String lastName = scanner.next();
-      int newVotes = scanner.nextInt();
-      scanner.nextLine();
-
-      if (!result.containsKey(lastName)) { // если это новый кандидат и его нет в нашей базе
-        result.put(lastName, 0); // добавляем ему "нулевой" счётчик
+      String line = scanner.nextLine(); // читаем всю строку
+      int lastSpaceIndex = line.lastIndexOf(' '); // последний пробел в строке
+      if (lastSpaceIndex == -1) {
+        throw new RuntimeException(
+            "В строке " + (i + 2) + " файла " + filename + " нет пробела: " + line);
       }
-      int oldVotes = result.get(lastName);
-      result.put(lastName, oldVotes + newVotes);
+      String name = line.substring(0, lastSpaceIndex);
+      int newVotes = Integer.parseInt(line.substring(lastSpaceIndex + 1));
+
+      if (!result.containsKey(name)) { // если это новый кандидат и его нет в нашей базе
+        result.put(name, 0); // добавляем ему "нулевой" счётчик
+      }
+      int oldVotes = result.get(name);
+      result.put(name, oldVotes + newVotes);
     }
     scanner.close();
     return result;
