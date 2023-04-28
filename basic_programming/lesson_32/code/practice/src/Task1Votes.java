@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Main {
+public class Task1Votes {
 
   // сообщения о коммитах (commit messages):
   // - должны быть на английском
