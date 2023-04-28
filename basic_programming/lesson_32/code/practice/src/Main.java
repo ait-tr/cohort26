@@ -1,5 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -36,6 +38,7 @@ public class Main {
   }
 
   private static void readInput(String filename) throws FileNotFoundException {
+    Map<String, Integer> result = new HashMap<>();
     Scanner scanner = new Scanner(new File(filename));
     int n = scanner.nextInt(); // читаем количество строк
     scanner.nextLine(); // переходим на новую строку
@@ -47,8 +50,12 @@ public class Main {
       int votes = scanner.nextInt();
       scanner.nextLine(); // переходим на новую (следующую) строку
       // Метод nextLine() "дочитывает" строку до конца - до символа конца строки
-      System.out.println(
-          "Строка " + (i + 1) + ": За кандидата '" + lastName + "' отдано " + votes + " голосов");
+      if (result.containsKey(lastName)) {
+        result.put(lastName, result.get(lastName) + votes);
+      } else {
+        result.put(lastName, votes);
+      }
     }
+    System.out.println(result);
   }
 }
