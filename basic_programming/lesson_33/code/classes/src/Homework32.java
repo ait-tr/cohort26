@@ -1,5 +1,8 @@
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -38,16 +41,16 @@ public class Homework32 {
   // Если слова в словаре нет, программа должна вывести "Не найдено", без кавычек.
 
   private final static String SEPARATOR = ": ";
+  private final static String DICTIONARY_FILE = "res/dict.txt";
 
-  public static void main(String[] args) throws FileNotFoundException {
-    Map<String, String> dict = readDict();
-    System.out.println(dict);
+  public static void main(String[] args) throws IOException {
+    Map<String, String> dict = readDictBuffered();
+    System.out.println(dict); // {ключ1=значение1, ключ2=значение2}
   }
 
   private static Map<String, String> readDict() throws FileNotFoundException {
-    final String filename = "res/dict.txt";
     Map<String, String> result = new HashMap<>();
-    Scanner scanner = new Scanner(new File(filename));
+    Scanner scanner = new Scanner(new File(DICTIONARY_FILE));
     int n = scanner.nextInt();
     scanner.nextLine(); // переход на следующую строку
     // i = 0, 1, 2, 3, 4
@@ -56,13 +59,32 @@ public class Homework32 {
       int separatorIndex = line.indexOf(SEPARATOR);
       if (separatorIndex == -1) {
         continue; // переход к следующему шагу цикла досрочно
-        // с прочитанной строкой что-то не так - в ней нет `:`
+        // с прочитанной строкой что-то не так - в ней нет `: `
       }
       String word = line.substring(0, separatorIndex); // определяемое слово
       String definition = line.substring(separatorIndex + SEPARATOR.length());
       result.put(word, definition);
     }
     scanner.close();
+    return result;
+  }
+
+  private static Map<String, String> readDictBuffered() throws IOException {
+    Map<String, String> result = new HashMap<>();
+    BufferedReader bufferedReader = new BufferedReader(new FileReader(DICTIONARY_FILE));
+    int n = Integer.parseInt(bufferedReader.readLine());
+    for (int i = 0; i < n; ++i) {
+      String line = bufferedReader.readLine();
+      int separatorIndex = line.indexOf(SEPARATOR);
+      if (separatorIndex == -1) {
+        continue; // переход к следующему шагу цикла досрочно
+        // с прочитанной строкой что-то не так - в ней нет `: `
+      }
+      String word = line.substring(0, separatorIndex); // определяемое слово
+      String definition = line.substring(separatorIndex + SEPARATOR.length());
+      result.put(word, definition);
+    }
+    bufferedReader.close();
     return result;
   }
 }
