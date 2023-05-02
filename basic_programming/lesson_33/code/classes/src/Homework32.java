@@ -53,7 +53,21 @@ public class Homework32 {
     for (int i = 0; i < m; ++i) {
 //      String word = scanner.next();
       String word = bufferedReader.readLine();
-      System.out.println(dictionary.getOrDefault(word.toLowerCase(), "Не найдено"));
+      String wordToLook = word.toLowerCase();
+      // Способ 1
+//      if (dictionary.containsKey(wordToLook)) {
+//        System.out.println(dictionary.get(wordToLook));
+//      } else {
+//        System.out.println("Не найдено");
+//      }
+      // Способ 2
+//      String definition = dictionary.get(wordToLook);
+//      if (definition == null) {
+//        definition = "Не найдено";
+//      }
+//      System.out.println(definition);
+      // Способ 3
+      System.out.println(dictionary.getOrDefault(wordToLook, "Не найдено"));
     }
   }
 
