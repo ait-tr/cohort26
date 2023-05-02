@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -45,10 +46,13 @@ public class Homework32 {
   public static void main(String[] args) throws IOException {
     Map<String, String> dictionary = readDictBuffered();
 //    System.out.println(dictionary); // {ключ1=значение1, ключ2=значение2}
-    Scanner scanner = new Scanner(System.in);
-    int m = scanner.nextInt();
+//    Scanner scanner = new Scanner(System.in);
+    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+//    int m = scanner.nextInt();
+    int m = Integer.parseInt(bufferedReader.readLine());
     for (int i = 0; i < m; ++i) {
-      String word = scanner.next();
+//      String word = scanner.next();
+      String word = bufferedReader.readLine();
       System.out.println(dictionary.getOrDefault(word.toLowerCase(), "Не найдено"));
     }
   }
