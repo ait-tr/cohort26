@@ -1,3 +1,9 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 public class Homework32 {
 
   // Программисты, как вы уже знаете, постоянно учатся, а в общении между собой используют весьма
@@ -30,7 +36,33 @@ public class Homework32 {
   // необходимо вывести на экран его определение.
   //
   // Если слова в словаре нет, программа должна вывести "Не найдено", без кавычек.
-  public static void main(String[] args) {
-    System.out.println("Hello world!");
+
+  private final static String SEPARATOR = ": ";
+
+  public static void main(String[] args) throws FileNotFoundException {
+    Map<String, String> dict = readDict();
+    System.out.println(dict);
+  }
+
+  private static Map<String, String> readDict() throws FileNotFoundException {
+    final String filename = "res/dict.txt";
+    Map<String, String> result = new HashMap<>();
+    Scanner scanner = new Scanner(new File(filename));
+    int n = scanner.nextInt();
+    scanner.nextLine(); // переход на следующую строку
+    // i = 0, 1, 2, 3, 4
+    for (int i = 0; i < n; ++i) { // повтори n раз
+      String line = scanner.nextLine();
+      int separatorIndex = line.indexOf(SEPARATOR);
+      if (separatorIndex == -1) {
+        continue; // переход к следующему шагу цикла досрочно
+        // с прочитанной строкой что-то не так - в ней нет `:`
+      }
+      String word = line.substring(0, separatorIndex); // определяемое слово
+      String definition = line.substring(separatorIndex + SEPARATOR.length());
+      result.put(word, definition);
+    }
+    scanner.close();
+    return result;
   }
 }
