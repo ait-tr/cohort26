@@ -37,15 +37,20 @@ public class Homework32 {
 
   // Для каждого слова, независимо от регистра символов, если оно присутствует в словаре,
   // необходимо вывести на экран его определение.
-  //
   // Если слова в словаре нет, программа должна вывести "Не найдено", без кавычек.
 
   private final static String SEPARATOR = ": ";
   private final static String DICTIONARY_FILE = "res/dict.txt";
 
   public static void main(String[] args) throws IOException {
-    Map<String, String> dict = readDictBuffered();
-    System.out.println(dict); // {ключ1=значение1, ключ2=значение2}
+    Map<String, String> dictionary = readDictBuffered();
+//    System.out.println(dictionary); // {ключ1=значение1, ключ2=значение2}
+    Scanner scanner = new Scanner(System.in);
+    int m = scanner.nextInt();
+    for (int i = 0; i < m; ++i) {
+      String word = scanner.next();
+      System.out.println(dictionary.getOrDefault(word.toLowerCase(), "Не найдено"));
+    }
   }
 
   private static Map<String, String> readDict() throws FileNotFoundException {
@@ -63,7 +68,7 @@ public class Homework32 {
       }
       String word = line.substring(0, separatorIndex); // определяемое слово
       String definition = line.substring(separatorIndex + SEPARATOR.length());
-      result.put(word, definition);
+      result.put(word.toLowerCase(), definition);
     }
     scanner.close();
     return result;
@@ -82,7 +87,7 @@ public class Homework32 {
       }
       String word = line.substring(0, separatorIndex); // определяемое слово
       String definition = line.substring(separatorIndex + SEPARATOR.length());
-      result.put(word, definition);
+      result.put(word.toLowerCase(), definition);
     }
     bufferedReader.close();
     return result;
