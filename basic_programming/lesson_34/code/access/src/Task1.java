@@ -9,5 +9,9 @@ public class Task1 {
     System.out.println(capriciosa.getString());
 //    Pizza pepperoni = new Pizza("", 10);
 //    Pizza mafia = new Pizza(null, 10);
+    Pizza untitled = new Pizza();
+    System.out.println(untitled.getString());
+    Pizza nonPriced = new Pizza("Какая-то пицца");
+    System.out.println(nonPriced.getString());
   }
 }
