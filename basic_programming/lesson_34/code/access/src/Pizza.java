@@ -8,17 +8,15 @@ public class Pizza {
   private int price;
 
   public Pizza(String name, int price) {
-    if (name == null || name.isEmpty()) {
+    if (name == null || name.isEmpty()) { // условие-стражник (guardian condition)
       throw new IllegalArgumentException("Название не может быть пустым");
-    }
-    this.name = name; // это не изменение, это задание первоначального значения - инициализация
-    if (price < 0) { // условие-стражник (guardian condition)
-      throw new IllegalArgumentException("Цена не может быть отрицательной");
       // throw какаяТоОшибка - оператор "завершиться с ошибкой"
       // RuntimeException - какая-то ошибка во время выполнения
       // IllegalArgumentException - некорректный аргумент метода
       // В аргументах конструктора исключения указывается строка - сообщение об ошибке
     }
+    this.name = name; // это не изменение, это задание первоначального значения - инициализация
+    checkPrice(price);
     this.price = price;
   }
 
@@ -28,9 +26,13 @@ public class Pizza {
 //  }
 
   public void setPrice(int price) {
+    checkPrice(price);
+    this.price = price;
+  }
+
+  public void checkPrice(int price) {
     if (price < 0) { // условие-стражник (guardian condition)
       throw new IllegalArgumentException("Цена не может быть отрицательной");
     }
-    this.price = price;
   }
 }
