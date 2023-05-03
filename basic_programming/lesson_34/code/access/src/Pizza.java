@@ -28,10 +28,18 @@ public class Pizza {
     this.price = checkPrice(price);
   }
 
-  public int checkPrice(int price) {
+  private int checkPrice(int price) {
     if (price < 0) { // условие-стражник (guardian condition)
-      throw new IllegalArgumentException("Цена не может быть отрицательной");
+      throw new IllegalArgumentException("Цена не может быть отрицательной: " + price);
     }
     return price; // возвращаем условие, прошедшее проверку
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public int getPrice() {
+    return price;
   }
 }
