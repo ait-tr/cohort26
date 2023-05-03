@@ -8,6 +8,9 @@ public class Main {
   // - измените добавку
   // - выведите новую добавку
   public static void main(String[] args) {
-    System.out.println("Hello world!");
+    Soda drink = new Soda("малина");
+    System.out.println("Добавка после создания: " + drink.getSupplement());
+    drink.setSupplement("вишня");
+    System.out.println("Добавка после изменения: " + drink.getSupplement());
   }
 }
