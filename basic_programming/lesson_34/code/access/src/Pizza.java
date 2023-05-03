@@ -42,4 +42,9 @@ public class Pizza {
   public int getPrice() {
     return price;
   }
+
+  public String getString() {
+//    return name + " (" + price + ")";
+    return String.format("%s (%d)", name, price);
+  }
 }
