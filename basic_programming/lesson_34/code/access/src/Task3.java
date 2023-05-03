@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Task3 {
 
   // задача: сделать небольшую базу автомобилей
@@ -12,4 +15,22 @@ public class Task3 {
   // - год выпуска
   // разделитель CSV: `,`
 
+  private static final String FILENAME = "res/cars.csv";
+  private static final String SEPARATOR = ",";
+  private static List<Car> cars = new ArrayList<>();
+
+  public static void main(String[] args) {
+    readCarsFromFile();
+    Car newCar = Car.readFromSystemIn();
+    cars.add(newCar);
+    writeCarsToFile();
+  }
+
+  private static void readCarsFromFile() {
+    // заполняет атрибут cars, читая содержимое файла
+  }
+
+  private static void writeCarsToFile() {
+    // записывает машины из cars в файл
+  }
 }
