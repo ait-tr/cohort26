@@ -16,8 +16,7 @@ public class Pizza {
       // В аргументах конструктора исключения указывается строка - сообщение об ошибке
     }
     this.name = name; // это не изменение, это задание первоначального значения - инициализация
-    checkPrice(price);
-    this.price = price;
+    this.price = checkPrice(price);
   }
 
   // сеттера для имени не будет - final атрибуты нельзя менять
@@ -26,13 +25,13 @@ public class Pizza {
 //  }
 
   public void setPrice(int price) {
-    checkPrice(price);
-    this.price = price;
+    this.price = checkPrice(price);
   }
 
-  public void checkPrice(int price) {
+  public int checkPrice(int price) {
     if (price < 0) { // условие-стражник (guardian condition)
       throw new IllegalArgumentException("Цена не может быть отрицательной");
     }
+    return price; // возвращаем условие, прошедшее проверку
   }
 }
