@@ -7,5 +7,7 @@ public class Main {
     dog.makeSound();
     cat.makeNoise();
     dog.catchTail();
+    Turtle turtle = new Turtle("Тортилла");
+    turtle.makeSound();
   }
 }
