@@ -17,6 +17,11 @@ public class Main {
   // При провале любой из проверок нужно вывести на экран соответствующее сообщение или выкинуть
   // исключение.
   public static void main(String[] args) {
-    System.out.println("Hello world!");
+    try {
+      Triangle test = new Triangle(1, 1, 2);
+      System.out.println(test);
+    } catch (IllegalArgumentException e) {
+      System.out.println("Не получилось создать треугольник: " + e.getMessage());
+    }
   }
 }

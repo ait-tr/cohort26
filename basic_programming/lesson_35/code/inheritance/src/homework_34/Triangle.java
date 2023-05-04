@@ -21,12 +21,16 @@ public class Triangle {
   private final int sideC;
 
   public Triangle(int a, int b, int c) {
-    if (!checkSides(a, b, c)) {
-      throw new IllegalArgumentException("Не выполняется неравенство треугольника");
-    }
     sideA = checkSide(a);
     sideB = checkSide(b);
     sideC = checkSide(c);
+    checkSides();
+  }
+
+  private void checkSides() {
+    if (!checkSides(sideA, sideB, sideC)) {
+      throw new IllegalArgumentException("Не выполняется неравенство треугольника");
+    }
   }
 
   private static int checkSide(int side) {
