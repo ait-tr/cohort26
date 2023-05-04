@@ -1,24 +1,14 @@
-public class Dog {
-
-  private String name;
+public class Dog extends Pet {
 
   public Dog(String name) {
-    this.name = name;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
+    super(name);
   }
 
   public void makeSound() {
-    System.out.println("Собака по кличке " + name + " говорит: гав-гав");
+    System.out.println("Собака по кличке " + getName() + " говорит: гав-гав");
   }
 
   public void catchTail() {
-    System.out.println("Собака по кличке " + name + " пытается поймать свой хвост");
+    System.out.println("Собака по кличке " + getName() + " пытается поймать свой хвост");
   }
 }

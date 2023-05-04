@@ -11,6 +11,7 @@ public class Pet {
   }
 
   public void setName(String name) {
+    System.out.println("Вызван pet.setName(" + name + ")");
     this.name = name;
   }
 }
