@@ -18,5 +18,7 @@ public class Main {
     dog.catchTail();
     Turtle turtle = new Turtle("Тортилла");
     turtle.makeSound();
+    turtle.setAge(302);
+    System.out.println("Черепашке " + turtle.getName() + " " + turtle.getAge() + " лет");
   }
 }
