@@ -21,15 +21,20 @@ public class Triangle {
   private final int sideC;
 
   public Triangle(int a, int b, int c) {
-    if (a <= 0 || b <= 0 || c <= 0) {
-      throw new IllegalArgumentException("Стороны не могут не быть положительными");
-    }
     if (!checkSides(a, b, c)) {
-      throw new IllegalArgumentException("Не выполняется условие треугольника");
+      throw new IllegalArgumentException("Не выполняется неравенство треугольника");
     }
-    sideA = a;
-    sideB = b;
-    sideC = c;
+    sideA = checkSide(a);
+    sideB = checkSide(b);
+    sideC = checkSide(c);
+  }
+
+  private static int checkSide(int side) {
+    if (side <= 0) {
+      throw new IllegalArgumentException(
+          "Сторона треугольника не может быть отрицательной или нулём: " + side);
+    }
+    return side;
   }
 
   public static boolean checkSides(int a, int b, int c) {
