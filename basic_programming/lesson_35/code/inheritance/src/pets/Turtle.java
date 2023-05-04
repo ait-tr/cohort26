@@ -1,3 +1,5 @@
+package pets;
+
 public class Turtle extends Pet {
   // public class Наследник extends Предок - класс-наследник расширяет функционал класса-предка
 

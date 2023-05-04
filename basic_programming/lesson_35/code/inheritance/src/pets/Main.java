@@ -1,3 +1,5 @@
+package pets;
+
 public class Main {
 
   // Ещё один принцип ООП - наследование (inheritance).
