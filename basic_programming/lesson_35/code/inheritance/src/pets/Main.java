@@ -1,5 +1,8 @@
 package pets;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
   // Ещё один принцип ООП - наследование (inheritance).
@@ -20,5 +23,19 @@ public class Main {
     turtle.makeSound();
     turtle.setAge(302);
     System.out.println("Черепашке " + turtle.getName() + " " + turtle.getAge() + " лет");
+
+    List<Pet> pets = new ArrayList<>();
+    pets.add(cat); // в список Pet можно добавить как сам Pet, так и его потомка - например, Cat
+    pets.add(dog);
+    pets.add(turtle);
+    for (Pet pet : pets) { // for-each
+      System.out.println(pet + " по кличке " + pet.getName());
+    }
+
+    Pet fluffy = new Cat("Пушистик");
+    // Не смотря на то, что перенная fluffy у нас класса Pet, Java знает, какой объект мы
+    // создали на самом деле - объект класса Cat (new Cat()), и это будет заметно при выводе
+    System.out.println(fluffy + " по кличке " + fluffy.getName());
+    pets.add(fluffy);
   }
 }
