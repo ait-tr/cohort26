@@ -33,23 +33,7 @@ public class GasStation {
 
       PaymentMethod paymentMethod = readPaymentMethod(scanner);
 
-      System.out.println("=== Ваш заказ ===");
-      System.out.println("Заказчик: " + name);
-      System.out.println("Количество топлива: " + quantity + " л");
-      double total = quantity * 2;
-      System.out.println("Стоимость заказа: " + total + " EUR");
-//      switch (paymentMethod) {
-//        case CARD:
-//          System.out.println("Заказ должен быть оплачен картой");
-//          break;
-//        case CASH:
-//          System.out.println("Заказ должен быть оплачен наличными");
-//          break;
-//      }
-      switch (paymentMethod) {
-        case CARD -> System.out.println("Заказ должен быть оплачен картой");
-        case CASH -> System.out.println("Заказ должен быть оплачен наличными");
-      }
+      printOrder(name, quantity, paymentMethod);
     }
   }
 
@@ -93,5 +77,25 @@ public class GasStation {
     } // после `return` нет смысла ставить `else` - если условие выполнилось, мы сюда не попадём
     // сканер не закрываем - мы продолжим им пользоваться, не мы создавали, не нам закрывать
     return PaymentMethod.CASH;
+  }
+
+  private static void printOrder(String name, double quantity, PaymentMethod paymentMethod) {
+    System.out.println("=== Ваш заказ ===");
+    System.out.println("Заказчик: " + name);
+    System.out.println("Количество топлива: " + quantity + " л");
+    double total = quantity * 2;
+    System.out.println("Стоимость заказа: " + total + " EUR");
+//      switch (paymentMethod) {
+//        case CARD:
+//          System.out.println("Заказ должен быть оплачен картой");
+//          break;
+//        case CASH:
+//          System.out.println("Заказ должен быть оплачен наличными");
+//          break;
+//      }
+    switch (paymentMethod) {
+      case CARD -> System.out.println("Заказ должен быть оплачен картой");
+      case CASH -> System.out.println("Заказ должен быть оплачен наличными");
+    }
   }
 }
