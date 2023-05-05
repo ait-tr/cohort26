@@ -25,4 +25,21 @@ public class Drink extends Food {
     super(title);
     this.carbonated = carbonated;
   }
+
+  // согласно нашему стилю кода, геттеры для boolean начинаются не со слова `get`, а со слова `is`
+  public boolean isCarbonated() {
+    return carbonated;
+  }
+
+  public void setCarbonated(boolean carbonated) {
+    this.carbonated = carbonated;
+  }
+
+  public void open() {
+    if (carbonated) {
+      System.out.println(getTitle() + " делает пшш");
+    } else {
+      System.out.println(getTitle() + " делает скр");
+    }
+  }
 }

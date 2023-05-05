@@ -17,8 +17,10 @@ public class Main {
     Food dumplings = new Food("пельмени");
     dumplings.consume();
     Drink milk = new Drink("молоко");
+    milk.open();
     milk.consume();
     Drink cola = new Drink("Кока-Кола", true);
+    cola.open();
     cola.consume();
   }
 }
