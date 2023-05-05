@@ -26,10 +26,8 @@ public class GasStation {
 
     System.out.println("Как будете оплачивать, картой или наличными?");
     String paymentMethod = scanner.nextLine();
-    boolean byCard = false;
-    if (paymentMethod.toLowerCase().contains("карт")) {
-      byCard = true;
-    }
+    // флажок (flag) - булева переменная, которая хранит в себе какой-то признак
+    boolean byCard = paymentMethod.toLowerCase().contains("карт");
 
     System.out.println("=== Ваш заказ ===");
     System.out.println("Заказчик: " + name);
