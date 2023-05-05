@@ -16,5 +16,9 @@ public class Main {
   public static void main(String[] args) {
     Food dumplings = new Food("пельмени");
     dumplings.consume();
+    Drink milk = new Drink("молоко");
+    milk.consume();
+    Drink cola = new Drink("Кока-Кола", true);
+    cola.consume();
   }
 }
