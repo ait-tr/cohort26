@@ -26,13 +26,17 @@ public class GasStation {
 
     System.out.println("Как будете оплачивать, картой или наличными?");
     String paymentMethod = scanner.nextLine();
+    boolean byCard = false;
+    if (paymentMethod.toLowerCase().contains("карт")) {
+      byCard = true;
+    }
 
     System.out.println("=== Ваш заказ ===");
     System.out.println("Заказчик: " + name);
     System.out.println("Количество топлива: " + quantity + " л");
     double total = quantity * 2;
     System.out.println("Стоимость заказа: " + total + " EUR");
-    if (paymentMethod.toLowerCase().contains("карт")) {
+    if (byCard) {
       System.out.println("Заказ должен быть оплачен картой");
     } else {
       System.out.println("Заказ должен быть оплачен наличными");
