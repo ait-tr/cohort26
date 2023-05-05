@@ -21,13 +21,7 @@ public class GasStation {
     System.out.println("Добро пожаловать! Как вас зовут?");
     String name = scanner.nextLine();
 
-    System.out.print("Введите количество заказов: ");
-    while (!scanner.hasNextInt()) {
-      String wrongLine = scanner.nextLine();
-      System.out.println("Неправильный формат целого числа: " + wrongLine);
-      System.out.print("Введите количество заказов: ");
-    }
-    int orders = scanner.nextInt();
+    int orders = readOrdersAmount(scanner);
 
     // for (командаПередЦиклом; условиеПовторения; командаПослеШага)
     for (int counter = 0; counter < orders; ++counter) {
@@ -61,5 +55,17 @@ public class GasStation {
         System.out.println("Заказ должен быть оплачен наличными");
       }
     }
+  }
+
+  private static int readOrdersAmount(Scanner scanner) {
+    System.out.print("Введите количество заказов: ");
+    while (!scanner.hasNextInt()) {
+      String wrongLine = scanner.nextLine();
+      System.out.println("Неправильный формат целого числа: " + wrongLine);
+      System.out.print("Введите количество заказов: ");
+    }
+    int orders = scanner.nextInt();
+    scanner.nextLine(); // пропустить остаток строки, из которой мы прочитали число
+    return orders;
   }
 }
