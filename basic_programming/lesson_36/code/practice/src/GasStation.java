@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class GasStation {
@@ -21,7 +22,16 @@ public class GasStation {
     String name = scanner.nextLine();
 
     System.out.println("Сколько литров топлива вам нужно?");
-    double quantity = scanner.nextDouble();
+    double quantity = 0.0;
+    // пока всё плохо, пропустить строку
+    while (!scanner.hasNextDouble()) {
+      String wrongLine = scanner.nextLine();
+      System.out.println("Неправильный формат дробного числа: " + wrongLine);
+      System.out.println("Введите количество топлива (в литрах):");
+    }
+//    if (scanner.hasNextDouble()) { // если всё хорошо
+    quantity = scanner.nextDouble();
+//    }
     scanner.nextLine();
 
     System.out.println("Как будете оплачивать, картой или наличными?");
