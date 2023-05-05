@@ -25,19 +25,7 @@ public class GasStation {
 
     // for (командаПередЦиклом; условиеПовторения; командаПослеШага)
     for (int counter = 0; counter < orders; ++counter) {
-      System.out.println("Сколько литров топлива вам нужно?");
-//    double quantity = 0.0; эта строчка была нужна, когда значение quantity присваивалось
-      // в цикле или условии
-      // пока всё плохо, пропустить строку
-      while (!scanner.hasNextDouble()) {
-        String wrongLine = scanner.nextLine();
-        System.out.println("Неправильный формат дробного числа: " + wrongLine);
-        System.out.println("Введите количество топлива (в литрах):");
-      }
-//    if (scanner.hasNextDouble()) { // если всё хорошо
-      double quantity = scanner.nextDouble();
-//    }
-      scanner.nextLine();
+      double quantity = readFuelQuantity(scanner);
 
       System.out.println("Как будете оплачивать, картой или наличными?");
       String paymentMethod = scanner.nextLine();
@@ -66,6 +54,24 @@ public class GasStation {
     }
     int orders = scanner.nextInt();
     scanner.nextLine(); // пропустить остаток строки, из которой мы прочитали число
+    // сканер не закрываем - мы продолжим им пользоваться, не мы создавали, не нам закрывать
     return orders;
+  }
+
+  private static double readFuelQuantity(Scanner scanner) {
+    System.out.println("Сколько литров топлива вам нужно?");
+//    double quantity = 0.0; эта строчка была нужна, когда значение quantity присваивалось
+    // в цикле или условии
+    while (!scanner.hasNextDouble()) { // пока всё плохо,
+      String wrongLine = scanner.nextLine(); // пропустить строку
+      System.out.println("Неправильный формат дробного числа: " + wrongLine);
+      System.out.println("Введите количество топлива (в литрах):");
+    }
+//    if (scanner.hasNextDouble()) { // если всё хорошо
+    double quantity = scanner.nextDouble();
+//    }
+    scanner.nextLine(); // пропустить остаток строки, из которой мы прочитали число
+    // сканер не закрываем - мы продолжим им пользоваться, не мы создавали, не нам закрывать
+    return quantity;
   }
 }
