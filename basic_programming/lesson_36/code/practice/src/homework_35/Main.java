@@ -14,6 +14,7 @@ public class Main {
   //   - для газированного напитка печатает "пшш",
   //   - для негазированного - "скр"
   public static void main(String[] args) {
-    System.out.println("Hello world!");
+    Food dumplings = new Food("пельмени");
+    dumplings.consume();
   }
 }
