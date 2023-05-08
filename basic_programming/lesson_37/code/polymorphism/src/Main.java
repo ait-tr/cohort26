@@ -45,10 +45,10 @@ public class Main {
 
     // какое-то домашнее животное - отдельного класса нет
     Pet turtle = new Pet("Тортилла");
-    turtle.makeNoise();
+    turtle.makeNoise(); // вызывается Pet.makeNoise()
 
     // обезьянка, но своего makeNoise() у неё нет
     Monkey monkey = new Monkey("Обезьяна");
-    monkey.makeNoise();
+    monkey.makeNoise(); // вызывается Pet.makeNoise(), потому что Monkey.makeNoise() не существует
   }
 }
