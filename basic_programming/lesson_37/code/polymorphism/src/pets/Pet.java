@@ -17,6 +17,11 @@ public class Pet {
   }
 
   public void makeNoise() {
-    System.out.println("Домашнее животное " + name + ": издаёт звуки");
+    System.out.println(name + ": издаёт звуки");
+  }
+
+  @Override
+  public String toString() {
+    return "Домашнее животное по кличке '" + name + "'";
   }
 }

@@ -16,6 +16,11 @@ public class Cat extends Pet {
   // аннотация (пометка) о том, что метод - перезапись метода из класса-предка
   @Override // декларация о намерениях
   public void makeNoise() {
-    System.out.println("Кошка " + getName() + ": мяу!");
+    System.out.println(getName() + ": мяу!");
+  }
+
+  @Override
+  public String toString() {
+    return "Кошка по кличке '" + getName() + "'";
   }
 }

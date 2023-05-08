@@ -10,4 +10,9 @@ public class Dog extends Pet {
   public void makeNoise() {
     System.out.println("Собака " + getName() + ": гав!");
   }
+
+  @Override
+  public String toString() {
+    return "Собака по кличке '" + getName() + "'";
+  }
 }
