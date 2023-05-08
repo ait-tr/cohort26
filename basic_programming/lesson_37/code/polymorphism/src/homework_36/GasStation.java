@@ -1,5 +1,7 @@
 package homework_36;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class GasStation {
@@ -27,11 +29,16 @@ public class GasStation {
     String name = scanner.nextLine();
 
     int amount = readOrdersAmount(scanner);
-    Order[] orders = new Order[amount];
+//    Order[] orders = new Order[amount];
+    List<Order> orders = new ArrayList<>(amount); // это не размер (size), а вместимость (capacity)
+    // элементов в списке пока нет, но добавляться они будут немного быстрее, пока не
+    // заполнится вместимость (быстрее будет выполняться операция add)
 
     // for (командаПередЦиклом; условиеПовторения; командаПослеШага)
-    for (int counter = 0; counter < amount; ++counter) {
+    for (int i = 0; i < amount; ++i) {
       Order order = Order.readOrder(name, scanner);
+//      orders[i] = order; // для массива
+      orders.add(order); // для списка
       order.print();
     }
   }
