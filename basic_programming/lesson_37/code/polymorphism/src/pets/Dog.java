@@ -4,15 +4,11 @@ public class Dog extends Pet {
 
   public Dog(String name) {
     super(name);
+    setType("Собака");
   }
 
   @Override
   public void makeNoise() {
-    System.out.println("Собака " + getName() + ": гав!");
-  }
-
-  @Override
-  public String toString() {
-    return "Собака по кличке '" + getName() + "'";
+    System.out.println(getName() + ": гав!");
   }
 }

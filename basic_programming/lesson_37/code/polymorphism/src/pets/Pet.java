@@ -3,9 +3,11 @@ package pets;
 public class Pet {
 
   private String name;
+  private String type;
 
   public Pet(String name) {
     this.name = name;
+    type = "Домашнее животное";
   }
 
   public String getName() {
@@ -16,12 +18,18 @@ public class Pet {
     this.name = name;
   }
 
+  // protected - доступен только классам внутри пакета pets или классам-наследникам
+  protected void setType(String type) {
+    // здесь могут быть дополнительные проверки
+    this.type = type;
+  }
+
   public void makeNoise() {
     System.out.println(name + ": издаёт звуки");
   }
 
-  @Override
+  @Override // перезаписали Object.toString()
   public String toString() {
-    return "Домашнее животное по кличке '" + name + "'";
+    return type + " по кличке '" + name + "'";
   }
 }

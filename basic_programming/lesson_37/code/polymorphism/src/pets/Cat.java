@@ -11,16 +11,13 @@ public class Cat extends Pet {
   public Cat(String name) {
     // создать объект класса-предка (Pet) нельзя без имени - нет такого конструктора
     super(name); // создание кошки - это создание домашнего животного
+//    type = "Кошка";
+    setType("Кошка");
   }
 
   // аннотация (пометка) о том, что метод - перезапись метода из класса-предка
   @Override // декларация о намерениях
   public void makeNoise() {
     System.out.println(getName() + ": мяу!");
-  }
-
-  @Override
-  public String toString() {
-    return "Кошка по кличке '" + getName() + "'";
   }
 }

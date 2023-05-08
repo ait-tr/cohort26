@@ -6,7 +6,7 @@ public class Monkey extends Pet {
     super(name);
   }
 
-  @Override
+  @Override // перезаписали Pet.toString()
   public String toString() {
     return "Обезьяна по кличке '" + getName() + "'";
   }
