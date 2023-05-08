@@ -37,18 +37,30 @@ public class Main {
     List<Pet> pets = new ArrayList<>();
     pets.add(cat);
     pets.add(dog);
-    for (Pet pet : pets) {
-      // даже без `instanceof` Java знает, какой класс это был на самом деле, и сразу вызывает
-      // нужный метод
-      pet.makeNoise();
-    }
 
     // какое-то домашнее животное - отдельного класса нет
     Pet turtle = new Pet("Тортилла");
     turtle.makeNoise(); // вызывается Pet.makeNoise()
+    pets.add(turtle);
 
     // обезьянка, но своего makeNoise() у неё нет
     Monkey monkey = new Monkey("Обезьяна");
     monkey.makeNoise(); // вызывается Pet.makeNoise(), потому что Monkey.makeNoise() не существует
+    pets.add(monkey);
+
+    for (Pet pet : pets) {
+      makePetNoise(pet);
+    }
+  }
+
+  public static void makePetNoise(Pet pet) {
+    // Этот метод не задумывается о том, какое именно домашнее животное
+    // ему передали, и со всеми аргументами работает одинаково.
+    // При этом метод универсален и может правильно работать с разными типами
+    // домашних животных.
+    // Даже без `instanceof` Java знает, какой класс это был на самом деле, и сразу вызывает
+    // нужный метод.
+    System.out.print(pet + " -> ");
+    pet.makeNoise();
   }
 }
