@@ -1,5 +1,7 @@
 package homework_36;
 
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -58,6 +60,25 @@ public class GasStation {
       }
       amount = scanner.nextInt(); // пропустили все "не числа", теперь читаем число
       scanner.nextLine(); // пропустить остаток строки, из которой мы прочитали число
+      // сканер не закрываем - мы продолжим им пользоваться, не мы создавали, не нам закрывать
+      if (amount < 0) { // если только что прочитанное количество меньше нуля
+        System.out.println("Количество заказов не может быть отрицательным: " + amount);
+      }
+    } while (amount < 0); // если количество отрицательное - читаем заново
+    return amount;
+  }
+
+  private static int readOrdersAmount(BufferedReader bufferedReader) throws IOException {
+    int amount = 0; // объявляем переменную заранее, чтобы она осталась после цикла
+    do { // читаем количество заказов
+      System.out.print("Введите количество заказов: ");
+      String line = bufferedReader.readLine();
+      try {
+        amount = Integer.parseInt(line);
+      } catch (NumberFormatException e) {
+        System.out.println("Неправильный формат целого числа: " + line);
+        continue; // досрочный переход к следующему шагу
+      }
       // сканер не закрываем - мы продолжим им пользоваться, не мы создавали, не нам закрывать
       if (amount < 0) { // если только что прочитанное количество меньше нуля
         System.out.println("Количество заказов не может быть отрицательным: " + amount);

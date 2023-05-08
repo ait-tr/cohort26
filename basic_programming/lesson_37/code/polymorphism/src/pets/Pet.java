@@ -30,6 +30,7 @@ public class Pet {
 
   @Override // перезаписали Object.toString()
   public String toString() {
-    return type + " по кличке '" + name + "'";
+//    return type + " по кличке '" + name + "'";
+    return String.format("%s по кличке '%s'", type, name);
   }
 }
