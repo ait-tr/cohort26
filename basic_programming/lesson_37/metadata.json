@@ -3,6 +3,13 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "code/polymorphism/src/homework_36/Order.java",
+    "code/polymorphism/src/homework_36/GasStation.java",
+    "code/polymorphism/src/pets/Pet.java",
+    "code/polymorphism/src/pets/Cat.java",
+    "code/polymorphism/src/pets/Dog.java",
+    "code/polymorphism/src/pets/Monkey.java",
+    "code/polymorphism/src/Main.java"
   ],
   "video": ""
 }
