@@ -1,4 +1,9 @@
+import java.util.ArrayList;
+import java.util.List;
 import pets.Cat;
+import pets.Dog;
+import pets.Monkey;
+import pets.Pet;
 
 public class Main {
 
@@ -19,9 +24,31 @@ public class Main {
   //   Например, добавляете объекты в List, не задумываясь о конкретном типе - у всех списков
   //   будет метод `add()`
   public static void main(String[] args) {
-    Cat cat = new Cat("Пушок");
+    Pet cat = new Cat("Пушок");
     cat.makeNoise();
     cat.setName("Пушок Первый");
     cat.makeNoise();
+
+    Pet dog = new Dog("Клык");
+    dog.makeNoise();
+    dog.setName("Дружок");
+    dog.makeNoise();
+
+    List<Pet> pets = new ArrayList<>();
+    pets.add(cat);
+    pets.add(dog);
+    for (Pet pet : pets) {
+      // даже без `instanceof` Java знает, какой класс это был на самом деле, и сразу вызывает
+      // нужный метод
+      pet.makeNoise();
+    }
+
+    // какое-то домашнее животное - отдельного класса нет
+    Pet turtle = new Pet("Тортилла");
+    turtle.makeNoise();
+
+    // обезьянка, но своего makeNoise() у неё нет
+    Monkey monkey = new Monkey("Обезьяна");
+    monkey.makeNoise();
   }
 }

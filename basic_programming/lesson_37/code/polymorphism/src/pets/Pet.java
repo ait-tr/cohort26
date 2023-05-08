@@ -15,4 +15,8 @@ public class Pet {
   public void setName(String name) {
     this.name = name;
   }
+
+  public void makeNoise() {
+    System.out.println("Домашнее животное " + name + ": издаёт звуки");
+  }
 }

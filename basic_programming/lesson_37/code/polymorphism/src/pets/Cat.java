@@ -13,6 +13,8 @@ public class Cat extends Pet {
     super(name); // создание кошки - это создание домашнего животного
   }
 
+  // аннотация (пометка) о том, что метод - перезапись метода из класса-предка
+  @Override
   public void makeNoise() {
     System.out.println("Кошка " + getName() + ": мяу!");
   }
