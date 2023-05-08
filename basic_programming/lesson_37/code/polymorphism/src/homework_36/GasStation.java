@@ -39,6 +39,10 @@ public class GasStation {
       Order order = Order.readOrder(name, scanner);
 //      orders[i] = order; // для массива
       orders.add(order); // для списка
+    }
+    // for-each -- для каждого -- для каждого элемента в наборе
+    // for (Класс переменная : коллекция) // в переменной по очереди побывают все значения коллекции
+    for (Order order : orders) { // для всех заказов в заполненном списке заказов
       order.print();
     }
   }
