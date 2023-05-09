@@ -6,11 +6,9 @@ public class Task3Equality {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     System.out.print("Введите имя первого студента: ");
-    String firstStudentName = scanner.next();
-    scanner.nextLine(); // пропустить остаток строки
+    String firstStudentName = scanner.nextLine(); // прочитать всю строку
     System.out.print("Введите имя второго студента: ");
-    String secondStudentName = scanner.next();
-    scanner.nextLine(); // пропустить остаток строки
+    String secondStudentName = scanner.nextLine(); // прочитать всю строку
     if (firstStudentName.equals(secondStudentName)) {
       System.out.println("Имена совпадают");
     } else {
