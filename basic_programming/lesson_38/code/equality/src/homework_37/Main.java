@@ -23,5 +23,7 @@ public class Main {
     Human second = new Woman("Ева");
     System.out.println(second);
     second.welcome();
+
+    System.out.println(first + " и " + second);
   }
 }
