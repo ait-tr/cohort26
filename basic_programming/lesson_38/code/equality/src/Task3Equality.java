@@ -11,6 +11,11 @@ public class Task3Equality {
     System.out.print("Введите имя второго студента: ");
     String secondStudentName = scanner.next();
     scanner.nextLine(); // пропустить остаток строки
+    if (firstStudentName.equals(secondStudentName)) {
+      System.out.println("Имена совпадают");
+    } else {
+      System.out.println("Имена не совпадают");
+    }
 
     Student first = new Student(firstStudentName);
     Student second = new Student(secondStudentName);
@@ -18,9 +23,9 @@ public class Task3Equality {
     System.out.println("Первый студент: " + first);
     System.out.println("Второй студент: " + second);
     if (first.equals(second)) {
-      System.out.println("Они совпадают");
+      System.out.println("Студенты совпадают");
     } else {
-      System.out.println("Они не совпадают");
+      System.out.println("Студенты не совпадают");
     }
     // так технически возможно, но никогда не делайте:
 //    System.out.println("Они " + (!first.equals(second) ? "не " : "") + "совпадают");

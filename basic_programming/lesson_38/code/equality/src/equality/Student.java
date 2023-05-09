@@ -15,4 +15,14 @@ public class Student {
   public String getName() {
     return name;
   }
+
+  @Override
+  public String toString() {
+    return "Студент по имени " + name;
+  }
+
+//  @Override
+//  public boolean equals(Object obj) {
+//
+//  }
 }
