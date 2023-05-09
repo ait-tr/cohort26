@@ -22,4 +22,8 @@ public class Human {
   public void welcome() {
     System.out.println("Я родился!");
   }
+
+  public String getName() {
+    return name;
+  }
 }
