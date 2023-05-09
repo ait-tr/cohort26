@@ -3,6 +3,15 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "code/equality/src/homework_37/Human.java",
+    "code/equality/src/homework_37/Man.java",
+    "code/equality/src/homework_37/Woman.java",
+    "code/equality/src/homework_37/Main.java",
+    "code/equality/src/Task1CliArguments.java",
+    "code/equality/src/MyOwnException.java",
+    "code/equality/src/Task2Exceptions.java",
+    "code/equality/src/equality/Student.java",
+    "code/equality/src/Task3Equality.java"
   ],
   "video": ""
 }

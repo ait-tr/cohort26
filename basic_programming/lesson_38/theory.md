@@ -116,7 +116,7 @@ public class Money {
 
 **Поэтому при переопределении метода `equals()` вы должны переопределить метод `hashCode()`.**
 
-Желательно, чтобы для разных объектов метод hashCode() возвращал разные значения, иначе скорость работы `HashMap` и `HashSet` сильно замедлится.
+Желательно, чтобы для разных объектов метод `hashCode()` возвращал разные значения, иначе скорость работы `HashMap` и `HashSet` сильно замедлится.
 
 Пример "грубой" реализации метода, консистентной с `equals()` для упомянутого выше класса `Money`:
 ```java
@@ -156,3 +156,9 @@ public int hashCode() {
 ```
 
 В большинстве случаев результат автоматической генерации вам полностью подойдёт.
+
+Дополнительная информация про `hashCode()`:
+- [Статья на JavaRush](https://javarush.com/groups/posts/2179-metodih-equals--hashcode-praktika-ispoljhzovanija)
+- [Статья на Tproger](https://tproger.ru/articles/equals-hashcode-java/)
+- [Статья на Baeldung (англ.)](https://www.baeldung.com/java-hashcode)
+- Очень умными словами [на Википедии](https://ru.wikipedia.org/wiki/Хеш-функция)
