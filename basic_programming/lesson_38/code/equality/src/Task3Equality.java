@@ -15,8 +15,8 @@ public class Task3Equality {
       System.out.println("Имена не совпадают");
     }
 
-    Student first = new Student(firstStudentName);
-    Student second = new Student(secondStudentName);
+    Student first = new Student(firstStudentName, 1);
+    Student second = new Student(secondStudentName, 1);
 
     System.out.println("Первый студент: " + first);
     System.out.println("Второй студент: " + second);
