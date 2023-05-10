@@ -1,6 +1,6 @@
 package drinks;
 
-public class Drink {
+public abstract class Drink {
 
   private final String title;
 
