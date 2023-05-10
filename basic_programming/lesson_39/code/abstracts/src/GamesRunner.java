@@ -1,5 +1,6 @@
 import games.Game;
 import games.Tetris;
+import games.TicTacToe;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -11,6 +12,7 @@ public class GamesRunner {
     System.out.println("=== Библиотека игр ===");
     List<Game> games = new ArrayList<>();
     games.add(new Tetris());
+    games.add(new TicTacToe());
 
     System.out.println("Выберите игру:");
     for (int i = 0; i < games.size(); ++i) {
