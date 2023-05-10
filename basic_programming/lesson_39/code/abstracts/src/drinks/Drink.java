@@ -11,4 +11,7 @@ public abstract class Drink {
   public String getTitle() {
     return title;
   }
+
+  public abstract void drink(); // обещаем, что у не-абстрактных наследников будет метод drink,
+  // но не знаем, какой
 }

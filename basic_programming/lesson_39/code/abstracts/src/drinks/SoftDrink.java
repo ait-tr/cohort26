@@ -17,4 +17,9 @@ public class SoftDrink extends Drink {
   public String toString() {
     return "SoftDrink{title='" + getTitle() + "', carbonated=" + carbonated + "}";
   }
+
+  @Override
+  public void drink() {
+    System.out.println("You drank some " + getTitle());
+  }
 }

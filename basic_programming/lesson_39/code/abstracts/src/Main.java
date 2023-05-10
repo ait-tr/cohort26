@@ -14,12 +14,17 @@ public class Main {
     System.out.println(soda);
 
 //    Drink other = new Drink("Milk");
+    Drink other = new SoftDrink("Milk", false);
     // если класс абстрактный, то нельзя создать экземпляр этого класса (new Класс())
     // При этом абстрактный класс можно использовать как тип переменной
     List<Drink> drinks = new ArrayList<>();
     drinks.add(beer);
     drinks.add(soda);
+    drinks.add(other);
 
     System.out.println(drinks);
+    for (Drink d : drinks) {
+      d.drink();
+    }
   }
 }
