@@ -4,7 +4,7 @@ import drinks.SoftDrink;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Drinks {
+public class DrinksRunner {
 
   public static void main(String[] args) {
     Drink beer = new AlcoholDrink("Jelen", 4.5);
