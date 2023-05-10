@@ -1,17 +1,13 @@
 package drinks;
 
-public class AlcoholDrink {
+public class AlcoholDrink extends Drink {
 
-  private final String title;
+
   private final double alcohol;
 
   public AlcoholDrink(String title, double alcohol) {
-    this.title = title;
+    super(title);
     this.alcohol = alcohol;
-  }
-
-  public String getTitle() {
-    return title;
   }
 
   public double getAlcohol() {
@@ -20,6 +16,6 @@ public class AlcoholDrink {
 
   @Override
   public String toString() {
-    return "AlcoholDrink{title='" + title + "', alcohol=" + alcohol + "}";
+    return "AlcoholDrink{title='" + getTitle() + "', alcohol=" + alcohol + "}";
   }
 }

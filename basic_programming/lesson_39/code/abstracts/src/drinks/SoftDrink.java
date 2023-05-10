@@ -1,17 +1,12 @@
 package drinks;
 
-public class SoftDrink {
+public class SoftDrink extends Drink {
 
-  private final String title;
   private final boolean carbonated;
 
   public SoftDrink(String title, boolean carbonated) {
-    this.title = title;
+    super(title);
     this.carbonated = carbonated;
-  }
-
-  public String getTitle() {
-    return title;
   }
 
   public boolean isCarbonated() {
@@ -20,6 +15,6 @@ public class SoftDrink {
 
   @Override
   public String toString() {
-    return "SoftDrink{title='" + title + "', carbonated=" + carbonated + "}";
+    return "SoftDrink{title='" + getTitle() + "', carbonated=" + carbonated + "}";
   }
 }
