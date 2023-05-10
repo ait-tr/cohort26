@@ -28,5 +28,6 @@ public class GamesRunner {
     Game chosenGame = games.get(gameIndex);
 
     System.out.println("Вы выбрали игру " + chosenGame.getTitle());
+    chosenGame.start();
   }
 }
