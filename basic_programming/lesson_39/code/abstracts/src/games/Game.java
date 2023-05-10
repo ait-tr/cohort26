@@ -21,4 +21,6 @@ public abstract class Game {
   // (какую-то абстрактную игру):
   // это какое-то абстрактное "запустить"
   public abstract void start();
+
+  public abstract String getResult(String playerName);
 }

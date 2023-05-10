@@ -29,5 +29,7 @@ public class GamesRunner {
 
     System.out.println("Вы выбрали игру " + chosenGame.getTitle());
     chosenGame.start();
+    System.out.println(chosenGame.getResult("Кирилл"));
+    System.out.println(chosenGame.getResult("не Кирилл"));
   }
 }
