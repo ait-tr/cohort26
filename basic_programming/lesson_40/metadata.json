@@ -3,6 +3,22 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "code/ait-tr-javalessons/src/ait/tr/homework/House.java",
+    "code/ait-tr-javalessons/src/ait/tr/homework/Mansion.java",
+    "code/ait-tr-javalessons/src/ait/tr/homework/Apartment.java",
+    "code/ait-tr-javalessons/src/ait/tr/homework/Main.java",
+    "code/ait-tr-javalessons/src/ait/tr/interfaces/Information.java",
+    "code/ait-tr-javalessons/src/ait/tr/interfaces/Animal.java",
+    "code/ait-tr-javalessons/src/ait/tr/interfaces/Person.java",
+    "code/ait-tr-javalessons/src/ait/tr/interfaces/Main.java",
+    "code/ait-tr-javalessons/src/ait/tr/task/converter/Converter.java",
+    "code/ait-tr-javalessons/src/ait/tr/task/converter/DollarConverter.java",
+    "code/ait-tr-javalessons/src/ait/tr/task/converter/EuroConverter.java",
+    "code/ait-tr-javalessons/src/ait/tr/task/converter/Main.java",
+    "code/ait-tr-javalessons/src/ait/tr/task/dialog/Dialog.java",
+    "code/ait-tr-javalessons/src/ait/tr/task/dialog/Professor.java",
+    "code/ait-tr-javalessons/src/ait/tr/task/dialog/Gopnik.java",
+    "code/ait-tr-javalessons/src/ait/tr/task/dialog/Main.java"
   ],
   "video": ""
 }
