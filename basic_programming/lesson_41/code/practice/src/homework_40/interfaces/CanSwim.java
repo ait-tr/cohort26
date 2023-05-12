@@ -1,4 +1,4 @@
-package homework_40;
+package homework_40.interfaces;
 
 public interface CanSwim {
 

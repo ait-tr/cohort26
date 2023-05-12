@@ -1,5 +1,7 @@
 package homework_40;
 
+import homework_40.characters.*;
+import homework_40.interfaces.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,24 +47,27 @@ public class Main {
 
   // метод "заставь летать"
   private static void makeThemFly(List<CanFly> flyable) {
+    System.out.println("Main.makeThemFly(flyable=" + flyable + ")");
     for (CanFly flyableObject : flyable) {
-      System.out.println("Main.makeThemFly(flyableObject=" + flyableObject + ")");
+      System.out.println(flyableObject + ".fly()");
       flyableObject.fly(); // команда "лети!"
     }
   }
 
   // метод "заставь бежать"
   private static void makeThemRun(List<CanRun> runnable) {
+    System.out.println("Main.makeThemRun(runnable=" + runnable + ")");
     for (CanRun runnableObject : runnable) {
-      System.out.println("Main.makeThemRun(runnableObject=" + runnableObject + ")");
+      System.out.println(runnableObject + ".run()");
       runnableObject.run(); // команда "беги!"
     }
   }
 
   // метод "заставь плыть"
   private static void makeThemSwim(List<CanSwim> swimmable) {
+    System.out.println("Main.makeThemSwim(swimmable=" + swimmable + ")");
     for (CanSwim swimmableObject : swimmable) {
-      System.out.println("Main.makeThemSwim(swimmableObject=" + swimmableObject + ")");
+      System.out.println(swimmableObject + ".swim()");
       swimmableObject.swim(); // команда "плыви!"
     }
   }

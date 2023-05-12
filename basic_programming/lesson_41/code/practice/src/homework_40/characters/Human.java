@@ -1,4 +1,7 @@
-package homework_40;
+package homework_40.characters;
+
+import homework_40.interfaces.CanRun;
+import homework_40.interfaces.CanSwim;
 
 public class Human implements CanRun, CanSwim {
 

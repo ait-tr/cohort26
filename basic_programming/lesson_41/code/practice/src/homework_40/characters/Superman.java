@@ -1,4 +1,6 @@
-package homework_40;
+package homework_40.characters;
+
+import homework_40.interfaces.CanFly;
 
 public class Superman extends Human implements CanFly {
 

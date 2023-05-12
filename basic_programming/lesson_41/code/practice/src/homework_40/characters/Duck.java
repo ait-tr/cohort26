@@ -1,4 +1,8 @@
-package homework_40;
+package homework_40.characters;
+
+import homework_40.interfaces.CanFly;
+import homework_40.interfaces.CanRun;
+import homework_40.interfaces.CanSwim;
 
 public class Duck implements CanFly, CanRun, CanSwim {
 
