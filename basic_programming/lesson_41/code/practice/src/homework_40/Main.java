@@ -19,10 +19,12 @@ public class Main {
     Human kirill = new Human();
     Duck donald = new Duck();
     Penguin skipper = new Penguin();
+    Plane dream = new Plane();
 
     List<CanFly> flyable = new ArrayList<>();
     flyable.add(clarkKent);
     flyable.add(donald);
+    flyable.add(dream);
 
     List<CanRun> runnable = new ArrayList<>();
     runnable.add(clarkKent);
