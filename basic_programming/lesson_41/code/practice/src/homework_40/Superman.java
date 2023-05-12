@@ -1,18 +1,18 @@
 package homework_40;
 
-public class Superman implements CanFly, CanRun, CanSwim {
+public class Superman extends Human implements CanFly {
 
-  @Override
+  @Override // CanFly.fly()
   public void fly() {
     System.out.println("Супермен летит");
   }
 
-  @Override
+  @Override // Human.run()
   public void run() {
     System.out.println("Супермен бежит");
   }
 
-  @Override
+  @Override // Human.swim()
   public void swim() {
     System.out.println("Супермен плывёт");
   }
