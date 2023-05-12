@@ -18,6 +18,7 @@ public class Main {
     Superman clarkKent = new Superman();
     Human kirill = new Human();
     Duck donald = new Duck();
+    Penguin skipper = new Penguin();
 
     List<CanFly> flyable = new ArrayList<>();
     flyable.add(clarkKent);
@@ -27,11 +28,13 @@ public class Main {
     runnable.add(clarkKent);
     runnable.add(kirill);
     runnable.add(donald);
+    runnable.add(skipper);
 
     List<CanSwim> swimmable = new ArrayList<>();
     swimmable.add(clarkKent);
     swimmable.add(kirill);
     swimmable.add(donald);
+    swimmable.add(skipper);
 
     makeThemFly(flyable);
     makeThemRun(runnable);
