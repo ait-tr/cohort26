@@ -17,17 +17,21 @@ public class Main {
     // есть объект (где-то в памяти)
     Superman clarkKent = new Superman();
     Human kirill = new Human();
+    Duck donald = new Duck();
 
     List<CanFly> flyable = new ArrayList<>();
     flyable.add(clarkKent);
+    flyable.add(donald);
 
     List<CanRun> runnable = new ArrayList<>();
     runnable.add(clarkKent);
     runnable.add(kirill);
+    runnable.add(donald);
 
     List<CanSwim> swimmable = new ArrayList<>();
     swimmable.add(clarkKent);
     swimmable.add(kirill);
+    swimmable.add(donald);
 
     makeThemFly(flyable);
     makeThemRun(runnable);
