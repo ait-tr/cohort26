@@ -3,6 +3,19 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "code/practice/src/homework_40/interfaces/CanFly.java",
+    "code/practice/src/homework_40/interfaces/CanRun.java",
+    "code/practice/src/homework_40/interfaces/CanSwim.java",
+    "code/practice/src/homework_40/characters/Superman.java",
+    "code/practice/src/homework_40/characters/Human.java",
+    "code/practice/src/homework_40/characters/Duck.java",
+    "code/practice/src/homework_40/characters/Penguin.java",
+    "code/practice/src/homework_40/characters/Plane.java",
+    "code/practice/src/homework_40/Main.java",
+    "code/practice/src/MyMath.java",
+    "code/practice/src/Main.java",
+    "code/practice/src/Main2.java",
+    "code/practice/src/Order.java"
   ],
   "video": ""
 }
