@@ -25,5 +25,22 @@ public class Task1Collections {
     // Сортировка по убыванию: sort + reverse
     // Collections.rotate(): 1, 2, 3, 4  ->  2, 3, 4, 1
     // - замечательно подойдёт для шифра Цезаря - в нём используется алфавит со сдвигом
+
+    // Как происходит сортировка строк?
+    // Ответ: по алфавиту, в словарном (лексикографическом) порядке
+    // Без дополнительных усилий - с учётом регистра (заглавные и строчные буквы будут разными)
+    List<String> words = new ArrayList<>();
+    Collections.addAll(words, "мама", "мыла", "раму");
+    System.out.println("words = " + words);
+    System.out.println("Collections.max(words) = " + Collections.max(words));
+    System.out.println("Collections.min(words) = " + Collections.min(words));
+
+    Collections.reverse(words);
+    System.out.println("После Collections.reverse(words):");
+    System.out.println("words = " + words);
+
+    Collections.sort(words);
+    System.out.println("После Collections.sort(words):");
+    System.out.println("words = " + words);
   }
 }
