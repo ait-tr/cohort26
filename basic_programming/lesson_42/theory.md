@@ -2,9 +2,9 @@
 
 Класс `Collections`, как и класс `Math`, в основном содержит **статические** методы и предназначен для работы с коллекциями - списками и множествами.
 
-Все методы класса описаны в [документации](https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/Collections.html#method-summary).
+Все методы класса описаны в [документации](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/util/Collections.html#method-summary).
 
-Примечание: для работы с массивами есть похожий класс [`Arrays`](https://docs.oracle.com/en/java/javase/19/docs/api/java.base/java/util/Arrays.html).
+Примечание: для работы с массивами есть похожий класс [`Arrays`](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/util/Arrays.html).
 
 Нас интересуют в первую очередь методы:
 - `max(Collection<?> coll)`
