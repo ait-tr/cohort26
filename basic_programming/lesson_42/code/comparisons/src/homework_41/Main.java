@@ -21,8 +21,10 @@ public class Main {
       orders.add(Order.readOrder());
     }
 
+    System.out.println("Заказы:");
     for (Order order : orders) {
       System.out.println(order);
     }
+    System.out.println("Итого: " + Order.getTotalSum(orders));
   }
 }

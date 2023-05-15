@@ -1,5 +1,6 @@
 package homework_41;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Order {
@@ -20,7 +21,7 @@ public class Order {
   }
 
   public int getPrice() {
-    return price;
+    return this.price;
   }
 
   @Override
@@ -44,7 +45,9 @@ public class Order {
 
   // утраивание стоимости какого-то заказа - статический метод, а заказ передаётся в аргументе
   public static void triplePrice(Order order) {
-    order.setPrice(order.getPrice() * 3);
+//    order.setPrice(order.getPrice() * 3);
+    // к приватным полям класса у нас есть доступ ВЕЗДЕ внутри класса, даже в статических методах:
+    order.price *= 3;
   }
 
   // статический метод чтения заказа с клавиатуры - никакого заказа ещё нет, он не может быть
@@ -65,5 +68,22 @@ public class Order {
 
     // только в этот момент появится конкретный заказ
     return new Order(id, content, client, phone, price);
+  }
+
+  // Добавьте статический метод:
+  // public static int getTotalSum(List<Order> orders)
+  //
+  // Метод будет статическим (не имеет отношения к конкретному заказу), но частью класса `Order`
+  // (имеет непосредственное отношение к заказам как к общей идее).
+  //
+  // Метод должен возвращать общую сумму заказов из списка.
+  public static int getTotalSum(List<Order> orders) {
+    int total = 0;
+    for (Order order : orders) {
+//       total += order.getPrice();
+      // к приватным полям класса у нас есть доступ ВЕЗДЕ внутри класса, даже в статических методах:
+      total += order.price;
+    }
+    return total;
   }
 }
