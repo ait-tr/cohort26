@@ -31,6 +31,6 @@ public class RegisterImpl implements Register {
       System.out.println(bill);
       total += bill.getTotal();
     }
-    System.out.println("Итого: " + total);
+    System.out.printf("Общий итог: %.2f EUR%n", total);
   }
 }
