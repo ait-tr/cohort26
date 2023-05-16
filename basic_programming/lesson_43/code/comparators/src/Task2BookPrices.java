@@ -1,3 +1,5 @@
+import books.Book;
+import books.BookTitleComparator;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

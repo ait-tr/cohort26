@@ -1,3 +1,5 @@
+package books;
+
 import java.util.Objects;
 
 public class Book {
