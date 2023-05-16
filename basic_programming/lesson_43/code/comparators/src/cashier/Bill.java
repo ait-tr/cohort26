@@ -23,7 +23,7 @@ public class Bill {
 
   @Override
   public String toString() {
-    // TODO lines.sort()
+    lines.sort(new LineTitleComparator());
     String result = "=== Чек ===\n";
     for (Line line : lines) {
       result += line + "\n";
