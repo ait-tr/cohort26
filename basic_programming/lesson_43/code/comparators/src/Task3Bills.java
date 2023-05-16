@@ -1,4 +1,5 @@
 import cashier.Register;
+import cashier.RegisterImpl;
 import java.util.Scanner;
 
 public class Task3Bills {
@@ -9,7 +10,7 @@ public class Task3Bills {
   // - закрывать чек (и автоматически открывать новый)
   // - закрывать день и выводить общий отчёт
   public static void main(String[] args) {
-    Register register; // TODO инициализировать
+    Register register = new RegisterImpl();
     Scanner scanner = new Scanner(System.in);
     int command = readCommand(scanner);
     while (command != 3) {
