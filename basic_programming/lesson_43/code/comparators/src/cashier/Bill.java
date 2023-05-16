@@ -6,9 +6,11 @@ import java.util.ArrayList;
 public class Bill {
 
   private final List<Line> lines = new ArrayList<>();
+  private double total = 0.0; // если мы начнём корректировать позиции, это надо будет учитывать
 
   public void addLine(String position, double price) {
     lines.add(new Line(position, price));
+    total += price;
   }
 
   public boolean isEmpty() {
@@ -16,10 +18,6 @@ public class Bill {
   }
 
   public double getTotal() {
-    double total = 0.0;
-    for (Line line : lines) {
-      total += line.getPrice();
-    }
     return total;
   }
 
@@ -30,7 +28,7 @@ public class Bill {
     for (Line line : lines) {
       result += line + "\n";
     }
-    result += String.format("Итого: %.2f EUR%n", getTotal());
+    result += String.format("Итого: %.2f EUR%n", total);
     return result;
   }
 }
