@@ -1,5 +1,7 @@
 package homework_42;
 
+import java.util.Objects;
+
 public class Book implements Comparable<Book> {
 
   // Создайте класс `Book` (книга), в конструктор которого передавайте автора, название книги и
@@ -39,8 +41,10 @@ public class Book implements Comparable<Book> {
    * названию (без учёта регистра)
    *
    * @param o the object to be compared.
-   * @return отрицательное число, если книга расположена раньше в упорядоченном списке, 0 для
-   * одинаковых книг и положительное число, если книга расположена позже в упорядоченном списке
+   * @return
+   * отрицательное число, если книга расположена раньше в упорядоченном списке,
+   * 0 для одинаковых книг и
+   * положительное число, если книга расположена позже в упорядоченном списке
    */
   @Override
   public int compareTo(Book o) {
@@ -52,5 +56,18 @@ public class Book implements Comparable<Book> {
     // сюда попали, только если авторы одинаковы
     // сравнение названий в алфавитном порядке
     return title.toLowerCase().compareTo(o.title.toLowerCase());
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (!(obj instanceof Book book)) {
+      return false;
+    }
+    return author.equalsIgnoreCase(book.author) && title.equalsIgnoreCase(book.title);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(author, title);
   }
 }
