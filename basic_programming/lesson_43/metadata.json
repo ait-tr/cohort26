@@ -3,6 +3,18 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "code/comparators/src/homework_42/Book.java",
+    "code/comparators/src/homework_42/Main.java",
+    "code/comparators/src/books/Book.java",
+    "code/comparators/src/books/BookTitleComparator.java",
+    "code/comparators/src/Task1Books.java",
+    "code/comparators/src/Task2BookPrices.java",
+    "code/comparators/src/Task3Bills.java",
+    "code/comparators/src/cashier/Register.java",
+    "code/comparators/src/cashier/RegisterImpl.java",
+    "code/comparators/src/cashier/Bill.java",
+    "code/comparators/src/cashier/Line.java",
+    "code/comparators/src/cashier/LineTitleComparator.java"
   ],
   "video": ""
 }

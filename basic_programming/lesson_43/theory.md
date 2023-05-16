@@ -20,7 +20,7 @@ Natural Ordering уже присутствует в Java. Например, Java
 
 Но и игнорировать 15% клиентов мы не можем. Что же нам делать?
 
-Здесь нам приходит на помощь другой интерфейс — `Comparator`. Так же, как и `Comparable`, он типизированный.
+Здесь нам приходит на помощь другой интерфейс — [`Comparator`](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/util/Comparator.html). Так же, как и `Comparable`, он типизированный.
 
 А в чем же разница?
 
