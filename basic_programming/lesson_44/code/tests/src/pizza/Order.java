@@ -48,4 +48,8 @@ public class Order {
     result += String.format("Итого: %.2f EUR%n", total);
     return result;
   }
+
+  public int getNumber() {
+    return number;
+  }
 }
