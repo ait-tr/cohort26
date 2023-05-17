@@ -3,6 +3,13 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "code/tests/src/homework_43/Book.java",
+    "code/tests/src/homework_43/BookTitleAuthorComparator.java",
+    "code/tests/src/homework_43/Main.java",
+    "code/tests/src/Main.java",
+    "code/tests/src/pizza/Order.java",
+    "code/tests/src/pizza/Pizza.java",
+    "code/tests/src/pizza/OrderTest.java"
   ],
   "video": ""
 }
