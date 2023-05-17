@@ -1,4 +1,4 @@
-package homework_42;
+package homework_43;
 
 import java.util.Objects;
 
