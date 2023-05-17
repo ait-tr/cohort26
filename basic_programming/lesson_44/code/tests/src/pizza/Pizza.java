@@ -1,6 +1,7 @@
 package pizza;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,6 +24,7 @@ public class Pizza {
 //  }
   // по-взрослому: Map<String, Map<Size, Double>> prices;
   private static final Map<String, Map<Size, Double>> prices = new HashMap<>();
+  private static final List<String> titles;
   static {
     Map<Size, Double> capricciosaPrices = new HashMap<>();
     capricciosaPrices.put(Size.SMALL, 7.5);
@@ -35,7 +37,6 @@ public class Pizza {
     diabloPrices.put(Size.MEDIUM, 9.0);
     diabloPrices.put(Size.LARGE, 10.5);
     prices.put("Diablo", diabloPrices);
-
 //    {
 //      "Capricciosa": {
 //        "SMALL": 7.5,
@@ -48,6 +49,8 @@ public class Pizza {
 //        "LARGE": 10.5
 //      }
 //    }
+    titles = new ArrayList<>(prices.keySet());
+    Collections.sort(titles);
   }
 
   private final String title;
@@ -65,7 +68,32 @@ public class Pizza {
   //   - выбор размера
   //   - нужен ли сырный борт
   public static Pizza readPizza(Scanner scanner) {
-    return new Pizza(); // TODO
+    System.out.println("Пиццы:");
+    for (int i = 0; i < titles.size(); ++i) {
+      int k = i + 1;
+      String title = titles.get(i);
+      System.out.println(k + ". " + title); // пронумерованный вывод содержимого списка
+    }
+    System.out.print("Выберите пиццу: ");
+    int pizzaNumber = scanner.nextInt();
+    scanner.nextLine();
+    String title = titles.get(pizzaNumber - 1);
+
+    System.out.println("Размеры:");
+    for (int i = 0; i < Size.values().length; ++i) {
+      int k = i + 1;
+      Size size = Size.values()[i];
+      System.out.println(k + ". " + size); // пронумерованный вывод содержимого массива
+    }
+    System.out.print("Выберите размер: ");
+    int sizeNumber = scanner.nextInt();
+    scanner.nextLine();
+    Size size = Size.values()[sizeNumber - 1];
+
+    System.out.print("Сделать борт сырным? [y/N]: ");
+    boolean cheesyBoard = scanner.nextLine().equalsIgnoreCase("y"); // ввели "y" или "Y"
+
+    return new Pizza(title, size, cheesyBoard);
   }
 
   public double getPrice() {
