@@ -37,8 +37,11 @@ public class Order {
     String result =  "=== Заказ № " + number + "\n";
 //    pizzas.sort(new PizzaComparator()); // TODO
     for (int i = 0; i < pizzas.size(); ++i) {
+      int pizzaNumber = i + 1;
+      Pizza pizza = pizzas.get(i);
+      result += pizzaNumber + ". " + pizza + "\n";
 //      result += (i + 1) + ". " + pizzas.get(i) + "\n";
-      result += String.format("%d. %s%n", i + 1, pizzas.get(i));
+//      result += String.format("%d. %s%n", i + 1, pizzas.get(i));
     }
     return result;
   }
