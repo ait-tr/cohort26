@@ -34,13 +34,12 @@ public class Main {
       command = scanner.nextLine();
       switch (command) {
         case "1" -> current.addPizza(scanner); // добавить пиццу в текущий заказ
-        case "2" -> {
+        case "2", "0" -> {
           if (!current.isEmpty()) {
             orders.add(current); // "старый текущий" заказ отправляю в завершённые
             current = new Order(); // "текущий заказ" - теперь новый заказ
           }
         }
-        case "0" -> System.out.println("До свидания!");
         default -> System.out.println("Некорректная команда: " + command);
       }
     } while (!command.equals("0"));
