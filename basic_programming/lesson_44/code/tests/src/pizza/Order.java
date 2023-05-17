@@ -34,15 +34,18 @@ public class Order {
 
   @Override
   public String toString() {
-    String result =  "=== Заказ № " + number + "\n";
+    String result =  "=== Заказ № " + number + " ===\n";
+    double total = 0.0;
 //    pizzas.sort(new PizzaComparator()); // TODO
     for (int i = 0; i < pizzas.size(); ++i) {
       int pizzaNumber = i + 1;
       Pizza pizza = pizzas.get(i);
       result += pizzaNumber + ". " + pizza + "\n";
+      total += pizza.getPrice();
 //      result += (i + 1) + ". " + pizzas.get(i) + "\n";
 //      result += String.format("%d. %s%n", i + 1, pizzas.get(i));
     }
+    result += String.format("Итого: %.2f EUR%n", total);
     return result;
   }
 }

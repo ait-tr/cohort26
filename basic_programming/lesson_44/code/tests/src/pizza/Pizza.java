@@ -15,7 +15,8 @@ public class Pizza {
     LARGE,
   }
 
-//  private static final List<String> titles = new ArrayList<>();
+  private static final double CHEESY = 1.5;
+  //  private static final List<String> titles = new ArrayList<>();
 //  static {
 //    titles.add("Capricciosa");
 //    titles.add("Vesuvio");
@@ -25,6 +26,7 @@ public class Pizza {
   // по-взрослому: Map<String, Map<Size, Double>> prices;
   private static final Map<String, Map<Size, Double>> prices = new HashMap<>();
   private static final List<String> titles;
+
   static {
     Map<Size, Double> capricciosaPrices = new HashMap<>();
     capricciosaPrices.put(Size.SMALL, 7.5);
@@ -56,11 +58,21 @@ public class Pizza {
   private final String title;
   private final Size size;
   private final boolean cheesyBorder;
+  private final double price;
 
   public Pizza(String title, Size size, boolean cheesyBorder) {
     this.title = title;
     this.size = size;
     this.cheesyBorder = cheesyBorder;
+
+    double price = prices.get(title).get(size);
+    // prices.get("Capricciosa") -> capricciosaPrices
+    // capricciosaPrices.get(Size.SMALL) -> 7.5
+    // prices.get("Capricciosa").get(Size.SMALL) -> 7.5
+    if (this.cheesyBorder) {
+      price += CHEESY;
+    }
+    this.price = price;
   }
 
   // - для каждой пиццы:
@@ -97,14 +109,11 @@ public class Pizza {
   }
 
   public double getPrice() {
-    return prices.get(title).get(size);
-    // prices.get("Capricciosa") -> capricciosaPrices
-    // capricciosaPrices.get(Size.SMALL) -> 7.5
-    // prices.get("Capricciosa").get(Size.SMALL) -> 7.5
+    return price;
   }
 
   @Override
   public String toString() {
-    return ""; // TODO
+    return String.format("%s (%s, сырный борт: %s) = %.2f EUR", title, size, cheesyBorder, price);
   }
 }
