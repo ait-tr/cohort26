@@ -16,7 +16,7 @@ public class Pizza {
   }
 
   private static final double CHEESY = 1.5;
-  //  private static final List<String> titles = new ArrayList<>();
+//  private static final List<String> titles = new ArrayList<>();
 //  static {
 //    titles.add("Capricciosa");
 //    titles.add("Vesuvio");
