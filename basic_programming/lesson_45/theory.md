@@ -179,7 +179,7 @@ System.out.println(message);
 
 Для этого у него есть специальный метод — `parse()`. Выглядит процесс парсинга так:
 ```java
-Date date = new Date("Jul 06 12:15:00 2019");
+Date date = Date.parse("Jul 06 12:15:00 2019");
 ```
 
 # Переход от класса `Date` к классу `Calendar`
