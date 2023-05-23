@@ -1,7 +1,6 @@
 package homework_45;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -14,14 +13,14 @@ public class PersonTests {
 
   @Test
   public void testConstructor() throws ParseException {
-    // arrange
+    // arrange - задание начальных значений
     String name = "Test";
     String birthdateStr = "25.04.2023";
     Date birthdate = formatter.parse(birthdateStr);
-    // arrange & act
+    // arrange & act - задание начальных значений и совершение действия
     Person person = new Person(name, birthdateStr);
 
-    // assert
+    // assert - предположение, что результат верен
     assertEquals(name, person.getName());
     assertEquals(birthdate, person.getBirthdate());
   }
