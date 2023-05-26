@@ -44,7 +44,13 @@ public class Order {
   }
 
   @Override
-  public String toString() { // использую для записи в файл
+  public String toString() { // используем для вывода на экран
+    return "=== Заказ # " + id + " ===\n" +
+        "Описание букета: " + content + "\n" +
+        "Дата доставки: " + formatter.format(dueDate) + "\n";
+  }
+
+  public String toCsvString() { // используем для записи в файл
     return id + SEP + content + SEP + formatter.format(dueDate);
   }
 
