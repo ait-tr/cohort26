@@ -18,9 +18,9 @@ public class Order {
   private Date dueDate;
 
   public Order(String content, String date) throws ParseException {
-    this.id = ++counter; // сначала увеличиваем счётчик, потом его значение становится ID
     this.content = content;
     this.dueDate = formatter.parse(date);
+    this.id = ++counter; // сначала увеличиваем счётчик, потом его значение становится ID
   }
 
   public void setContent(String content) {

@@ -1,5 +1,7 @@
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -23,7 +25,7 @@ public class Base {
     String content = scanner.nextLine();
     do {
       try {
-        System.out.print("Введите дату (в формате 'dd.MM.yyyy HH:mm': ");
+        System.out.print("Введите дату (в формате 'dd.MM.yyyy HH:mm'): ");
         String date = scanner.nextLine();
         add(content, date); // работает с прочитанными данными
         // если не случилось ошибки, то
@@ -44,5 +46,20 @@ public class Base {
       throw new RuntimeException("Заказ с id " + orderId + " уже существует");
     }
     orders.put(orderId, order);
+  }
+
+  public void printOrders() {
+    // перебор словаря (Map):
+//    for (Map.Entry<Integer, Order> entry : orders.entrySet()) { // перебор пар ключ-значение
+//    for (int orderId : orders.keySet()) { // перебор ключей
+//    for (Order order : orders.values()) { // перебор значений
+    // Map<Integer, Order> orders - словарь с ID и заказами
+    // orders.values() - Collection<Order> - все значения словаря - набор заказов
+    // new ArrayList(...) - создать список из указанной в скобках коллекции
+    // итог: List<Order> orders - список заказов (чтобы можно было сортировать)
+    List<Order> orders = new ArrayList<>(this.orders.values());
+    for (Order order : orders) {
+      System.out.println(order);
+    }
   }
 }

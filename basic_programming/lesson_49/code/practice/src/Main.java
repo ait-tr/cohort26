@@ -20,6 +20,8 @@ public class Main {
   // Будет общая база (система учёта), в которой заказы будут храниться в Map<Integer, Order>
   // Заказы могут удаляться, а ID при этом меняться не будут. Нумерация будет "разреженной" 1, 2, 7
   public static void main(String[] args) {
-    System.out.println("Hello world!");
+    Base orders = new Base();
+    orders.add();
+    orders.printOrders();
   }
 }
