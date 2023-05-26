@@ -1,5 +1,6 @@
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -60,6 +61,34 @@ public class Base {
     List<Order> orders = new ArrayList<>(this.orders.values());
     for (Order order : orders) {
       System.out.println(order);
+    }
+  }
+
+  public void remove(int id) {
+    orders.remove(id);
+  }
+
+  public void remove(Date date) {
+    // удаление из коллекции можно делать двумя способами:
+    // 1: создать копию для перебора, а из оригинала удалять найденное
+//    Map<Integer, Order> ordersCopy = new HashMap<>(orders);
+//    for (Map.Entry<Integer, Order> entry : ordersCopy.entrySet()) { // перебираем копию
+//      Order order = entry.getValue();
+//      Date orderDate = order.getDueDate();
+//      if (orderDate.equals(date)) {
+//        orders.remove(order.getId()); // меняем оригинал
+//      }
+//    }
+    // 2: создать коллекцию "к удалению", в которую складывать ссылки на то,
+    // что потом придётся удалить:
+    List<Integer> ordersToRemove = new ArrayList<>(); // список ID заказов для удаления
+    for (Map.Entry<Integer, Order> entry : orders.entrySet()) { // перебираем оригинал
+      if (entry.getValue().getDueDate().equals(date)) {
+        ordersToRemove.add(entry.getKey()); // если этот заказ надо удалить, запоминаем его ID
+      }
+    }
+    for (int idToRemove : ordersToRemove) { // перебираем список "для удаления"
+      orders.remove(idToRemove); // удаляем заказ по запомненному ID
     }
   }
 }
