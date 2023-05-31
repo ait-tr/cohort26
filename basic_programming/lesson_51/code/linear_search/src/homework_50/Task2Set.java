@@ -22,12 +22,20 @@ public class Task2Set {
 
     // удаление: 2 способа
     // 1-й способ: перебор копии
-    Set<Integer> numbersCopy = new HashSet<>(numbers); // создаём копию numbers
-    for (int x : numbersCopy) { // перебираем копию
-      if (x % 2 != 0) {
-        numbers.remove(x); // меняем оригинал
+//    Set<Integer> numbersCopy = new HashSet<>(numbers); // создаём копию numbers
+//    for (int x : numbersCopy) { // перебираем копию
+//      if (x % 2 != 0) {
+//        numbers.remove(x); // меняем оригинал
+//      }
+//    }
+    // 2-й способ: временное хранилище для всего, что надо удалить
+    Set<Integer> oddNumbersToRemove = new HashSet<>();
+    for (int x : numbers) { // перебираем числа
+      if (x % 2 != 0) { // если число нечётное
+        oddNumbersToRemove.add(x); // запоминаем его "для удаления"
       }
     }
+    numbers.removeAll(oddNumbersToRemove);
 
     System.out.println(numbers);
   }
