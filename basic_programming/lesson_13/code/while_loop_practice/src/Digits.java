@@ -32,7 +32,7 @@ public class Digits {
            digit = num % 10; // деление на 10 с остатоком дает нам цифру числа
             System.out.println(i +  " digit is " + digit); // печатаем цифру
             num = num - digit; // уменьшили число на его единицы
-            num = num/10;
+            num = num/10; // убрали последний 0 в числе
             i++;
         }
         System.out.println("Digits in number: " + i);

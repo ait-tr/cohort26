@@ -29,7 +29,7 @@ public class Main {
         System.out.println("Среднее количество поездок за прошедший месяц: " + trip);
 
         double averageTripPrise = priceMonatsCart/trip;
-        System.out.println("Средняя стоимсоть поездки: " + averageTripPrise + " евро.");
+        System.out.println("Средняя стоимость поездки: " + averageTripPrise + " евро.");
 
     }
 }
