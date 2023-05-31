@@ -30,4 +30,24 @@ public class Task3Phonebook {
     // если перебрали всех и не закончили, то никого не нашли
     return false;
   }
+
+  /**
+   * Поиск записи по указанному имени
+   *
+   * @param name имя для поиска
+   * @return индекс первой встреченной записи с указанным именем или -1, если имя не найдено
+   */
+  public int indexOfName(String name) {
+    for (int i = 0; i < people.size(); ++i) {
+//      Person person = people.get(i);
+//      String personName = person.getName();
+//      if (personName.equals(name)) {
+//        return i;
+//      }
+      if (people.get(i).getName().equals(name)) {
+        return i;
+      }
+    }
+    return -1;
+  }
 }
