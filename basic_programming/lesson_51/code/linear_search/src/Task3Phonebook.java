@@ -17,4 +17,17 @@ public class Task3Phonebook {
     Person person = new Person(name, phone);
     people.add(person);
   }
+
+  // такой поиск называется линейным: прямой перебор всех объектов в поисках нужного
+  // работаем с данными нашего класса, n для оценки эффективности - размер списка people
+  // O(n) по времени, O(1) по дополнительной памяти
+  public boolean hasName(String name) {
+    for (Person person : people) { // перебираем всех людей // n раз = O(1 * n) = O(n)
+      if (person.getName().equals(name)) { // если имя человека из списка совпадает с нужным // O(1)
+        return true; // мы его нашли, можно заканчивать
+      }
+    }
+    // если перебрали всех и не закончили, то никого не нашли
+    return false;
+  }
 }
