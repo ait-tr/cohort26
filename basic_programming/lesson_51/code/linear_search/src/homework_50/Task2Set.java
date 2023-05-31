@@ -22,21 +22,26 @@ public class Task2Set {
 
     // удаление: 2 способа
     // 1-й способ: перебор копии
-    Set<Integer> numbersCopy = new HashSet<>(numbers); // создаём копию numbers
-    for (int x : numbersCopy) { // перебираем копию - n элементов, для каждого O(1), итого O(n)
-      if (x % 2 != 0) { // O(1)
-        numbers.remove(x); // меняем оригинал // O(1)
-      }
-    }
-    // O(n) + O(n) = O(2 * n) = O(n)
-    // 2-й способ: временное хранилище для всего, что надо удалить
-//    Set<Integer> oddNumbersToRemove = new HashSet<>();
-//    for (int x : numbers) { // перебираем числа
-//      if (x % 2 != 0) { // если число нечётное
-//        oddNumbersToRemove.add(x); // запоминаем его "для удаления"
+//    Set<Integer> numbersCopy = new HashSet<>(numbers); // создаём копию numbers - O(n)
+//    for (int x : numbersCopy) { // перебираем копию - n элементов, для каждого O(1), итого O(n)
+//      if (x % 2 != 0) { // O(1)
+//        numbers.remove(x); // меняем оригинал // O(1)
 //      }
 //    }
-//    numbers.removeAll(oddNumbersToRemove);
+    // O(n) + O(2 * n) = O(3 * n) = O(n)
+    // 2-й способ: временное хранилище для всего, что надо удалить
+    Set<Integer> oddNumbersToRemove = new HashSet<>(); // O(1)
+    for (int x : numbers) { // перебираем оригинал // O(1 * n) = O(n)
+      if (x % 2 != 0) { // если число нечётное // O(1)
+        oddNumbersToRemove.add(x); // меняем временную коллекцию // O(1)
+        // запоминаем его "для удаления"
+      }
+    }
+//    for (int x : oddNumbersToRemove) { // перебираем временную коллекцию // O(n / 2) = O(n)
+//      numbers.remove(x); // меняем оригинал // O(1)
+//    }
+    numbers.removeAll(oddNumbersToRemove); // O(n / 2) = O(n)
+    // (на самом деле O(m), где m - количество нечётных чисел)
 
     System.out.println(numbers); // O(n / 2) = O(1/2 * n) = O(0.5 * n) = O(n)
     // O(n) + O(n) = O(n)
