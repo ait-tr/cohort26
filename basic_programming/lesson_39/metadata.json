@@ -1,0 +1,18 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "code/abstracts/src/homework_38/Book.java",
+    "code/abstracts/src/homework_38/Main.java",
+    "code/abstracts/src/drinks/Drink.java",
+    "code/abstracts/src/drinks/AlcoholDrink.java",
+    "code/abstracts/src/drinks/SoftDrink.java",
+    "code/abstracts/src/DrinksRunner.java",
+    "code/abstracts/src/games/Game.java",
+    "code/abstracts/src/games/Tetris.java",
+    "code/abstracts/src/games/TicTacToe.java",
+    "code/abstracts/src/GamesRunner.java"
+  ],
+  "video": ""
+}

@@ -1,0 +1,6 @@
+5
+John McCain 10
+John McCain 5
+Barack Obama 9
+Barack Obama 8
+John McCain 1

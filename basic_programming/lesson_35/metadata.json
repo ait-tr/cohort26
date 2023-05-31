@@ -1,0 +1,15 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "code/inheritance/src/homework_34/Triangle.java",
+    "code/inheritance/src/homework_34/Main.java",
+    "code/inheritance/src/pets/Pet.java",
+    "code/inheritance/src/pets/Cat.java",
+    "code/inheritance/src/pets/Dog.java",
+    "code/inheritance/src/pets/Turtle.java",
+    "code/inheritance/src/pets/Main.java"
+  ],
+  "video": ""
+}

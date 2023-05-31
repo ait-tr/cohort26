@@ -1,0 +1,13 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "code/practice/src/homework_35/Food.java",
+    "code/practice/src/homework_35/Drink.java",
+    "code/practice/src/homework_35/Main.java",
+    "code/practice/src/Order.java",
+    "code/practice/src/GasStation.java"
+  ],
+  "video": ""
+}

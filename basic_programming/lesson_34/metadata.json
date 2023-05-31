@@ -1,0 +1,16 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "/code/access/src/homework33/Soda.java",
+    "/code/access/src/homework33/Main.java",
+    "/code/access/src/Pizza.java",
+    "/code/access/src/Task1.java",
+    "/code/access/src/Student.java",
+    "/code/access/src/Task2.java",
+    "/code/access/src/Car.java",
+    "/code/access/src/Task3.java"
+  ],
+  "video": ""
+}

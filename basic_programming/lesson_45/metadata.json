@@ -1,0 +1,14 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "code/date/src/homework_44/Pizza.java",
+    "code/date/src/homework_44/PizzaComparator.java",
+    "code/date/src/homework_44/PizzaComparatorTests.java",
+    "code/date/src/Task1DateExample.java",
+    "code/date/src/Task2CalendarExample.java",
+    "code/date/src/Task3Duration.java"
+  ],
+  "video": ""
+}
