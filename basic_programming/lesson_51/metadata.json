@@ -3,13 +3,12 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
-    "code/linear_search/src/Utils.java",
-    "code/linear_search/src/Task1FirstIndexOf.java",
-    "code/linear_search/src/Task1FirstIndexOfV2.java",
-    "code/linear_search/src/Task2LastIndexOf.java",
-    "code/linear_search/src/Task3FirstIndexOfMax.java",
-    "code/linear_search/src/Task4PreRLE.java",
-    "code/linear_search/src/Task5RLE.java"
+    "code/linear_search/src/homework_50/Task2Set.java",
+    "code/linear_search/src/homework_50/Task3Map.java",
+    "code/linear_search/src/Task1Filter.java",
+    "code/linear_search/src/Task2UniqueFilter.java",
+    "code/linear_search/src/Person.java",
+    "code/linear_search/src/Task3Phonebook.java"
   ],
   "video": ""
 }
