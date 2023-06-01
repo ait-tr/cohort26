@@ -3,12 +3,10 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
-    "code/binary_search/src/homework_55/MinEven1.java",
-    "code/binary_search/src/homework_55/MinEven2.java",
-    "code/binary_search/src/homework_55/MinEven3.java",
+    "code/binary_search/src/homework_51/Task1.java",
     "code/binary_search/src/Task1GuessNumber.java",
     "code/binary_search/src/Task2IndexOf.java",
-    "code/binary_search/src/Task3TimeOfWork.java"
+    "code/binary_search/src/Task3BinarySearchForAnswer.java"
   ],
   "video": ""
 }
