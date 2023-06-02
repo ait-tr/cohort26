@@ -15,15 +15,18 @@ public class Task2PreRle {
   }
 
   public static String preRle(String line) {
-    String result = "";
+//    String result = "";
+    StringBuilder result = new StringBuilder();
     Character prev = null; // никакого "предыдущего" ещё нет
-    for (int i = 0; i < line.length(); ++i) {
-      Character current = line.charAt(i);
-      if (!current.equals(prev)) {
-        result += current;
-        prev = current;
+    for (int i = 0; i < line.length(); ++i) { // n раз - O(n * n) для String, O(n) для StringBuilder
+      Character current = line.charAt(i); // O(1)
+      if (!current.equals(prev)) { // O(1)
+//        result += current; // O(n) для String += String / char
+        result.append(current); // O(1) для StringBuilder.append(String / char)
+        prev = current; // O(1)
       }
     }
-    return result;
+//    return result; // O(1)
+    return result.toString(); // O(n)
   }
 }
