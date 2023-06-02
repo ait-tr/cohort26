@@ -11,7 +11,7 @@ public class Task2PreRle {
     Scanner scanner = new Scanner(System.in);
     System.out.println("Введите строку для сжатия:");
     String line = scanner.nextLine();
-    String result = preRle(line);
+    String result = preRleShort(line);
     System.out.println("Промежуточный результат сжатия:");
     System.out.println(result);
   }
@@ -47,5 +47,19 @@ public class Task2PreRle {
       preString[i] = result.get(i); // O(1) для ArrayList
     }
     return new String(preString); // O(n)
+  }
+
+  public static String preRleShort(String line) {
+    if (line.isEmpty()) {
+      return "";
+    }
+    StringBuilder result = new StringBuilder();
+    result.append(line.charAt(0));
+    for (int i = 1; i < line.length(); ++i) { // (n - 1) раз - O(n)
+      if (line.charAt(i) != line.charAt(i - 1)) { // O(1)
+        result.append(line.charAt(i)); // O(1)
+      }
+    }
+    return result.toString(); // O(n)
   }
 }
