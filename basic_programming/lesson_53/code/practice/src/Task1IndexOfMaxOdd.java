@@ -10,14 +10,12 @@ public class Task1IndexOfMaxOdd {
    * чисел
    */
   public static int indexOfMaxOdd(List<Integer> numbers) {
-    int result = -1;
+    int result = -1; // индекс самого большого найденного нечётного
     for (int i = 0; i < numbers.size(); i++) {
       int x = numbers.get(i);
-      int maxOdd = Integer.MIN_VALUE; // минимальное значение (будем увеличивать)
-      if (result > 0) { // если до этого что-то находили
-        maxOdd = numbers.get(result); // записываем найденное в рамочку
-      }
-      if (x % 2 != 0 && x > maxOdd) {
+      // если (число нечётное И (нечётных чисел ещё не было ИЛИ число больше известного максимума))
+      // если (число нечётное И (результат не менялся ИЛИ число больше известного максимума))
+      if (x % 2 != 0 && (result == -1 || x > numbers.get(result))) {
         result = i;
       }
     }
