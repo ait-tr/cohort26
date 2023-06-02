@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Task2PreRle {
@@ -28,5 +30,22 @@ public class Task2PreRle {
     }
 //    return result; // O(1)
     return result.toString(); // O(n)
+  }
+
+  public static String preRleList(String line) {
+    List<Character> result = new ArrayList<>();
+    Character prev = null; // никакого "предыдущего" ещё нет
+    for (int i = 0; i < line.length(); ++i) { // n раз - O(n * n) для String, O(n) для StringBuilder
+      Character current = line.charAt(i); // O(1)
+      if (!current.equals(prev)) { // O(1)
+        result.add(current); // O(1)
+        prev = current; // O(1)
+      }
+    }
+    char[] preString = new char[result.size()];
+    for (int i = 0; i < result.size(); ++i) {
+      preString[i] = result.get(i);
+    }
+    return new String(preString); // O(n)
   }
 }
