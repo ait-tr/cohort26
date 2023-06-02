@@ -3,6 +3,12 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "code/practice/src/homework_52/Task1IndexOf.java",
+    "code/practice/src/Task1IndexOfMaxOdd.java",
+    "code/practice/src/Task1IndexOfMaxOddTests.java",
+    "code/practice/src/Task2PreRle.java",
+    "code/practice/src/Task3Rle.java",
+    "code/practice/src/Task3RleTests.java"
   ],
   "video": ""
 }
