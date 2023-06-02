@@ -49,21 +49,36 @@ public class Task1IndexOfMaxOddTests {
   }
 
   @Test
+  public void testNegativeList() {
+    // arrange
+    List<Integer> numbers = new ArrayList<>();
+    numbers.add(-3); // 0
+    numbers.add(-5); // 1
+    numbers.add(-1); // 2 - max odd
+
+    // act
+    int result = Task1IndexOfMaxOdd.indexOfMaxOdd(numbers);
+
+    // assert
+    assertEquals(2, result);
+  }
+
+  @Test
   public void testMixedList() {
     // arrange
     List<Integer> numbers = new ArrayList<>();
     numbers.add(2); // 0
     numbers.add(-3); // 1
     numbers.add(4); // 2
-    numbers.add(-5); // 3
-    numbers.add(-1); // 4 - max odd
+    numbers.add(5); // 3 - max odd
+    numbers.add(-1); // 4
     numbers.add(-6); // 5
 
     // act
     int result = Task1IndexOfMaxOdd.indexOfMaxOdd(numbers);
 
     // assert
-    assertEquals(4, result);
+    assertEquals(3, result);
   }
 
   @Test

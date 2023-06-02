@@ -11,11 +11,13 @@ public class Task1IndexOfMaxOdd {
    */
   public static int indexOfMaxOdd(List<Integer> numbers) {
     int result = -1;
-    int maxOdd = Integer.MIN_VALUE;
     for (int i = 0; i < numbers.size(); i++) {
       int x = numbers.get(i);
+      int maxOdd = Integer.MIN_VALUE; // минимальное значение (будем увеличивать)
+      if (result > 0) { // если до этого что-то находили
+        maxOdd = numbers.get(result); // записываем найденное в рамочку
+      }
       if (x % 2 != 0 && x > maxOdd) {
-        maxOdd = x;
         result = i;
       }
     }
