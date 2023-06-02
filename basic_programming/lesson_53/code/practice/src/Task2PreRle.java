@@ -16,7 +16,14 @@ public class Task2PreRle {
 
   public static String preRle(String line) {
     String result = "";
-
+    Character prev = null; // никакого "предыдущего" ещё нет
+    for (int i = 0; i < line.length(); ++i) {
+      Character current = line.charAt(i);
+      if (!current.equals(prev)) {
+        result += current;
+        prev = current;
+      }
+    }
     return result;
   }
 }
