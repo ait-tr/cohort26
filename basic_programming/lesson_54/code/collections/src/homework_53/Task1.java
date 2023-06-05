@@ -69,22 +69,25 @@ public class Task1 {
 //  }
 
   public static int findPos(List<Integer> heights, int x) {
+    if (heights.isEmpty()) {
+      return 1;
+    }
     // 2. бинарный поиск - O(log n)
     // позиция, на которую должен встать Петя - это та позиция, на которой начинается "меньше"
     int left = 0;
-    int right = heights.size(); // правый - "не включая"
-    while (left < right - 1) {
+    int right = heights.size() - 1; // правый - "включая"
+    while (left < right) {
       int mid = left + (right - left) / 2;
       int midHeight = heights.get(mid);
       // ищем границу, где появляется "низкий" - первый элемент, который меньше Пети
       // midHeight < x:     Высокий - ..x.. - средний - ... - низкий
-      //                    left                        right ("средний" может быть ответом)
+      //                    left              right ("средний" может быть ответом)
       // midHeight == x:    Высокий - ...x  - x       - x... -  низкий
       //                                                left    right
       // midHeight > x:     Высокий - ...   - средний - ..x.. - низкий
       //                                                left    right
       if (midHeight < x) {
-        right = mid + 1;
+        right = mid;
       } else {
         left = mid + 1;
       }
