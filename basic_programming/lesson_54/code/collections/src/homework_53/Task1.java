@@ -1,5 +1,9 @@
 package homework_53;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class Task1 {
 
   // Петя перешёл в другую школу. На уроке физкультуры ему понадобилось определить своё место
@@ -17,6 +21,37 @@ public class Task1 {
   // Пример вывода
   // 3
   public static void main(String[] args) {
-    System.out.println("Hello world!");
+    Scanner scanner = new Scanner(System.in);
+    // Прочитать ввод из примера ввода - 2 способа:
+    // 1. Прочитать все числа через nextInt() и потом "отцепить" последнее. Для примера ввода
+    //    сначала прочитаем все девять (8 + 1) чисел в один список, потом удалим
+    //    (или даже не положим) последнее в список, а сохраним его отдельно.
+//    List<Integer> heights = new ArrayList<>();
+//    int pete = 0; // высота Пети
+//    while (scanner.hasNextInt()) {
+//      int x = scanner.nextInt(); // читаем следующее число // 162
+//      // после прочтения можно узнать, последнее оно или нет
+//      if (scanner.hasNextInt()) { // если за ним есть ещё одно - значит, мы прочитали НЕ Петю
+//        heights.add(x); // 165, 163, 160, 160, 157, 157, 155, 154
+//      } else { // это было последнее - высота Пети
+//        pete = x; // 162
+//      }
+//    }
+    //   У этого способа есть большой минус: он не масштабируемый (на "двух разных списках" уже не
+    //   сработает)
+    // 2. Прочитать строку и уже её разбивать на числа
+    List<Integer> heights = new ArrayList<>();
+    String numbersLine = scanner.nextLine(); // читаем всю строку со списком чисел
+    for (String numberStr : numbersLine.split(" ")) { // разбиение строки на подстроки
+      int x = Integer.parseInt(numberStr);
+      heights.add(x);
+    }
+    int pete = scanner.nextInt(); // после списка ровно одно число - читаем "как обычно"
+    int result = findPos(heights, pete);
+    System.out.println(result);
+  }
+
+  public static int findPos(List<Integer> heights, int x) {
+    return 0;
   }
 }
