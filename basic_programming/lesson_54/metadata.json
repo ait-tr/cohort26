@@ -3,6 +3,9 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "code/collections/src/homework_53/Task1.java",
+    "code/collections/src/homework_53/Task1Tests.java",
+    "code/collections/src/CollectionsComplexity.java"
   ],
   "video": ""
 }
