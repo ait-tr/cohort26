@@ -3,6 +3,10 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "code/collections/src/File1Map.java",
+    "code/collections/src/File2Queue.java",
+    "code/collections/src/File3Stack.java",
+    "code/collections/src/Task1Brackets.java"
   ],
   "video": ""
 }
