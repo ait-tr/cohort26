@@ -1,4 +1,4 @@
-public class Main {
+public class File1Map {
 
   // - как работает бинарный поиск в дереве
   //   Пример:
