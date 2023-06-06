@@ -3,7 +3,8 @@ import java.util.Queue;
 
 public class File2Queue {
 
-  // Queue - FIFO (first-in-first-out - первый пришёл, первый ушёл) - реализация: LinkedList
+  // Queue - FIFO (first-in-first-out - первый пришёл, первый ушёл)
+  // реализация: LinkedList, все Deque
   // Буквально "очередь" - как в магазин или к врачу
   // Использование: обработка событий и команд
   //  команды:
@@ -16,7 +17,7 @@ public class File2Queue {
   // - удаление: из начала - O(1), из середины - n/a, с конца - n/a
   //
   // Deque - double ended queue - как очередь, но добавлять и убирать можно и с начала, и с конца
-  // реализация: LinkedList
+  // реализация: LinkedList, ArrayDeque
   //  команды:
   //  - addFirst(e) - offerFirst(e) - добавляет e в начало
   //  - addLast(e) - offerLast(e) - add(e) - offer(e) - добавляет e в конец
