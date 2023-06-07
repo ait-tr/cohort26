@@ -10,7 +10,7 @@ public class Task4Fibonacci {
   }
 
   public static int fibonacci(int index) {
-    if (index < 2) {
+    if (index < 2) { // выход из рекурсии
       return 1; // первые два числа
     }
     return fibonacci(index - 2) + fibonacci(index - 1);

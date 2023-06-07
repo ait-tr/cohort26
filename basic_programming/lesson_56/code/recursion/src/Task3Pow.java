@@ -12,8 +12,11 @@ public class Task3Pow {
    * @return x в степени p
    */
   public static int pow(int x, int p) {
+    if (p < 0) { // условие-стражник для проверки корректности аргументов
+      throw new IllegalArgumentException("отрицательная степень: " + p);
+    }
     // x^0 = 1
-    if (p == 0) {
+    if (p == 0) { // условие-стражник для выхода из рекурсии
       return 1;
     }
     // x^5 = x^4 * x
