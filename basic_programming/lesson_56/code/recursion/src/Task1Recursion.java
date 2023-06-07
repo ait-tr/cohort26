@@ -34,7 +34,7 @@ public class Task1Recursion {
       return; // выход из рекурсии
     }
     System.out.println(numbers.get(lastIndex));
-    // if (lastIndex > 0) { // правильный шаг рекурсии
-    reversePrintRecurse(numbers, lastIndex - 1);
+    // if (lastIndex > 0) { // правильное условие рекурсии
+    reversePrintRecurse(numbers, lastIndex - 1); // шаг рекурсии
   }
 }
