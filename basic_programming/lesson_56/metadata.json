@@ -3,6 +3,15 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "/code/recursion/src/homework_55/Task1Brackets.java",
+    "/code/recursion/src/Task1Recursion.java",
+    "/code/recursion/src/Task2Max.java",
+    "/code/recursion/src/Task3Pow.java",
+    "/code/recursion/src/Task4Fibonacci.java",
+    "/code/recursion/src/Task5BinarySearch.java",
+    "/code/recursion/src/Task6Power2.java",
+    "/code/recursion/src/Task7ReverseString.java",
+    "/code/recursion/src/Task8Digits.java"
   ],
   "video": ""
 }
