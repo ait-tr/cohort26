@@ -3,6 +3,8 @@ public class Task8Digits {
   public static void main(String[] args) {
     System.out.println(sum(123));
     System.out.println(binary(128));
+    printBinary(25);
+    System.out.println();
   }
 
   // сумма цифр числа
@@ -26,5 +28,20 @@ public class Task8Digits {
     // в остальных случаях:
     // "результат деления на два" - левая часть и "остаток от деления на 2" - последняя цифра
     return binary(x / 2) + x % 2;
+  }
+
+  public static void printBinary(int x) {
+    if (x < 0) {
+      throw new IllegalArgumentException("Число должно быть положительным: " + x);
+    }
+    // если число меньше 2, то в двоичной системе оно такое же
+    if (x < 2) {
+      System.out.print(x);
+      return;
+    }
+    // в остальных случаях:
+    // "результат деления на два" - левая часть и "остаток от деления на 2" - последняя цифра
+    printBinary(x / 2);
+    System.out.print(x % 2);
   }
 }
