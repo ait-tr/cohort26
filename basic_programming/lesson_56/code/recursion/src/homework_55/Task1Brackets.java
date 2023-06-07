@@ -53,29 +53,21 @@ public class Task1Brackets {
     for (int i = 0; i < brackets.length(); ++i) { // .toCharArray - O(n) дополнительной памяти
       char curr = brackets.charAt(i);
       switch (curr) {
-        case '(':
-        case '{':
-        case '[':
-        case '<':
+        case '(', '{', '[', '<':
           openedBrackets.offerLast(curr);
           break;
-        case ')':
-        case '}':
-        case ']':
-        case '>': {
+        case ')', '}', ']', '>': {
           // poll одновременно убирает из стека и отдаёт нам
           Character lastOpened = openedBrackets.pollLast(); // если открывающих скобок нет, null
           // если скобки нет или она неправильная
           // bracketsMap - "правильные" скобочки, по закрывающей получаем открывающую
-          if (lastOpened == null || !lastOpened.equals(bracketsMap.get(curr))) {
+//          if (lastOpened == null || lastOpened.charValue() != bracketsMap.get(curr)) {
+          if (lastOpened == null || lastOpened.equals(bracketsMap.get(curr))) {
             return false; // последовательность сломалась
           }
           break;
         }
-        default:
-          // не скобка, можно выкинуть ошибку, вернуть false или проигнорировать
-          // мы решили проигнорировать
-          break;
+        // все "не скобки" мы решили проигнорировать
       }
     }
     // всё проверили и ни разу не сломались
