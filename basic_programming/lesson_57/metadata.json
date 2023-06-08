@@ -3,6 +3,11 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "code/sort/src/homework_56/Task1Reverse.java",
+    "code/sort/src/Task1BubbleSort.java",
+    "code/sort/src/Task2MergeSortClean.java",
+    "code/sort/src/Task2MergeSortDebugPrint.java",
+    "code/sort/src/Task3MergeSortSimplified.java"
   ],
   "video": ""
 }
