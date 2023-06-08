@@ -13,11 +13,19 @@ public class Task1BubbleSort {
   //   например, чисел одинаковой длины).
   public static void main(String[] args) {
     int[] numbers = {4, 2, 5, 7, 3};
-    bubbleSort(numbers);
+    bubbleSort(numbers, /*recursive=*/true);
     System.out.println(Arrays.toString(numbers)); // array.toString() - [I@2a84aee7
   }
 
-  public static void bubbleSort(int[] array) {
+  public static void bubbleSort(int[] array, boolean recursive) {
+    if (recursive) {
+      bubbleSortRecursive(array);
+    } else {
+      bubbleSortIterative(array);
+    }
+  }
+
+  private static void bubbleSortIterative(int[] array) {
     // Отсортируем массив in-place - прямо на месте, не копируя.
     // Сортировки могут менять существующую коллекцию или возвращать новую, отсортированную,
     // не трогая старую.
@@ -54,5 +62,41 @@ public class Task1BubbleSort {
         // иначе всё и так хорошо, можно идти дальше
       }
     }
+  }
+
+  // запуск рекурсивной сортировки
+  // лучше написать bubbleSort(int[] array), но такая сигнатура уже занята
+  private static void bubbleSortRecursive(int[] array) {
+    // выход из рекурсии
+    // - массив не нужно сортировать - в нём меньше двух элементов
+    // шаг рекурсии:
+    // - нужно отсортировать массив из n элементов
+    // - подняли наверх самый большой пузырёк
+    // - остался неотсортированным массив из (n - 1) элементов - все, кроме последнего
+    // - нужно отсортировать массив из (n - 1) элементов - рекурсия (с уменьшением размера)
+    // создавать новый массив другого размера невыгодно ни по времени, ни по памяти
+    // проще передавать в метод границу - размер неотсортированной части (right из метода выше)
+    bubbleSortRecursive(array, array.length - 1); // запуск рекурсии с начальным значением last
+  }
+
+  // настоящий рекурсивный метод - для шага рекурсии нужно передавать размер неотсортированной части
+  // перегрузка метода - название то же, аргументы другие (и этот метод приватный)
+  private static void bubbleSortRecursive(int[] array, int last) {
+//    System.out.println("bubbleSort(array=" + Arrays.toString(array) + ", last=" + last + ")");
+    // выход из рекурсии
+    // - массив не нужно сортировать - в нём меньше двух элементов
+    if (last < 1) { // last = 0, остался единственный элемент с индексом 0 (или ничего не осталось)
+      return; // выход из рекурсии
+    }
+    // шаг рекурсии - поднимаем наверх (в last) самый большой пузырёк
+    for (int i = 0; i < last; ++i) {
+      if (array[i] > array[i + 1]) {
+        int temp = array[i];
+        array[i] = array[i + 1];
+        array[i + 1] = temp;
+//        System.out.println(Arrays.toString(array));
+      }
+    }
+    bubbleSortRecursive(array, last - 1); // шаг рекурсии - переход к массиву меньшего размера
   }
 }
