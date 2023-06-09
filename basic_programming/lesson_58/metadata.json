@@ -3,6 +3,10 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "code/practice/src/Task0Efficiency.java",
+    "code/practice/src/Task1SecondMax.java",
+    "code/practice/src/Task2Sqrt.java",
+    "code/practice/src/Task3Menu.java"
   ],
   "video": ""
 }
