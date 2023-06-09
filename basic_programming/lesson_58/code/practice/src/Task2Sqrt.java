@@ -2,7 +2,10 @@ import java.util.Scanner;
 
 public class Task2Sqrt {
 
-  final static int PRECISION = 6;
+  final static int PRECISION = 6; // точность - количество правильных знаков после запятой
+
+  // найденные значения должны совпадать ровно на PRECISION знаков
+  // значит, разница между ними должно начинаться с PRECISION нулей после запятой
   final static double ACCURACY = Math.pow(10, -(PRECISION + 1)); // accuracy = 10^-7 = 0.0000001
 
   public static void main(String[] args) {
