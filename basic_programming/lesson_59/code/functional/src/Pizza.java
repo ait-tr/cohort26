@@ -43,4 +43,14 @@ public class Pizza {
   public void setPrice(double price) {
     this.price = price;
   }
+
+  @Override
+  public String toString() {
+    return "Pizza{" +
+        "title='" + title + '\'' +
+        ", diameter=" + diameter +
+        ", weight=" + weight +
+        ", price=" + price +
+        '}';
+  }
 }

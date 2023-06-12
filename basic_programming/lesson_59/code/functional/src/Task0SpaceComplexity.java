@@ -1,4 +1,4 @@
-public class Main {
+public class Task0SpaceComplexity {
 
   // Сложность по памяти:
   // - обычные переменные (примитивные типы) и ссылки - O(1)
