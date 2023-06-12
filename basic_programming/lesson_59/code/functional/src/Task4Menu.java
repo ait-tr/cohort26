@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class Task4Menu {
 
-  private static final int EXIT = 0;
-  private static final int ADD = 1;
-  private static final int PRINT = 2;
-  private static final int SORT = 3;
+  private static final String EXIT = "0";
+  private static final String ADD = "1";
+  private static final String PRINT = "2";
+  private static final String SORT = "3";
 
-  private static final Map<Integer, String> descriptions = new LinkedHashMap<>();
+  private static final Map<String, String> descriptions = new LinkedHashMap<>();
   static {
     descriptions.put(ADD, "Добавить элемент");
     descriptions.put(PRINT, "Вывести элементы");
@@ -18,26 +18,20 @@ public class Task4Menu {
   }
 
   public static void print() {
-    for (Map.Entry<Integer, String> entry : descriptions.entrySet()) {
+    for (Map.Entry<String, String> entry : descriptions.entrySet()) {
       System.out.println(entry.getKey() + ". " + entry.getValue());
     }
   }
 
-  public static int read() {
+  public static String read() {
     Scanner scanner = new Scanner(System.in);
-    int command;
-    do {
-      while (!scanner.hasNextInt()) {
-        String wrong = scanner.nextLine();
-        System.out.println("Некорректный ввод: " + wrong);
-        System.out.println("Введите номер команды!");
-      }
-      command = scanner.nextInt();
-      scanner.nextLine();
-      if (!descriptions.containsKey(command)) {
-        System.out.println("Некорректный номер команды: " + command);
-      }
-    } while (!descriptions.containsKey(command));
+    System.out.print("Введите команду: ");
+    String command = scanner.nextLine();
+    while (!descriptions.containsKey(command)) {
+      System.out.println("Некорректная команда: \"" + command + '"');
+      System.out.print("Введите команду: ");
+      command = scanner.nextLine();
+    }
     return command;
   }
 }
