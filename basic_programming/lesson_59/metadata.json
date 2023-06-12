@@ -3,6 +3,13 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "code/functional/src/Task0SpaceComplexity.java",
+    "code/functional/src/Pizza.java",
+    "code/functional/src/Task1PizzaComparison.java",
+    "code/functional/src/Alive.java",
+    "code/functional/src/Task2DifferentObjects.java",
+    "code/functional/src/Task3Functional.java",
+    "code/functional/src/Task4Menu.java"
   ],
   "video": ""
 }
