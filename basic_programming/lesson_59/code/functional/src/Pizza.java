@@ -1,9 +1,9 @@
 public class Pizza {
 
-  String title;
-  int diameter;
-  int weight;
-  double price;
+  private String title;
+  private int diameter;
+  private int weight;
+  private double price;
 
   public Pizza(String title, int diameter, int weight, double price) {
     this.title = title;
