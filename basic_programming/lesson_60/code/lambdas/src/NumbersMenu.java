@@ -26,9 +26,11 @@ public class NumbersMenu {
   private static final Map<String, Runnable> actions = new LinkedHashMap<>();
 
   static {
-    actions.put(ADD, () -> add());
-    // для обращения к атрибутам внутри лямбда-функции нужно указать this.атрибут или Класс.атрибут
-    actions.put(PRINT, () -> System.out.println(NumbersMenu.numbers));
+    // если лямбда-функция состоит из единственного вызова другого метода с таким же аргументом,
+    // её можно заменить ссылкой на метод (method reference): `Класс::метод`
+    actions.put(ADD, NumbersMenu::add);
+    actions.put(PRINT, NumbersMenu::print);
+    // для обращения к атрибутам внутри лямбда-функции стоит указать this.атрибут или Класс.атрибут
     actions.put(SORT, () -> Collections.sort(NumbersMenu.numbers));
     actions.put(EXIT, () -> System.exit(0));
   }
@@ -39,16 +41,20 @@ public class NumbersMenu {
     numbers.add(scanner.nextInt());
   }
 
-  private static List<Integer> numbers = new ArrayList<>();
-
   private static void print() {
+    System.out.println(numbers);
+  }
+
+  private static final List<Integer> numbers = new ArrayList<>();
+
+  private static void printMenu() {
     for (Map.Entry<String, String> entry : descriptions.entrySet()) {
       System.out.println(entry.getKey() + ". " + entry.getValue());
     }
   }
 
   public static String read() {
-    print();
+    printMenu();
     Scanner scanner = new Scanner(System.in);
     System.out.print("Введите команду: ");
     String command = scanner.nextLine();
