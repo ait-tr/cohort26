@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Function;
 
 public class Main {
 
@@ -41,22 +42,62 @@ public class Main {
     System.out.println("До сортировки:");
     System.out.println(pizzas);
 
-    pizzas.sort(new Comparator<Pizza>() {
-      @Override
-      public int compare(Pizza o1, Pizza o2) {
-        return o1.getTitle().compareTo(o2.getTitle());
-      }
-    });
+    // 1: компаратор
+//    pizzas.sort(new Comparator<Pizza>() {
+//      @Override
+//      public int compare(Pizza o1, Pizza o2) {
+//        String title1 = o1.getTitle();
+//        String title2 = o2.getTitle();
+//        return title1.compareTo(title2);
+//      }
+//    });
+    // лямбда-функции - безымянные (одноразовые) функции (методы) без сигнатур
+    // (аргументы через запятую) -> {команды через точку с запятой}
+    // для функциональных интерфейсов (интерфейсов с единственным абстрактным методом) анонимный
+    // класс можно заменить анонимной функцией - она будет считаться реализацией этого метода
+    // 2: лямбда-функция
+//    pizzas.sort((Pizza o1, Pizza o2) -> {
+//      String title1 = o1.getTitle();
+//      String title2 = o2.getTitle();
+//      return title1.compareTo(title2);
+//    });
+    // 3: можно не указывать типы аргументов, если они вычислимы
+//    pizzas.sort((o1, o2) -> {
+//      // другие команды, если надо
+//      return o1.getTitle().compareTo(o2.getTitle());
+//    });
+    // лямбда-функцию можно записать без фигурных скобок и точки с запятой,
+    // если у нас единственный оператор - return результат;
+    // `(аргументы) -> результат`
+    // 4:
+    pizzas.sort((o1, o2) -> o1.getTitle().compareTo(o2.getTitle()));
     System.out.println("После сортировки:");
     System.out.println(pizzas);
 
-    pizzas.sort(new Comparator<Pizza>() {
-      @Override
-      public int compare(Pizza o1, Pizza o2) {
-        return Integer.compare(o1.getWeight(), o2.getWeight());
-      }
-    });
+    pizzas.sort((o1, o2) -> Integer.compare(o1.getWeight(), o2.getWeight()));
     System.out.println("После другой сортировки:");
     System.out.println(pizzas);
+    // лямбда-функции (lambda functions, anonymous functions, lambda expressions):
+    // (аргументы с типами) -> {команды;}
+    // (аргументы) -> {команды;}
+    // (аргументы) -> результат
+    // аргумент -> результат
+
+    // отвратительный способ описания функции "модуль":
+//    class Abs implements Function<Integer, Integer> {
+//      @Override
+//      public Integer apply(Integer x) {
+//        if (x < 0) {
+//          return -x;
+//        }
+//        return x;
+//      }
+//    }
+//
+//    Function<Integer, Integer> abs = new Abs();
+//    abs.apply(-5);
+    Function<Integer, Integer> abs = x -> x < 0 ? -x : x;
+    // ^ плохой код, не делайте так!
+    System.out.println("|-5| = " + abs.apply(-5));
   }
 }
