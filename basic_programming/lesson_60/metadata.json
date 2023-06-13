@@ -3,6 +3,9 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "code/lambdas/src/Pizza.java",
+    "code/lambdas/src/Main.java",
+    "code/lambdas/src/NumbersMenu.java"
   ],
   "video": ""
 }

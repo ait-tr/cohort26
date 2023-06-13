@@ -32,56 +32,6 @@
 - `static <T extends Comparable<? super T>> void sort(List<T> list)`
 - `static <T> void sort(List<T> list, Comparator<? super T> c)`
 
-# Анонимный класс
-
-В документации Oracle приведена хорошая рекомендация: «Применяйте анонимные классы, если вам нужен локальный класс для одноразового использования».
-
-Зачем нам может потребоваться одноразовый класс? Например, для компаратора.
-
-Для сравнения автомобилей по максимальной скорости вместо создания отдельного класса
-```java
-public class MaxSpeedCarComparator implements Comparator<Car> {
-
-  @Override
-  public int compare(Car o1, Car o2) {
-    return o1.getMaxSpeed() - o2.getMaxSpeed();
-  }
-}
-
-public class Main {
-
-  public static void main(String[] args) {
-    List<Car> cars = new ArrayList<>();
-    // заполнение списка
-
-    Collections.sort(cars, new MaxSpeedCarComparator());
-
-    System.out.println(cars);
-  }
-}
-```
-мы можем использовать более короткую запись:
-```java
-public class Main {
-
-  public static void main(String[] args) {
-    List<Car> cars = new ArrayList<>();
-    // заполнение списка
-
-    Collections.sort(cars, new Comparator<Car>() {
-      @Override
-      public int compare(Car o1, Car o2) {
-        return o1.getMaxSpeed() - o2.getMaxSpeed();
-      }
-    });
-
-    System.out.println(cars);
-  }
-}
-```
-
-Нам больше не нужен отдельный файл с компаратором, и логика сравнения теперь находится в том же месте кода, где вызывается сортировка.
-
 # Лямбда-выражения в Java
 
 Лямбда-функции или просто лямбда в Java — это анонимные функции, которые можно сохранять и передавать как анонимные классы, реализующие абстрактный функциональный интерфейс.
@@ -92,12 +42,6 @@ public class Main {
 
 Общий вид лямбды: `(параметры) -> выражение` или `(параметры) -> {операторы;}`. Стрелка — это лямбда-оператор.
 
-Чаще всего используются три функциональных интерфейса:
-
-- `Predicate` - принимает параметр и возвращает логическое значение
-- `Consumer` - который принимает параметр и не возвращает никакого значения
-- `Function` - принимает параметр и возвращает какое-то значение
-
 Если у лямбда-выражения всего один аргумент, и для него не требуется объявление типа, то круглые скобки можно опустить. В остальных случаях, в том числе если лямбда не принимает никаких аргументов, скобки опустить нельзя.
 
 Аналогичная ситуация и с телом лямбда-выражений: если оно состоит только из одной строки, то фигурные скобки, точку с запятой (;) и директиву return можно тоже опустить.
@@ -106,7 +50,7 @@ public class Main {
 
 ## Создание лямбда-выражений
 
-Для приведённый выше пример анонимного компаратора можно заменить лямбда-функцией:
+Анонимный компаратор из предыдущего урока
 ```java
 public class Main {
 
@@ -114,7 +58,26 @@ public class Main {
     List<Car> cars = new ArrayList<>();
     // заполнение списка
 
-    Collections.sort(cars, (Car o1, Car o2) -> o1.getMaxSpeed() - o2.getMaxSpeed());
+    cars.sort(new Comparator<Car>() {
+      @Override
+      public int compare(Car o1, Car o2) {
+        return o1.getMaxSpeed() - o2.getMaxSpeed();
+      }
+    });
+
+    System.out.println(cars);
+  }
+}
+```
+можно заменить лямбда-функцией:
+```java
+public class Main {
+
+  public static void main(String[] args) {
+    List<Car> cars = new ArrayList<>();
+    // заполнение списка
+
+    cars.sort((o1, o2) -> o1.getMaxSpeed() - o2.getMaxSpeed());
 
     System.out.println(cars);
   }
