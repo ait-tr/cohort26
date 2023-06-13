@@ -26,30 +26,11 @@ public class NumbersMenu {
   private static final Map<String, Runnable> actions = new LinkedHashMap<>();
 
   static {
-    actions.put(ADD, new Runnable() {
-      @Override
-      public void run() {
-        add();
-      }
-    });
-    actions.put(PRINT, new Runnable() {
-      @Override
-      public void run() {
-        System.out.println(numbers);
-      }
-    });
-    actions.put(SORT, new Runnable() {
-      @Override
-      public void run() {
-        Collections.sort(numbers);
-      }
-    });
-    actions.put(EXIT, new Runnable() {
-      @Override
-      public void run() {
-        System.exit(0); // выход из программы
-      }
-    });
+    actions.put(ADD, () -> add());
+    // для обращения к атрибутам внутри лямбда-функции нужно указать this.атрибут или Класс.атрибут
+    actions.put(PRINT, () -> System.out.println(NumbersMenu.numbers));
+    actions.put(SORT, () -> Collections.sort(NumbersMenu.numbers));
+    actions.put(EXIT, () -> System.exit(0));
   }
 
   private static void add() {
@@ -83,8 +64,7 @@ public class NumbersMenu {
     if (!actions.containsKey(command)) {
       throw new IllegalArgumentException("Некорректная команда: " + command);
     }
-    Runnable action = actions.get(command);
-    action.run();
+    actions.get(command).run();
   }
 
   public static void main(String[] args) {
