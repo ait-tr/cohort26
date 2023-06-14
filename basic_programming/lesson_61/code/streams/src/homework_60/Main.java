@@ -1,6 +1,7 @@
 package homework_60;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -19,7 +20,15 @@ public class Main {
     for (Book book : books) {
       System.out.println(book);
     }
-    // TODO сортировка
+    books.sort(new Comparator<Book>() {
+      @Override
+      public int compare(Book o1, Book o2) {
+        if (!o1.getTitle().equals(o2.getTitle())) {
+          return o1.getTitle().compareTo(o2.getTitle());
+        }
+        return o1.getAuthor().compareTo(o2.getAuthor());
+      }
+    });
     System.out.println("После сортировки:");
     for (Book book : books) {
       System.out.println(book);
