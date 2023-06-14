@@ -20,9 +20,10 @@ public class Main {
     for (Book book : books) {
       System.out.println(book);
     }
-    books.sort((Book o1, Book o2) -> {
-      if (!o1.getTitle().equals(o2.getTitle())) {
-        return o1.getTitle().compareTo(o2.getTitle());
+    books.sort((o1, o2) -> {
+      int titleComp = o1.getTitle().compareTo(o2.getTitle());
+      if (titleComp != 0) {
+        return titleComp;
       }
       return o1.getAuthor().compareTo(o2.getAuthor());
     });
