@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.IntStream;
@@ -25,6 +26,20 @@ public class Task4Numbers {
 
     // не делайте так
 //    System.out.println(IntStream.generate(new Scanner(System.in)::nextInt).skip(10).limit(10).sum());
+    int result2 = 0;
+    int i = 0;
+    while (true) {
+      int x = scanner.nextInt(); // scanner::nextInt
+      ++i;
+      if (i < 11) { // .skip(10)
+        continue;
+      }
+      if (i > 20) { // .limit(10)
+        break;
+      }
+      result2 += x;
+    }
+    System.out.println(result2);
   }
 
   public static int sumSecondTen(List<Integer> numbers) {
