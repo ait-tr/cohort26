@@ -3,17 +3,12 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
-    "code/streams/src/homework60/Book.java",
-    "code/streams/src/homework60/Main.java",
-    "code/streams/src/Main1StreamExample.java",
-    "code/streams/src/Main2StreamExample.java",
-    "code/streams/src/Main3StreamExample.java",
-    "code/streams/src/Main4StreamExample.java",
-    "code/streams/src/Main5StreamMapExample.java",
-    "code/streams/src/Main6StreamComplexMapExample.java",
-    "code/streams/src/Main7StreamInteractiveMapExample.java",
-    "code/streams/src/Main8StreamToListExample.java",
-    "code/streams/src/Main9CollectorExample.java"
+    "code/streams/src/homework_60/Book.java",
+    "code/streams/src/homework_60/Main.java",
+    "code/streams/src/Task1Streams.java",
+    "code/streams/src/Task2ComplexStream.java",
+    "code/streams/src/Task3Books.java",
+    "code/streams/src/Task4Numbers.java"
   ],
   "video": ""
 }

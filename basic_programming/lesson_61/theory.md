@@ -4,7 +4,7 @@
 
 Потоки описаны в пакете `java.util.stream`, полное имя класса - `java.util.stream.Stream`.
 
-[Документация класса Stream](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/util/stream/Stream.html)
+[Документация класса Stream](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)
 
 # Создание потоков
 
