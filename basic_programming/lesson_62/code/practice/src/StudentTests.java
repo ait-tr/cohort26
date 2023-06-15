@@ -1,5 +1,6 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.Scanner;
 import org.junit.jupiter.api.Test;
 
 public class StudentTests {
@@ -57,5 +58,23 @@ public class StudentTests {
 
     assertEquals(name, actual.getName());
     assertEquals(score, actual.getScore());
+  }
+
+  @Test
+  public void testCsv() {
+    String name = "Test";
+    int score = 42;
+    char sep = ';';
+
+    Student source = new Student(name, score);
+    String csvLine = source.toCsvString(sep);
+
+    // сканер, в который мы передали заранее заготовленный ввод
+    Scanner scanner = new Scanner(csvLine);
+    String readLine = scanner.nextLine(); // scanner.nextLine() обрезает конец строки
+    Student read = Student.parseFromCsv(readLine, sep);
+
+    assertEquals(source.getName(), read.getName());
+    assertEquals(source.getScore(), read.getScore());
   }
 }
