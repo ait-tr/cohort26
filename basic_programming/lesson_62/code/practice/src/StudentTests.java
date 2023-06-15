@@ -45,4 +45,17 @@ public class StudentTests {
 
     assertEquals(expected, actual);
   }
+
+  @Test
+  public void testParseFromCsv() {
+    String name = "Test";
+    int score = 42;
+    char sep = ';';
+
+    String source = name + sep + score;
+    Student actual = Student.parseFromCsv(source, sep);
+
+    assertEquals(name, actual.getName());
+    assertEquals(score, actual.getScore());
+  }
 }
