@@ -32,7 +32,7 @@ public class Main {
         .filter(s -> s.getScore() >= passingScore)
         .sorted((s1, s2) -> -Integer.compare(s1.getScore(), s2.getScore()))
         .limit(10)
-        .forEach(s -> System.out.println(s));
+        .forEach(System.out::println);
   }
 
   private static List<Student> createStudentList() {
