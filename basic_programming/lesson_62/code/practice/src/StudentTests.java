@@ -5,30 +5,30 @@ import org.junit.jupiter.api.Test;
 
 public class StudentTests {
 
+  private static final String NAME = "Test";
+  private static final int SCORE = 42;
+  private static final char SEP = ';';
+
   @Test
   public void testCreation() {
-    String name = "Test";
-    int score = 42;
-    Student student = new Student(name, score);
-    assertEquals(name, student.getName());
-    assertEquals(score, student.getScore());
+    Student student = new Student(NAME, SCORE);
+    assertEquals(NAME, student.getName());
+    assertEquals(SCORE, student.getScore());
 
-    name = "Test2";
-    student.setName(name);
-    assertEquals(name, student.getName());
+    String newName = "Test2";
+    student.setName(newName);
+    assertEquals(newName, student.getName());
 
-    score *= 2;
-    student.setScore(score);
-    assertEquals(score, student.getScore());
+    int newScore = SCORE * 2;
+    student.setScore(newScore);
+    assertEquals(newScore, student.getScore());
   }
 
   @Test
   public void testToString() {
-    String name = "Test";
-    int score = 42;
-    Student student = new Student(name, score);
+    Student student = new Student(NAME, SCORE);
 
-    String expected = name + " (score: " + score + ")";
+    String expected = NAME + " (score: " + SCORE + ")";
     String actual = student.toString(); // вызываем метод, который проверяем
 
     assertEquals(expected, actual);
@@ -36,43 +36,32 @@ public class StudentTests {
 
   @Test
   public void testToCsvString() {
-    String name = "Test";
-    int score = 42;
-    Student student = new Student(name, score);
+    Student student = new Student(NAME, SCORE);
 
-    char sep = ';';
-    String expected = name + sep + score + '\n';
-    String actual = student.toCsvString(sep);
+    String expected = NAME + SEP + SCORE + '\n';
+    String actual = student.toCsvString(SEP);
 
     assertEquals(expected, actual);
   }
 
   @Test
   public void testParseFromCsv() {
-    String name = "Test";
-    int score = 42;
-    char sep = ';';
+    String source = NAME + SEP + SCORE;
+    Student actual = Student.parseFromCsv(source, SEP);
 
-    String source = name + sep + score;
-    Student actual = Student.parseFromCsv(source, sep);
-
-    assertEquals(name, actual.getName());
-    assertEquals(score, actual.getScore());
+    assertEquals(NAME, actual.getName());
+    assertEquals(SCORE, actual.getScore());
   }
 
   @Test
   public void testCsv() {
-    String name = "Test";
-    int score = 42;
-    char sep = ';';
-
-    Student source = new Student(name, score);
-    String csvLine = source.toCsvString(sep);
+    Student source = new Student(NAME, SCORE);
+    String csvLine = source.toCsvString(SEP);
 
     // сканер, в который мы передали заранее заготовленный ввод
     Scanner scanner = new Scanner(csvLine);
     String readLine = scanner.nextLine(); // scanner.nextLine() обрезает конец строки
-    Student read = Student.parseFromCsv(readLine, sep);
+    Student read = Student.parseFromCsv(readLine, SEP);
 
     assertEquals(source.getName(), read.getName());
     assertEquals(source.getScore(), read.getScore());
