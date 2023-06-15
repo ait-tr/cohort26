@@ -9,32 +9,41 @@ import java.util.Scanner;
 public class StudentList {
 
   private final List<Student> students;
-  private final String fileName;
+  private final File file;
   private final char sep;
 
-  public StudentList(String fileName, char sep) throws FileNotFoundException {
-    this.fileName = fileName;
+  public StudentList(String fileName, char sep) {
+    file = new File(fileName);
     this.sep = sep;
     students = readFromCsv();
   }
 
   public void writeToCsv() throws IOException {
-    FileWriter fileWriter = new FileWriter(fileName);
+    FileWriter fileWriter = new FileWriter(file);
     for (Student student : students) {
       fileWriter.write(student.toCsvString(sep));
     }
     fileWriter.close();
   }
 
-  private List<Student> readFromCsv() throws FileNotFoundException {
-    Scanner scanner = new Scanner(new File(fileName)); // сканер для чтения из файла
+  private List<Student> readFromCsv() {
     List<Student> result = new ArrayList<>();
-    while (scanner.hasNext()) {
-      String line = scanner.nextLine(); // читаем строку из файла
-      Student student = Student.parseFromCsv(line, sep); // получаем студента из строки
-      result.add(student); // добавляем полученного студента в список
+    if (!file.exists() || !file.canRead()) {
+      return result; // если файла нет или его нельзя читать
     }
-    scanner.close();
+    try { // try-catch с ignored, потому что мы заранее всё проверили
+      Scanner scanner = new Scanner(file); // сканер для чтения из файла
+      while (scanner.hasNext()) {
+        String line = scanner.nextLine(); // читаем строку из файла
+        try {
+          Student student = Student.parseFromCsv(line, sep); // получаем студента из строки
+          result.add(student); // добавляем полученного студента в список
+        } catch (IndexOutOfBoundsException | NumberFormatException ignored) {
+        } // не получилось прочитать строку
+      }
+      scanner.close();
+    } catch (FileNotFoundException ignored) {
+    }
     return result;
   }
 

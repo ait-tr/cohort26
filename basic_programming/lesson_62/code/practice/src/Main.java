@@ -30,7 +30,7 @@ public class Main {
   // Редактировать список: добавлять, удалять, изменять информацию о студенте
   public static void main(String[] args) throws IOException {
     // чтение из файла
-    StudentList students = new StudentList("res/students.csv", ';');
+    StudentList students = new StudentList("res/student.csv", ';');
 
     // вывод
     students.print();
