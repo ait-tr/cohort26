@@ -34,14 +34,19 @@ public class Main {
   // Программа, работающая со списком студентов.
   // Нужно уметь читать, редактировать, сохранять список студентов в файл.
   // Редактировать список: добавлять, удалять, изменять информацию о студенте
+  private static final String fileName = "res/students.csv";
 
   public static void main(String[] args) throws IOException {
-    List<Student> students = createStudentList();
-    writeToCsv(students, "res/students.csv");
-    List<Student> anotherList = readFromCsv("res/students.csv");
-    for (Student student : anotherList) {
+    // чтение из файла
+    List<Student> students = readFromCsv(fileName);
+
+    // вывод
+    for (Student student : students) {
       System.out.println(student);
     }
+
+    // запись в файл
+    writeToCsv(students, fileName);
   }
 
   private static void writeToCsv(List<Student> students, String fileName) throws IOException {
@@ -61,27 +66,6 @@ public class Main {
       result.add(student); // добавляем полученного студента в список
     }
     scanner.close();
-    return result;
-  }
-
-  private static List<Student> createStudentList() {
-    List<Student> result = new ArrayList<>();
-    result.add(new Student("Бовша Альберт Рустамович", 99));
-    result.add(new Student("Богатикова Антонина Дмитриевна", 101));
-    result.add(new Student("Горохов Степан Леонидович", 75));
-    result.add(new Student("Гусев Александр Семенович", 43));
-    result.add(new Student("Дзугаев Ахсарбек Станиславович", 130));
-    result.add(new Student("Загибалов Павел Дмитриевич", 76));
-    result.add(new Student("Землянов Константин Александрович", 67));
-    result.add(new Student("Игумеников Степан Владимирович", 99));
-    result.add(new Student("Каламбетов Даниил Эдуардович", 88));
-    result.add(new Student("Карданова Аида Аскеровна", 80));
-    result.add(new Student("Кашина Оксана Алексеевна", 95));
-    result.add(new Student("Киреев Кирилл Александрович", 100));
-    result.add(new Student("Коротких Анна Алексеевна", 0));
-    result.add(new Student("Кудряшов Дмитрий Романович", 200));
-    result.add(new Student("Мамлеева Аделина Ринатовна", 90));
-    result.add(new Student("Паршин Егор Ильич", 15));
     return result;
   }
 }
