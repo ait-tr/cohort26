@@ -12,7 +12,7 @@ public class Main {
   //
   // Выведите список учеников согласно следующим условиям:
   // - каждый ученик выведен в отдельной строке
-  // - баллы каждого ученика выше минимального проходного
+  // - баллы каждого ученика не ниже минимального проходного
   // - ученики отсортированы по убыванию среднего балла
   // - в списке не больше 10 учеников (извините, конкурс)
   //
@@ -28,6 +28,11 @@ public class Main {
     int passingScore = scanner.nextInt();
     scanner.nextLine();
 
+    students.stream()
+        .filter(s -> s.getScore() >= passingScore)
+        .sorted((s1, s2) -> Integer.compare(s1.getScore(), s2.getScore()))
+        .limit(10)
+        .forEach(s -> System.out.println(s));
   }
 
   private static List<Student> createStudentList() {
