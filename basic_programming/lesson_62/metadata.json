@@ -3,6 +3,12 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "code/practice/src/homework_61/Main.java",
+    "code/practice/src/homework_61/Student.java",
+    "code/practice/src/Main.java",
+    "code/practice/src/Student.java",
+    "code/practice/src/StudentList.java",
+    "code/practice/src/StudentTests.java"
   ],
   "video": ""
 }
