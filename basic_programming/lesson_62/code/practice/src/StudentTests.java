@@ -28,8 +28,21 @@ public class StudentTests {
     Student student = new Student(name, score);
 
     String expected = name + " (score: " + score + ")";
-    String line = student.toString();
+    String actual = student.toString(); // вызываем метод, который проверяем
 
-    assertEquals(expected, line);
+    assertEquals(expected, actual);
+  }
+
+  @Test
+  public void testToCsvString() {
+    String name = "Test";
+    int score = 42;
+    Student student = new Student(name, score);
+
+    char sep = ';';
+    String expected = name + sep + score + '\n';
+    String actual = student.toCsvString(sep);
+
+    assertEquals(expected, actual);
   }
 }
