@@ -38,7 +38,7 @@ public class Main {
   public static void main(String[] args) throws IOException {
     List<Student> students = createStudentList();
     writeToFile(students, "res/students.txt");
-    List<Student> anotherList = readFromFile("res/students.txt");
+    List<Student> anotherList = readFromCsv("res/students.csv");
     for (Student student : anotherList) {
       System.out.println(student);
     }
@@ -52,11 +52,13 @@ public class Main {
     fileWriter.close();
   }
 
-  private static List<Student> readFromFile(String fileName) throws FileNotFoundException {
+  private static List<Student> readFromCsv(String fileName) throws FileNotFoundException {
     Scanner scanner = new Scanner(new File(fileName)); // сканер для чтения из файла
     List<Student> result = new ArrayList<>();
     while (scanner.hasNext()) {
-      result.add(Student.parse(scanner.nextLine()));
+      String line = scanner.nextLine(); // читаем строку из файла
+      Student student = Student.parseFromCsv(line); // получаем студента из строки
+      result.add(student); // добавляем полученного студента в список
     }
     scanner.close();
     return result;

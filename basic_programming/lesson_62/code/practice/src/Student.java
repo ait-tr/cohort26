@@ -2,6 +2,7 @@ public class Student {
 
   String name;
   int score;
+  private static final char SEP = ';';
 
   public Student(String name, int score) {
     this.name = name;
@@ -29,7 +30,13 @@ public class Student {
     return name + " (score: " + score + ")";
   }
 
-  public static Student parse(String line) {
-    return new Student("<" + line + ">", 0);
+  public static Student parseFromCsv(String line) {
+    // line = "Бовша Альберт Рустамович;99"
+    int sepIndex = line.indexOf(SEP);
+    String name = line.substring(0, sepIndex); // name = "Бовша Альберт Рустамович"
+    // ';' пропускаем, поэтому начинаем с `sepIndex + 1`
+    String scoreStr = line.substring(sepIndex + 1); // scoreStr = "99"
+    int score = Integer.parseInt(scoreStr);
+    return new Student(name, score);
   }
 }
