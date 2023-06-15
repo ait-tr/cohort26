@@ -28,4 +28,8 @@ public class Student {
   public String toString() {
     return name + " (score: " + score + ")";
   }
+
+  public static Student parse(String line) {
+    return new Student("<" + line + ">", 0);
+  }
 }

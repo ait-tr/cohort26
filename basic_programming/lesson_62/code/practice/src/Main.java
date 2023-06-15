@@ -1,8 +1,10 @@
-import homework_61.Student;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
@@ -36,6 +38,10 @@ public class Main {
   public static void main(String[] args) throws IOException {
     List<Student> students = createStudentList();
     writeToFile(students, "res/students.txt");
+    List<Student> anotherList = readFromFile("res/students.txt");
+    for (Student student : anotherList) {
+      System.out.println(student);
+    }
   }
 
   private static void writeToFile(List<Student> students, String fileName) throws IOException {
@@ -44,6 +50,16 @@ public class Main {
       fileWriter.write(student.toString() + "\n");
     }
     fileWriter.close();
+  }
+
+  private static List<Student> readFromFile(String fileName) throws FileNotFoundException {
+    Scanner scanner = new Scanner(new File(fileName)); // сканер для чтения из файла
+    List<Student> result = new ArrayList<>();
+    while (scanner.hasNext()) {
+      result.add(Student.parse(scanner.nextLine()));
+    }
+    scanner.close();
+    return result;
   }
 
   private static List<Student> createStudentList() {
