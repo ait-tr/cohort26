@@ -3,6 +3,7 @@ package homework_61;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -25,13 +26,18 @@ public class Main {
     Scanner scanner = new Scanner(System.in);
     List<Student> students = createStudentList();
     System.out.print("Введите минимальный проходной балл: ");
-    int passingScore = scanner.nextInt();
+    int passingScore = scanner.nextInt(); // минимальный проходной балл
     scanner.nextLine();
 
+    // получаем из списка поток (stream)
     students.stream()
+        // отбрасываем всех с баллами меньше минимального - intermediate operation
         .filter(s -> s.getScore() >= passingScore)
+        // сортируем по убыванию баллов - stateful intermediate operation
         .sorted((s1, s2) -> -Integer.compare(s1.getScore(), s2.getScore()))
+        // ограничиваем список - не больше 10 студентов - intermediate operation
         .limit(10)
+        // каждого выводим в новой строке - terminal operation
         .forEach(System.out::println);
   }
 
