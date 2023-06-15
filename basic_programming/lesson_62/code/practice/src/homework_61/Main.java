@@ -20,7 +20,7 @@ public class Main {
   // Для обработки и вывода результата используйте потоки (`Stream`).
   //
   // ## Примечание
-  // Cортировка потока выполняется при помощи промежуточного метода `sorted(Comparator<? super T> comparator)`.
+  // Сортировка потока выполняется при помощи промежуточного метода `sorted(Comparator<? super T> comparator)`.
   // В качестве компаратора используйте лямбда-функцию.
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
