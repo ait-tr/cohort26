@@ -1,10 +1,4 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 public class Main {
 
@@ -34,38 +28,14 @@ public class Main {
   // Программа, работающая со списком студентов.
   // Нужно уметь читать, редактировать, сохранять список студентов в файл.
   // Редактировать список: добавлять, удалять, изменять информацию о студенте
-  private static final String fileName = "res/students.csv";
-
   public static void main(String[] args) throws IOException {
     // чтение из файла
-    List<Student> students = readFromCsv(fileName);
+    StudentList students = new StudentList("res/students.csv", ';');
 
     // вывод
-    for (Student student : students) {
-      System.out.println(student);
-    }
+    students.print();
 
     // запись в файл
-    writeToCsv(students, fileName);
-  }
-
-  private static void writeToCsv(List<Student> students, String fileName) throws IOException {
-    FileWriter fileWriter = new FileWriter(fileName);
-    for (Student student : students) {
-      fileWriter.write(student.toCsvString());
-    }
-    fileWriter.close();
-  }
-
-  private static List<Student> readFromCsv(String fileName) throws FileNotFoundException {
-    Scanner scanner = new Scanner(new File(fileName)); // сканер для чтения из файла
-    List<Student> result = new ArrayList<>();
-    while (scanner.hasNext()) {
-      String line = scanner.nextLine(); // читаем строку из файла
-      Student student = Student.parseFromCsv(line); // получаем студента из строки
-      result.add(student); // добавляем полученного студента в список
-    }
-    scanner.close();
-    return result;
+    students.writeToCsv();
   }
 }
