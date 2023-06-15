@@ -30,6 +30,10 @@ public class Student {
     return name + " (score: " + score + ")";
   }
 
+  public String toCsvString() {
+    return name + SEP + score + '\n';
+  }
+
   public static Student parseFromCsv(String line) {
     // line = "Бовша Альберт Рустамович;99"
     int sepIndex = line.indexOf(SEP);

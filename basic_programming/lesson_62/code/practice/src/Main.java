@@ -37,17 +37,17 @@ public class Main {
 
   public static void main(String[] args) throws IOException {
     List<Student> students = createStudentList();
-    writeToFile(students, "res/students.txt");
+    writeToCsv(students, "res/students.csv");
     List<Student> anotherList = readFromCsv("res/students.csv");
     for (Student student : anotherList) {
       System.out.println(student);
     }
   }
 
-  private static void writeToFile(List<Student> students, String fileName) throws IOException {
+  private static void writeToCsv(List<Student> students, String fileName) throws IOException {
     FileWriter fileWriter = new FileWriter(fileName);
     for (Student student : students) {
-      fileWriter.write(student.toString() + "\n");
+      fileWriter.write(student.toCsvString());
     }
     fileWriter.close();
   }
