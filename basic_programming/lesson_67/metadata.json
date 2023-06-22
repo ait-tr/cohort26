@@ -3,6 +3,9 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "code/multithreading/src/Main.java",
+    "code/multithreading/src/MyThread.java",
+    "code/multithreading/src/MyOtherThread.java"
   ],
   "video": ""
 }
