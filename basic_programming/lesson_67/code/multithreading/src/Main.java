@@ -21,6 +21,10 @@ public class Main {
     System.out.println("Hello world!");
     Thread thread = new MyThread();
     thread.start(); // отдельный запуск потока, начнётся асинхронное выполнение thread.run()
+    while (thread.isAlive()) { // пока поток thread не закончит выполнение
+      System.out.println("Waiting...");
+    }
+    // здесь поток thread уже завершился
     for (int i = 0; i < 100; ++i) {
       System.out.println("Вывод в основном потоке");
     }
