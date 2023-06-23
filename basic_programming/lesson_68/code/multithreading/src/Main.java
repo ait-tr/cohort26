@@ -7,7 +7,24 @@ public class Main {
   //   класс Stream и все его операторы (промежуточные и терминальные)
   // - Потоки выполнения команды - треды - (thread)
   //   многопоточность, класс Thread
+
+  // Data race (гонка данных) - основная опасность при многопоточности
   public static void main(String[] args) {
-    System.out.println("Hello world!");
+    Example1DataRace example = new Example1DataRace();
+    Thread thread = new Thread(() -> {
+      for (int i = 0; i < 1000; ++i) {
+        example.increment();
+      }
+    });
+    thread.start();
+    for (int i = 0; i < 1000; ++i) {
+      example.increment();
+    }
+    // после нашего цикла подождём завершения треда
+    while (thread.isAlive()) {
+      System.out.println("Waiting...");
+    }
+    // должно получиться 2000
+    System.out.println(example.getCount());
   }
 }
