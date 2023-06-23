@@ -10,7 +10,7 @@ public class Main {
 
   // Data race (гонка данных) - основная опасность при многопоточности
   public static void main(String[] args) {
-    Example3SynchronizedBlocks example = new Example3SynchronizedBlocks();
+    Example4Atomic example = new Example4Atomic();
     Thread thread = new Thread(() -> {
       for (int i = 0; i < 1000; ++i) {
         example.increment();
