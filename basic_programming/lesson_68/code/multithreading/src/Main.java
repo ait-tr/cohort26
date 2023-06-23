@@ -9,6 +9,16 @@ public class Main {
   //   многопоточность, класс Thread
 
   // Data race (гонка данных) - основная опасность при многопоточности
+
+  // Кроме атомарных классов, бывают Thread-safe (потокобезопасные) коллекции:
+  // - ConcurrentHashMap - потокобезопасная HashMap, эффективнее, чем использование synchronized
+  // - CopyOnWriteArrayList - потокобезопасный ArrayList
+  // - BlockingQueue - блокирующая очередь (Queue)
+  // - и др.
+
+  // Безопасное многопоточное использование данных часто замедляет работу программы.
+  // Иногда можно достигнуть отрицательного эффекта - многопоточная программа будет выполняться
+  // медленнее, чем те же самые команды в один поток.
   public static void main(String[] args) {
     Example4Atomic example = new Example4Atomic();
     Thread thread = new Thread(() -> {
