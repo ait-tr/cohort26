@@ -4,6 +4,9 @@ public class Example1DataRace {
 
   public void increment() { // увеличить count на 1
     // count++;
+    // между getCount() = 1023
+    // и setCount(1024)
+    // могло произойти увеличение в другом потоке
     setCount(getCount() + 1);
   }
 
