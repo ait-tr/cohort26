@@ -3,6 +3,13 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "code/multithreading/src/Example1DataRace.java",
+    "code/multithreading/src/Example2Synchronized.java",
+    "code/multithreading/src/Example3SynchronizedBlocks.java",
+    "code/multithreading/src/Example4Atomic.java",
+    "code/multithreading/src/Main.java",
+    "code/multithreading/src/Main2ExecutorService.java",
+    "code/multithreading/src/Main3ExecutorFuture.java"
   ],
   "video": ""
 }
