@@ -13,7 +13,11 @@ public class Example2Synchronized {
     System.out.println("Новое значение: " + getCount());
   }
 
-  // synchronized - метод increment() не может выполняться одновременно для одного и того же объекта
+  // synchronized для статического метода:
+  // - метод не может выполняться одновременно
+
+  // synchronized для не-статического метода (метода экземпляра):
+  // - метод increment() не может выполняться одновременно для одного и того же объекта
   public synchronized void increment() { // увеличить count на 1
     // count++;
     // между getCount() = 1023
