@@ -10,15 +10,15 @@ public class Main {
 
   // Data race (гонка данных) - основная опасность при многопоточности
   public static void main(String[] args) {
-    Example1DataRace example = new Example1DataRace();
+    Example2Synchronized example = new Example2Synchronized();
     Thread thread = new Thread(() -> {
       for (int i = 0; i < 1000; ++i) {
-        example.increment();
+        example.visit();
       }
     });
     thread.start();
     for (int i = 0; i < 1000; ++i) {
-      example.increment();
+      example.visit();
     }
     // после нашего цикла подождём завершения треда
     while (thread.isAlive()) {
