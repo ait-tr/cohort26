@@ -1,0 +1,51 @@
+/* Выбирали селекторы по тегу */
+span {
+    font-size: 20px;
+    background-color: lightcyan;
+}
+
+/* Селекторы по id */
+#second-span {
+    font-size: 14px;
+}
+
+#third-span {
+    color:blueviolet
+}
+
+#forth-span {
+    font-weight: bold;
+}
+
+#yellow-p{
+    color: rgb(168, 168, 51);
+    width: 500px;
+    box-shadow: 0 0 0 1px #a12d84;
+    border-radius: 50px;
+}
+
+/* Селекторы по class */
+.red {
+    color: red;
+}
+
+.green-p {
+    color: green
+}
+
+.red-box {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(208, 41, 41);
+}
+
+.italic-text {
+    font-style: italic;
+    border: 1px solid
+}
+
+.text-pointer {
+    font-style: normal;
+    cursor: pointer;
+    border: 2px dashed;
+}
