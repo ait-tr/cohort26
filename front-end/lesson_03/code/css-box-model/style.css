@@ -1,0 +1,145 @@
+.block {
+    background-color: aquamarine;
+}
+
+/* Строчному элементу можем вручную прописать блочный вид (display: block;) */
+.string {
+    display: block;
+    background-color: lightgoldenrodyellow;
+}
+
+h1 {
+    background-color: aquamarine;
+}
+
+p {
+    background-color: blueviolet;
+}
+
+a {
+    background-color: antiquewhite;
+}
+
+span {
+    display: block;
+    margin-top: 30px;
+    background-color: bisque;
+}
+.red-box {
+    /* если у padding стоит одна цифра - значит стили применяются для всех сторон */
+    padding: 30px;
+    /* если у margin стоит одна цифра - значит стили применяются для всех сторон */
+    margin: 50px;
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    text-align: center;
+}
+
+.green-parent {
+    width: 600px;
+    height: 500px;
+    background-color: lightgrey;
+    position: relative;
+}
+.green-box {
+    /* если 2 цифры, то первая - верх-низ, вторая - лево-право */
+    padding: 15px 40px;
+    /*  если 3 цифры, то первая - верх, вторая - право-лево, третья - низ */
+    margin: 30px 60px 15px;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 64px;
+    left: 50px;
+    background-color: green;
+    border: 4px dotted;
+}
+
+.black-box {
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    color: aliceblue;
+}
+
+.yellow-box {
+    margin: 40px;
+    padding: 30px;
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+    border: 1px dashed;
+    /* Цифры у box-shadow: */
+    /* первая - горизонтальное смещение тени */
+    /* вторая - вертикальное смещение тени */
+    /* третья - радиус размытия тени */
+    box-shadow: 26px 21px 7px rgb(196, 180, 180);
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.blue-circle {
+    /* если 4 цифры, то первая - верх, вторая - право, третья - низ, четвертая - лево */
+    margin: 10px 60px 20px 40px;
+    padding: 50px;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    color: white;
+    border-radius: 50%;
+    border: 1px solid darkmagenta;
+}
+
+.blue-circle-text {
+    position: relative;
+    bottom: -95px;
+    right: -64px;
+}
+
+.triangle {
+   width: 0;
+   height: 0;
+   position: relative;
+   top: 7px;
+   left: 240px;
+   border-left: 100px solid transparent;
+   border-right: 100px solid transparent;
+   border-bottom: 250px solid lightsalmon;
+}
+
+.triangle-text {
+    position: relative;
+    top: 220px;
+    left: -23px;
+    /* А можно было написать и вот так: */
+    /* bottom: -220px;
+    right: 27px */
+}
+
+.tree-children {
+    background-color: lightyellow;
+    position: relative;
+}
+
+.child {
+    margin: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+.child1 {
+    background-color: blueviolet;
+}
+
+.child2 {
+    background-color: magenta;
+}
+
+.child3 {
+    position: absolute;
+    background-color: pink;
+    z-index: 5;
+    top: 20px;
+    left: 20px;
+}
