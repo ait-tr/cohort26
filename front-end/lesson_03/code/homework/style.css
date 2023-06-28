@@ -1,0 +1,51 @@
+main {
+  background-color: azure;
+  width: fit-content;
+}
+
+img {
+  height: 400px;
+}
+
+div {
+  font-size: larger;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.intro {
+  border: 5px solid orange;
+}
+
+.main-text {
+  background-color: yellow;
+  font-size: 13px;
+  font-variant: small-caps;
+  border: 2px dashed #391ee7
+}
+
+#text-more {
+  background-color: hotpink;
+  cursor: pointer;
+}
+
+
+#idea3 {
+  color: blue;
+  background-color: beige;
+}
+
+
+.bald-idea {
+  color: lawngreen;
+  font-size: 15px;
+}
+
+.footer-element {
+  font-family: 'Times New Roman', Times, serif;
+}
