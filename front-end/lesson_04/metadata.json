@@ -1,0 +1,11 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "code/example01/index.html",
+    "code/example02/index.html"
+  ],
+  "video": "",
+  "etc": ""
+}
