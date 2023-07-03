@@ -17,7 +17,7 @@
 
 Элементы будут располагаться либо по главной оси (от начала до конца), либо по поперечной оси (от начала до конца).
 
-<img src="https://github.com/ait-tr/cohort26/tree/main/front-end/lesson_05/img/00-basic-terminology.svg" alt="isolated" width="700"/>
+<img src="https://css-tricks.com/wp-content/uploads/2018/11/00-basic-terminology.svg" alt="isolated" width="700"/>
 
 - main-axis — главная ось гибкого контейнера — это основная ось, вдоль которой располагаются гибкие элементы. Внимание, она не обязательно горизонтально расположена; это зависит от свойства flex-direction (см. ниже).
 - main-start | main-end — flex-элементы размещаются внутри контейнера, начиная с main-start и заканчивая main-end.
@@ -35,7 +35,7 @@
 }
 ```
 #### *`flex-direction`*
-<img src="https://github.com/ait-tr/cohort26/tree/main/front-end/lesson_05/img/flex-direction.svg" alt="isolated" width="400"/>
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/flex-direction.svg" alt="isolated" width="400"/>
 
 Это свойство определяет направление главной оси: горизонтально
 ```
@@ -49,7 +49,7 @@
 - column-reverse: столбец снизу вверх
 
 #### *`flex-wrap`*
-<img src="https://github.com/ait-tr/cohort26/tree/main/front-end/lesson_05/img/flex-wrap.svg" alt="isolated" width="400"/>
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/flex-wrap.svg" alt="isolated" width="400"/>
 
 По умолчанию все флекс элементы будут пытаться уместиться на строке, это можно изменить, если поменять значение свойства flex-wrap на wrap
 ```
@@ -72,7 +72,7 @@
 ```
 
 #### *`justify-content`*
-<img src="https://github.com/ait-tr/cohort26/tree/main/front-end/lesson_05/img/justify-content.svg" alt="isolated" width="400"/>
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/align-items.svg" alt="isolated" width="400"/>
 
 
 Определяет то, как располагаются элементы относительно главной оси.
@@ -91,7 +91,7 @@
 - space-evenly: элементы расположены равномерно, расстояние между элементами и от элементов до краев равно
 
 #### *`align-content`*
-<img src="https://github.com/ait-tr/cohort26/tree/main/front-end/lesson_05/img/align-content.svg" alt="isolated" width="400"/>
+<img src="https://css-tricks.com/wp-content/uploads/2018/10/align-content.svg" alt="isolated" width="400"/>
 
 Это свойство выравнивает положение строк внутри гибкого контейнера.
 ```
@@ -109,7 +109,8 @@
 - stretch: строки растянуты чтобы заполнить свободно пространство 
 
 #### *`gap`*
-<img src="https://github.com/ait-tr/cohort26/tree/main/front-end/lesson_05/img/gap-1.svg" alt="isolated" width="400"/>
+
+<img src="https://css-tricks.com/wp-content/uploads/2021/09/gap-1.svg" alt="isolated" width="400"/>
 
 ```
 .container {
