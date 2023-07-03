@@ -1,0 +1,154 @@
+/* Пример 1 */
+.container {
+  background-color: lightcyan;
+  display: flex;
+  /* 
+  flex-direction - направление основной оси 
+    row - основная ось горизонатльно
+    column - вертикально
+  */
+  flex-direction: row;
+  /*  */
+  flex-wrap: wrap;
+  /* короткая запись  вместо 9 и 11 строк */
+  flex-flow: row wrap;
+}
+
+
+.red-box {
+  background-color: lightcoral;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+/* Пример 2 */
+.container2 {
+  background-color: lemonchiffon;
+  display: flex;
+  /* 
+   justify-content - как располагаются элементы по основной оси 
+    - flex-end или end - располагаются к концу основной оси 
+    - flex-start или start - элементы располагаются у начала основной оси, смещены к началу
+    - center - элементы расположены в центре 
+    - space-between - все место между элементами - по краям нет 
+    - space-around - когда есть есть расстояние до края 
+    - space-evenly - когда равное рсстояние между элементами и от элемента до края 
+
+  */
+  justify-content: space-around;
+}
+
+.green-box {
+  background-color: lightgreen;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+/* Пример 3 */
+.container3 {
+  background-color: lightgrey;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  /* 
+    align-items -  отвечает за выравнивание относительно поперечной оси
+    то есть элементы с разной высотой будут выровнены (в данном пример верх-низ)
+      - center - по середине поперечной оси
+    */
+  align-items: flex-end;
+}
+
+.yellow-box {
+  background-color: lightyellow;
+  width: 300px;
+  border: 10px;
+  margin: 20px;
+}
+
+.small {
+  height: 100px;
+}
+
+.middle {
+  height: 300px;
+}
+
+.big {
+  height: 400px;
+}
+
+/* Пример 4 */
+.container4 {
+  height: 1200px;
+  background-color: lightseagreen;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* align-content  !!! не то же самое что align items !!!
+    контен следует понимать как все содержимое контенера 
+    flex-end - все квадратики сместились к концу поперечной оси - в данном случае вниз
+    flex-start - к началу поперечной оси - в данном случае к верху 
+
+  
+  */
+  align-content: flex-end;
+}
+
+/* Пример 5 */
+.container5 {
+  background-color: lemonchiffon;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* gap - минимальное расстояние между карточками */
+  gap: 40px;
+
+  /* можно уточнить */
+  /* row-gap - расстояние между строками */
+  row-gap: 30px;
+  /* column-gap - рассотяние между колонками */
+  column-gap: 100px;
+  /* сокращенная запись row gap - column gap*/
+  gap: 30px 100px;
+}
+
+.container6 {
+  height: 500px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-menue{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.upper-section {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.upper-section {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.lower-section {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.left-menue {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
