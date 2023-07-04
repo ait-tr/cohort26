@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <h1>Повторение positioning</h1>
+  <!-- 
+    position: 
+      - static === значение по умолчанию
+      - relative - позиция относительно нормального состояния 
+        другие элементы страницы ведут себя так, словно элемент занимает свое место
+        не схлопываются вокруг него 
+      - absolute - вынесет из normal flow и другие схлопнутся 
+      - fixed 
+      - sticky
+   -->
+   <div class="red box"> Красный квадрат</div>
+   <div class="sticky-box">Sticky header</div>
+   <div class="green box"> Зеленый квадрат</div>
+   <div class="red box"> Красный квадрат</div>
+   <div class="purple box"> Красный квадрат</div>
+   <div class="parent">
+     <div class="purple box"> Красный квадрат</div>
+     <div class="small">small box</div>
+   </div>
+   <div class="fixed-box">Здесь могла бы быть ваша реклама</div>
+</body>
+</html>

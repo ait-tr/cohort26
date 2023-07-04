@@ -1,0 +1,9 @@
+.big-black-box {
+  height: 300px;
+  width: 300px;
+  background-color: black;
+}
+
+.rounded {
+  border-radius: 20px;
+}

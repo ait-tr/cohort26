@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Hello, bootstrap!</h1>
+  <h2>Пример первый</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        Первый элемент
+      </div>
+      <div class="col">
+        Второй элемент
+      </div>
+    </div>
+  </div>
+
+  <h2>Grid Layout Bootstrap</h2>
+  <p>Строка row состоит из 12 единиц</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-1" style="background-color: antiquewhite; border: 2px black solid;">
+        1
+      </div>
+      <div class="col-1" style="background-color: antiquewhite; border: 2px black solid;">
+        2
+      </div>
+      <div class="col-1" style="background-color: antiquewhite; border: 2px black solid;">
+        3
+      </div>
+      <div class="col-1" style="background-color: antiquewhite; border: 2px black solid;">
+        4
+      </div>
+      <div class="col-1" style="background-color: antiquewhite; border: 2px black solid;">
+        5
+      </div>
+      <div class="col-1" style="background-color: antiquewhite; border: 2px black solid;">
+        6
+      </div>
+      <div class="col-1" style="background-color: antiquewhite; border: 2px black solid;">
+        7
+      </div>
+      <div class="col-1" style="background-color: antiquewhite; border: 2px black solid;">
+        8
+      </div>
+      <div class="col-1" style="background-color: antiquewhite; border: 2px black solid;">
+        9
+      </div>
+      <div class="col-1" style="background-color: antiquewhite; border: 2px black solid;">
+        10
+      </div>
+      <div class="col-1" style="background-color: antiquewhite; border: 2px black solid;">
+        11
+      </div>
+      <div class="col-1" style="background-color: antiquewhite; border: 2px black solid;">
+        12
+      </div>
+      <div class="col-6" style="background-color: antiquewhite; border: 2px black solid;">
+        13
+      </div>
+    </div>
+  </div>
+
+  <h2>Пример второй</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        Первый элемент
+      </div>
+      <div class="col-4">
+        Второй элемент
+      </div>
+    </div>
+  </div>
+
+  <h1>Пример готового элемента</h1>
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <h2>Пример 3</h2>
+  <div class="container">
+    <div class="row">
+      <!-- col если не указали цифру - занимает все доступное место -->
+      <div class="col yellow-box">
+        1
+      </div>
+      <div class="col yellow-box">
+        2
+      </div>
+    </div>
+  </div>
+
+  <h2>Пример 4</h2>
+  <div class="container">
+    <div class="row">
+      <!--  -->
+      <div class="col-3">
+        <img class="image" src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+      </div>
+      <div class="col-3">
+        <img class="image" src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+      </div>
+    </div>
+  </div>
+
+  <h2>Пример 5</h2>
+  <div class="container">
+    <div class="row row-cols-2 gy-3 gx-5">
+      <!--  row-cols-2 - будет по два столбца 
+            px-2 - паддинги лево-право
+            py-2 - паддинги низ-верх
+            gy-5 - вертикальный отступ   - между рядами 
+            gx-3 - горизонтальный отступ - между столбцами
+      -->
+      <div class="col px-5 py-5">
+        <img class="image" src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+      </div>
+      <div class="col">
+        <img class="image" src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+      </div>
+      <div class="col">
+        <img class="image" src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+      </div>
+      <div class="col">
+        <img class="image" src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+      </div>
+      <div class="col">
+        <img class="image" src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+      </div>
+    </div>
+  </div>
+
+  <h2>Пример 6</h2>
+  <!-- 
+  X-Small	None	<576px
+  Small	sm	≥576px
+  Medium	md	≥768px
+  Large	lg	≥992px
+  Extra large	xl	≥1200px
+  Extra extra large	xxl	≥1400px
+   -->
+  <div class="container">
+    <div class="row">
+      <!-- sm - для маленького экрана - он стал занимать всю строку -->
+      <div class="col-sm">
+        <img class="image" src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+      </div>
+      <div class="col">
+        <img class="image" src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+      </div>
+    </div>
+  </div>
+
+  <h2>Пример 7</h2>
+  <!-- 
+  col-md-3 col-sm 
+  - если средний экран - то будет занимать три ячейки, 
+  - если маленький - то всю строку
+   -->
+  <div class="container">
+    <div class="row">
+      <!-- sm - для маленького экрана - он стал занимать всю строку -->
+      <div class="col-sm col-md-3">
+        <img class="image" src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+      </div>
+      <div class="col-md-3 col-sm">
+        <img class="image" src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
