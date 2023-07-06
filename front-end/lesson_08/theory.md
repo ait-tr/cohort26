@@ -25,8 +25,6 @@
 - Получим нулевой элемент
   console.log(fruits[0]); // Apple
 
-- Можно получить элемент по индексу
-  let fruits = ["Apple", "Orange", "Banana"];
 -  Можно заменить элемент по идексу
    fruits[0] = "Mango"
    console.log(fruits[0]); // ["Mango", "Orange", "Banana"];
