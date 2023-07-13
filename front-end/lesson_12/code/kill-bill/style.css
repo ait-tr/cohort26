@@ -1,0 +1,30 @@
+.btn-container {
+  font-size: 0;
+}
+
+.btn {
+  border: none;
+  background-color: lightblue;
+  color: white;
+  display: inline;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.left {
+  background-color: lightblue;
+  color: white;
+  margin-right: 0;
+  display: inline;
+  padding: 10px;
+  border-radius: 10px 0 0 10px;
+}
+
+.right {
+  background-color: lightpink;
+  color: white;
+  margin-left: 0;
+  display: inline;
+  padding: 10px;
+  border-radius: 0 10px 10px 0;
+}

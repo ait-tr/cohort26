@@ -1,0 +1,13 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "./code/array-methods/homework.js",
+    "./code/array-methods/index.js",
+    "./code/array-methods/object-destructuring.js",
+    "./code/array-methods/spread-object.js"
+  ],
+  "video": "",
+  "etc": ""
+}
