@@ -3,10 +3,13 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
-    "./code/array-methods/homework.js",
-    "./code/array-methods/index.js",
-    "./code/array-methods/object-destructuring.js",
-    "./code/array-methods/spread-object.js"
+    "./code/counter/index.html",
+    "./code/counter/index.js",
+    "./code/counter/style.css",
+    "./code/homework/index.js",
+    "./code/kill-bill/index.html",
+    "./code/kill-bill/index.js",
+    "./code/kill-bill/style.css"
   ],
   "video": "",
   "etc": ""
