@@ -14,7 +14,7 @@ const plusHandler = () => {
 }
 
 const minusHandler = () => {
-  counterElement.innerText = --counter; // зделали декремент в одну строку 
+  counterElement.innerText = --counter; // cделали декремент в одну строку
 }
 
 plusBtnElement.addEventListener('click', plusHandler);
