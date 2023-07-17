@@ -1,0 +1,14 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "./code/async-intro/intervals.js",
+    "./code/async-intro/timeouts.js",
+    "./code/async-intro/promises.js",
+    "./code/homework/index.html",
+    "./code/homework/index.js"
+  ],
+  "video": "",
+  "etc": ""
+}

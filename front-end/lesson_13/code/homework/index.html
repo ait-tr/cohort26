@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="index.js" defer></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- получим от пользователя информацию через форму -->
+  <form id="todo-form">
+    <input type="text" placeholder="title" name="title" required>
+    <input type="text" placeholder="description" name="description" required>
+    <button type="submit">Создать</button>
+  </form>
+  <!-- ul - список - куда будем добавлять дела -->
+  <ul id="todo-list">
+  </ul>
+  <!-- При нажатии на кнопку - задачи из массива будут выводится в качестве элементов на экран -->
+  <!-- <button id="show-tasks">Показать все задачи из массива</button> -->
+</body>
+
+</html>
