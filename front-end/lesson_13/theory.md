@@ -9,7 +9,7 @@ Event Loop - это специальный механизм на уровне д
 - Web API (API, предоставляемый браузером)  
 - Callback Queue (очередь колбэков)    
 
-<img src="./eventLoop.png" width="1000">
+<img src="https://joprblob.azureedge.net/site/blog/8e147efe-422d-42c3-bb51-61ca50d660dc/event.png" width="1000">
 
 ## setTimeout
 
