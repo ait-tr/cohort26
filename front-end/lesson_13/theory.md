@@ -60,7 +60,7 @@ setTimeout (() => {
 - resolve - в случае исполнения промиса
 - rejected - в случает невыполнения промиса
 ```
-let promice = new Promise(function(resolve, reject) {
+let promise = new Promise(function(resolve, reject) {
     setTimeout(() => {
         resolve(5)
     }, 3000)
@@ -71,13 +71,13 @@ let promice = new Promise(function(resolve, reject) {
 
 ```
 
-let promice = new Promise(function(resolve, reject) {
+let promise = new Promise(function(resolve, reject) {
     setTimeout(() => {
     resolve(5)
     }, 3000)
     })
     
-    promice.then((value) => {
+    promise.then((value) => {
         console.log(value);
     })
 ```
