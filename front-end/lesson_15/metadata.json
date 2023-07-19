@@ -1,0 +1,17 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "./code/flowers/index.html",
+    "./code/flowers/index.js",
+    "./code/flowers/style.css",
+    "./code/gender-reveal/index.html",
+    "./code/gender-reveal/index.js",
+    "./code/homework/index.html",
+    "./code/homework/index.js",
+    "./code/homework/style.css"
+  ],
+  "video": "",
+  "etc": ""
+}
