@@ -1,0 +1,7 @@
+.weather-card {
+  background-color: lightcyan;
+  width: 400px;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 15px;
+}
