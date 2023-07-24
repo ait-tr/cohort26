@@ -1,0 +1,12 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "./code/cra/src/App.tsx",
+    "./code/ts-intro/index.ts",
+    "./code/cra/src/index.tsx"
+  ],
+  "video": "",
+  "etc": ""
+}
