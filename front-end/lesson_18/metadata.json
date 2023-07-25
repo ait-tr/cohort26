@@ -1,0 +1,12 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "./code/cra/src/index.tsx",
+    "./code/cra/src/CityPage/CityPage.tsx",
+    "./code/cra/src/Counter/Counter.tsx",
+    "./code/cra/src/FruitPage/FruitPage.tsx",
+    "./code/homework/index.ts"
+  ]
+}
