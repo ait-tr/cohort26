@@ -1,0 +1,16 @@
+.container {
+  background-color: lightskyblue;
+  margin: 30px;
+  padding: 40px;
+  width: 500px;
+}
+
+.btn {
+  background-color: lightcyan;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 20px;
+}

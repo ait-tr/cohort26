@@ -1,0 +1,19 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "./code/cra/src/App/App.css",
+    "./code/cra/src/App/App.tsx",
+    "./code/cra/src/Car/Car.tsx",
+    "./code/cra/src/Child/Child.tsx",
+    "./code/cra/src/CityPage/CityPage.tsx",
+    "./code/cra/src/Counter/Counter.module.css",
+    "./code/cra/src/Counter/Counter.tsx",
+    "./code/cra/src/FruitPage/FruitPage.tsx",
+    "./code/cra/src/Fruits/Fruit.tsx",
+    "./code/cra/src/Parent/Parent.tsx",
+    "./code/cra/src/Sandwich/Sandwich.module.css",
+    "./code/cra/src/Sandwich/Sandwich.tsx"
+  ]
+}
