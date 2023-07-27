@@ -1,0 +1,15 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "./code/cra/src/index.tsx",
+    "./code/cra/src/FlowerCard/FlowerCard.tsx",
+    "./code/cra/src/DogCard/DogCard.tsx",
+    "./code/cra/src/DogCard/DogCard.module.css",
+    "./code/cra/src/Counter/Counter.tsx",
+    "./code/cra/src/Counter/Counter.module.css",
+    "./code/cra/src/CatFact/CatFact.tsx",
+    "./code/cra/src/Parent/Parent.tsx"
+  ]
+}
