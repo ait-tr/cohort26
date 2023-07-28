@@ -1,0 +1,16 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "./code/cra/src/App/App.tsx",
+    "./code/cra/src/components/Home/Home.module.css",
+    "./code/cra/src/components/Home/Home.tsx",
+    "./code/cra/src/components/NavBar/NavBar.module.css",
+    "./code/cra/src/components/NavBar/NavBar.tsx",
+    "./code/cra/src/components/RandomActivity/types/Activity.ts",
+    "./code/cra/src/components/RandomActivity/RandomActivity.tsx",
+    "./code/cra/src/layouts/Layout/Layout.tsx",
+    "./code/cra/src/index.tsx"
+  ]
+}

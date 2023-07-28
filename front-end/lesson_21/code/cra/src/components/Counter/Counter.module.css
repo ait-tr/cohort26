@@ -1,0 +1,27 @@
+.container {
+  background-color: #3E363F;
+  margin: 30px;
+  padding: 40px;
+  width: 500px;
+}
+
+/* Если через запятую селекторы - то применится к каждому */
+.btn {
+  background-color: lightcyan;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 20px;
+}
+
+.link {
+  text-decoration: none;
+  border-radius: 10px;
+  width: 50px;
+  height: 20px;
+  padding: 10px;
+  color: #FFFCE8;
+  background-color: #B8B42D;
+}
