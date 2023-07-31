@@ -1,0 +1,21 @@
+.container {
+  background-color: #DD403A;
+  height: 70px;
+  position: sticky;
+  top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.link {
+  color: #FFFCE8;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.link:global.active {
+  /* для активной ссылки */
+  text-decoration: underline;
+}

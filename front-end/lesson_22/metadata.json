@@ -1,0 +1,13 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "./code/cra/src/components/Shop/Shop.module.css",
+    "./code/cra/src/App/App.tsx",
+    "./code/cra/src/components/Shop/types/Product.ts",
+    "./code/cra/src/components/ProductPage/ProductPage.tsx",
+    "./code/cra/src/components/Shop/Shop.tsx",
+    "./code/cra/src/layouts/Layout/Layout.tsx"
+  ]
+}

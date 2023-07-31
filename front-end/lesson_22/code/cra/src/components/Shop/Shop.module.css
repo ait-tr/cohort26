@@ -1,0 +1,44 @@
+.productList {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #3E363F;
+}
+
+.productCard {
+  margin: 30px;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.title {
+  word-wrap: break-word;
+  width: 200px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.imgContainer {
+  height: 381px;
+  width: 300px;
+  object-fit: contain;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.link {
+  background-color: #DD403A;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 10px;
+  color: #FFFCE8;
+  text-decoration: none;
+
+}
