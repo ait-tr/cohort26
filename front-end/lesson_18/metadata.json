@@ -3,10 +3,13 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
-    "./code/cra/src/index.tsx",
-    "./code/cra/src/CityPage/CityPage.tsx",
-    "./code/cra/src/Counter/Counter.tsx",
-    "./code/cra/src/FruitPage/FruitPage.tsx",
-    "./code/homework/index.ts"
+    "./code/redux-intro/src/features/counter/types/Action.ts",
+    "./code/redux-intro/src/features/counter/types/CounterState.ts",
+    "./code/redux-intro/src/features/counter/Counter.tsx",
+    "./code/redux-intro/src/features/counter/counterReducer.ts",
+    "./code/redux-intro/src/App.tsx",
+    "./code/redux-intro/src/index.tsx",
+    "./code/redux-intro/src/store.ts",
+    "./code/redux-intro/package-lock.json"
   ]
 }

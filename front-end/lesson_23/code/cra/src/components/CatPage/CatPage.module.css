@@ -1,0 +1,11 @@
+.pashaImage {
+  width: 400px;
+}
+
+.container {
+  width: 900px;
+  background-color: lightcyan;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 40px;
+}

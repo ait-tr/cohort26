@@ -1,0 +1,18 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "./code/redux-intro/src/App.tsx",
+    "./code/redux-intro/src/index.tsx",
+    "./code/redux-intro/src/store.ts",
+    "./code/redux-intro/src/features/auth/types/Action.ts",
+    "./code/redux-intro/src/features/auth/types/AuthState.ts",
+    "./code/redux-intro/src/features/auth/authReducer.ts",
+    "./code/redux-intro/src/features/auth/Login.tsx",
+    "./code/redux-intro/src/features/counter/types/Action.ts",
+    "./code/redux-intro/src/features/counter/types/CounterState.ts",
+    "./code/redux-intro/src/features/counter/Counter.tsx",
+    "./code/redux-intro/src/features/counter/counterReducer.ts"
+  ]
+}

@@ -1,0 +1,10 @@
+.container {
+  background-color: azure;
+  border-radius: 20px;
+  margin: 40px;
+  padding: 40px;
+}
+
+.image {
+  width: 400px;
+}
