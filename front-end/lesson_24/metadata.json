@@ -1,0 +1,16 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "./code/redux-intro/src/features/tasks/types/Action.ts",
+    "./code/redux-intro/src/features/tasks/types/Task.ts",
+    "./code/redux-intro/src/features/tasks/types/TaskCredentials.ts",
+    "./code/redux-intro/src/features/tasks/types/TasksState.ts",
+    "./code/redux-intro/src/features/tasks/TaskCreation.tsx",
+    "./code/redux-intro/src/features/tasks/Tasks.tsx",
+    "./code/redux-intro/src/features/tasks/tasksReducer.ts",
+    "./code/redux-intro/src/App.tsx",
+    "./code/redux-intro/src/store.ts"
+  ]
+}
