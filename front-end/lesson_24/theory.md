@@ -4,7 +4,7 @@ Material UI это библиотека готовых компонентов.
 Чтобы ей воспользоваться, необходимо подключить все необходимые библиотеки к вашему проекту.   
 Для этого выполните команду:
 
-```npm install --save @mui/icons-material @mui/material @emotion/styled @emotion/react```
+```npm install @mui/icons-material @mui/material @emotion/styled @emotion/react```
 
 После этого в том компоненте, где вы хотите использовать компонент из библиотеки,
 нужно прописать импорт этого конкретного компонента.
