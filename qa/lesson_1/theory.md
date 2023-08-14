@@ -83,3 +83,5 @@ Low_
 
 [Баг и баг-репорт](https://docs.google.com/presentation/d/1S-kzM5cG5wG4vq7vYEa2LnNuk_iIaSHo/edit?usp=sharing&ouid=116447005932578256378&rtpof=true&sd=true)
 
+[Bug Report Example](https://drive.google.com/drive/folders/1WxettjjlapH3uyGZnQhdCIMlgpvrHJLA?usp=sharing)
+
