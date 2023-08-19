@@ -1,0 +1,13 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "code/pom.xml",
+    "code/src/main/java/lesson1/Camera.java",
+    "code/src/main/java/lesson1/CameraRoll.java",
+    "code/src/main/java/lesson1/Client.java",
+    "code/src/main/java/lesson1/spring/AppConfig.java",
+    "code/src/main/java/lesson1/spring/Client.java"
+  ]
+}
