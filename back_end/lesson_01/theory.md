@@ -1,6 +1,6 @@
 ## Frontend vs Backend
 
-<img src="https://raw.githubusercontent.com/ait-tr/cohort26/main/back_end/lesson_01/images/frontend_backend.png" width=50% height=50%>
+<img src="https://raw.githubusercontent.com/ait-tr/cohort26/main/back_end/lesson_01/images/frontend_backend.png" width=75% height=75%>
 
 **Frontend**
 
