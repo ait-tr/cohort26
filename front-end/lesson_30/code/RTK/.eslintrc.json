@@ -1,0 +1,101 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"airbnb/hooks",
+		"airbnb-typescript",
+		"plugin:react/recommended",
+		"plugin:react/jsx-runtime",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended-requiring-type-checking",
+		"plugin:prettier/recommended",
+		"plugin:import/recommended"
+	],
+	// Specifying Parser
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module",
+		"tsconfigRootDir": ".",
+		"project": ["./tsconfig.json"]
+	},
+	// Configuring third-party plugins
+	"plugins": ["react", "@typescript-eslint"],
+	// Resolve imports
+	"settings": {
+		"import/resolver": {
+			"typescript": {
+				"project": "./tsconfig.json"
+			}
+		},
+		"react": {
+			"version": "18.x"
+		}
+	},
+	"rules": {
+		"linebreak-style": "off",
+		// Configure prettier
+		"prettier/prettier": [
+			"error",
+			{
+				"printWidth": 100,
+				"endOfLine": "lf",
+				"singleQuote": true,
+				"tabWidth": 2,
+				"indentStyle": "space",
+				"useTabs": true,
+				"trailingComma": "es5"
+			}
+		],
+		// Disallow the `any` type.
+		"@typescript-eslint/no-explicit-any": "warn",
+		"@typescript-eslint/ban-types": [
+			"error",
+			{
+				"extendDefaults": true,
+				"types": {
+					"{}": false
+				}
+			}
+		],
+		"react-hooks/exhaustive-deps": "off",
+		// Enforce the use of the shorthand syntax.
+		"object-shorthand": "error",
+		"no-console": "warn",
+		"@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/no-unsafe-return": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "react/jsx-indent": 0,
+    "implicit-arrow-linebreak": 0,
+    "@typescript-eslint/indent": 0,
+    "@typescript-eslint/comma-dangle": 0,
+    "function-paren-newline": 0,
+    "no-param-reassign": 0,
+    "no-nested-ternary": 0,
+    "no-confusing-arrow": 0,
+    "operator-linebreak": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/label-has-associated-control": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "default-case": 0,
+    "@typescript-eslint/default-param-last": 0,
+    "@typescript-eslint/switch-exhaustiveness-check": 2,
+    "@typescript-eslint/explicit-function-return-type": [
+      2,
+      {
+        "allowExpressions": true,
+        "allowTypedFunctionExpressions": true,
+        "allowHigherOrderFunctions": true,
+        "allowDirectConstAssertionInArrowFunctions": true
+      }
+    ]
+	}
+}
