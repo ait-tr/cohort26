@@ -1,6 +1,6 @@
 ## Frontend vs Backend
 
-<img src="https://blogger.googleusercontent.com/img/a/AVvXsEhoG86pcBF1VPHbUY7AXflXzAykTr7RlqeW8OTp18SJ0aOXGPuL9kFYy1uQO76aBD-B8B10GNkYY6s38FhilYP0johqQTpsBoXIiCQZDNkcS47FGLaErrdFr2OG7cgimikOyeCpUVRz5zHVbZG8JYJGCk5JPuPzX9E4WUYT1KHNqpcDr2eR2BME5Y4uOA=s16000" width=50% height=50%>
+<img src="https://raw.githubusercontent.com/ait-tr/cohort26/main/back_end/lesson_01/images/frontend_backend.png" width=75% height=75%>
 
 **Frontend**
 
@@ -197,10 +197,13 @@ Menu -> More Tools -> Web Developer Tools -> Network -> Copy Value -> Copy as cU
 - [What JavaScript Developers Should Know About Curl](http://thecodebarbarian.com/what-javascript-developers-should-know-about-curl.html)
 - [Шпаргалка по curl](https://gist.github.com/subfuzion/08c5d85437d5d4f00e58)
 
-
 ## Источники
 
 - [What is HTTP?](https://www.cloudflare.com/learning/ddos/glossary/hypertext-transfer-protocol-http/) 
+
+## Postman
+
+- [Как использовать Postman](https://otus.ru/journal/kak-ispolzovat-postman/)
 
 ## Bonus
 
