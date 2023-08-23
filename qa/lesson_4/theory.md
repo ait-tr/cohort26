@@ -1,5 +1,3 @@
-[Test(en)](https://forms.gle/xbaJRsybta5PHH896)
-
 [Test(ru)](https://forms.gle/JzABQK8oXjSxatAM6)
 
 ##### CRUD
