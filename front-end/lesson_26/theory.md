@@ -1,5 +1,5 @@
 
-### Повторение
+### Повторение Redux
 
 
 ## Redux
@@ -76,7 +76,5 @@ const store = createStore(combineReducers({
   <App />
 <Provider/>
 ````
-
-
 
 

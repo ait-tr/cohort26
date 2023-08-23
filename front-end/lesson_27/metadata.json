@@ -1,0 +1,23 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "./code/RTK/src/vite-env.d.ts",
+    "./code/RTK/src/features/products/selectors.ts",
+    "./code/RTK/src/App.tsx",
+    "./code/RTK/src/index.css",
+    "./code/RTK/src/features/products/productsSlice.ts",
+    "./code/RTK/src/App.css",
+    "./code/RTK/src/main.tsx",
+    "./code/RTK/package.json",
+    "./code/RTK/tsconfig.json",
+    "./code/RTK/vite.config.ts",
+    "./code/RTK/src/features/products/types/Product.ts",
+    "./code/RTK/src/features/products/types/ProductsState.ts",
+    "./code/RTK/src/features/products/ProductsList.tsx",
+    "./code/RTK/src/features/products/api.ts",
+    "./code/RTK/src/app/hooks.ts",
+    "./code/RTK/src/app/store.ts"
+  ]
+}

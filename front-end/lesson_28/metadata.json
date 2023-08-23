@@ -1,0 +1,20 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "./RTK/src/features/products/types/ProductsState.ts",
+    "./RTK/src/features/products/ProductCreate.tsx",
+    "./RTK/src/features/products/types/Product.ts",
+    "./RTK/src/app/store.ts",
+    "./RTK/src/components/Navbar/Navbar.tsx",
+    "./RTK/src/features/products/productsSlice.ts",
+    "./RTK/src/features/products/selectors.ts",
+    "./RTK/src/features/products/ProductsList.tsx",
+    "./RTK/src/features/products/types/ProductDto.ts",
+    "./RTK/src/components/Home/Home.tsx",
+    "./RTK/src/features/products/api.ts",
+    "./RTK/src/layouts/Layout.tsx",
+    "./RTK/src/App.tsx"
+  ]
+}

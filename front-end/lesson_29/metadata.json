@@ -1,0 +1,20 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "./code/RTK/src/features/auth/types/AuthState.ts",
+    "./code/RTK/src/app/store.ts",
+    "./code/RTK/src/components/CommentsList/types/Comment.ts",
+    "./code/RTK/src/components/CommentsList/CommentsList.tsx",
+    "./code/RTK/src/components/Home/Home.tsx",
+    "./code/RTK/src/components/Navbar/Navbar.tsx",
+    "./code/RTK/src/components/ProtectedRoute/ProtectedRoute.tsx",
+    "./code/RTK/src/features/auth/types/Credentials.ts",
+    "./code/RTK/src/features/auth/types/User.ts",
+    "./code/RTK/src/features/auth/api.ts",
+    "./code/RTK/src/features/auth/authSlice.ts",
+    "./code/RTK/src/features/auth/Login.tsx",
+    "./code/RTK/src/features/auth/selectors.ts"
+  ]
+}
