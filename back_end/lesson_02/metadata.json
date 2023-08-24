@@ -1,0 +1,11 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "code/pom.xml",
+    "code/src/main/java/spring/controller/GreetingController.java",
+    "code/src/main/java/spring/Application.java",
+    "code/src/main/resources/templates/greeting.html"
+  ]
+}
