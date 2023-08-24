@@ -1,0 +1,30 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "./code/RTK/src/features/products/api.ts",
+    "./code/RTK/src/features/posts/PostEditForm.tsx",
+    "./code/RTK/src/features/posts/api.ts",
+    "./code/RTK/src/features/products/types/ProductDto.ts",
+    "./code/RTK/src/components/Home/Home.tsx",
+    "./code/RTK/src/features/counter/counterSlice.spec.ts",
+    "./code/RTK/src/features/products/types/Product.ts",
+    "./code/RTK/src/features/products/types/ProductsState.ts",
+    "./code/RTK/src/features/posts/selectors.ts",
+    "./code/RTK/src/features/counter/counterSlice.ts",
+    "./code/RTK/src/app/store.ts",
+    "./code/RTK/src/components/Navbar/Navbar.tsx",
+    "./code/RTK/src/features/posts/postsSlice.ts",
+    "./code/RTK/src/features/products/ProductsList.tsx",
+    "./code/RTK/src/features/posts/PostsList.module.css",
+    "./code/RTK/src/features/counter/Counter.tsx",
+    "./code/RTK/src/features/counter/Counter.module.css",
+    "./code/RTK/src/features/posts/PostsList.tsx",
+    "./code/RTK/src/features/counter/counterAPI.ts",
+    "./code/RTK/src/features/products/ProductCreate.tsx",
+    "./code/RTK/src/features/products/productsSlice.ts",
+    "./code/RTK/src/features/products/selectors.ts",
+    "./code/RTK/src/App.tsx"
+  ]
+}

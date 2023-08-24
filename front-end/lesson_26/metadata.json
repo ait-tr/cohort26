@@ -1,0 +1,16 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "./code/redux-intro/src/features/movies/types/Action.ts",
+    "./code/redux-intro/src/features/movies/types/Movie.ts",
+    "./code/redux-intro/src/features/movies/types/MovieCredentials.ts",
+    "./code/redux-intro/src/features/movies/MovieCreation.tsx",
+    "./code/redux-intro/src/features/movies/MovieEdit.tsx",
+    "./code/redux-intro/src/features/movies/Movies.tsx",
+    "./code/redux-intro/src/features/movies/moviesReducer.ts,",
+    "./code/redux-intro/src/App.tsx",
+    "./code/redux-intro/src/store.ts"
+  ]
+}
