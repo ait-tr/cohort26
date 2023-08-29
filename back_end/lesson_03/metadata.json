@@ -1,0 +1,14 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "code/pom.xml",
+    "code/src/main/java/spring/controller/EventController.java",
+    "code/src/main/java/spring/domain/Event.java",
+    "code/src/main/java/spring/service/EventService.java",
+    "code/src/main/java/spring/Application.java",
+    "code/src/main/resources/templates/list.html",
+    "code/src/main/resources/templates/add.html"
+  ]
+}
