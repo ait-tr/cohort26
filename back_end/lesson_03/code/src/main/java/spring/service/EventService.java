@@ -1,26 +1,23 @@
 package spring.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import spring.domain.Event;
+import spring.repository.EventRepository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class EventService {
 
-    static final ArrayList<Event> events = new ArrayList<Event>(){{
-        add(new Event("Opera", "London"));
-        add(new Event("Violin concert", "Prague"));
-        add(new Event("Jazz concert", "Berlin"));
-        add(new Event("Art exhibition", "London"));
-    }};
+    @Autowired
+    private EventRepository eventRepository;
 
     public List<Event> findAll() {
-        return events;
+        return eventRepository.findAll();
     }
 
     public void add(Event event) {
-        events.add(event);
+        eventRepository.save(event);
     }
 }
