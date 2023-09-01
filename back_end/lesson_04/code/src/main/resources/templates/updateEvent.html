@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Event</title>
+</head>
+<body>
+    <h2>Update Event Page</h2>
+    <form th:action="@{/update/{id}(id=${id})}" th:object="${event}" th:method="PUT">
+        <table>
+            <tr>
+                <td>Event name</td>
+                <td><input type="text" th:field="*{name}"/></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text" th:field="*{city}"/></td>
+            </tr>
+        </table>
+        <input type="submit" value="Update event" />
+    </form>
+
+    <div th:if="${errorMsg}" th:utext="${errorMsg}" style="color:red;font-style:italic">...</div>
+</body>
+</html>
