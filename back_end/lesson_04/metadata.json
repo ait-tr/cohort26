@@ -9,7 +9,7 @@
     "code/src/main/java/spring/service/EventService.java",
     "code/src/main/java/spring/repository/EventRepository.java",
     "code/src/main/java/spring/Application.java",
-    "code/src/main/resources/templates/application.properties",
+    "code/src/main/resources/application.properties",
     "code/src/main/resources/templates/addEvent.html",
     "code/src/main/resources/templates/listEvent.html",
     "code/src/main/resources/templates/updateEvent.html"
