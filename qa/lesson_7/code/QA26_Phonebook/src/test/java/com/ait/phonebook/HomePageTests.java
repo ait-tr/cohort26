@@ -10,7 +10,6 @@ public class HomePageTests extends TestBase{
         // System.out.println("Home Component is " + isHomeComponentPresent());
         //  System.out.println("Home Component is " + isElementPresent(By.xpath("//div[2]/div/div")));
         //  System.out.println("Home Component is " + isElementPresent(By.xpath("//div[2]/div/div")));
-        Assert.assertTrue(isHomeComponentPresent());
+        Assert.assertTrue(app.getHomePage().isHomeComponentPresent());
     }
-
 }
