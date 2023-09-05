@@ -1,6 +1,6 @@
 ## Задачи на урок:
 
-- REST API
-- Переписать наше приложение на JSON REST API
-- Подключить библитеку
+- REST API, @RestController vs @Controller
+- Переписать наше CRUD приложение на REST API
+- Подключить SwaggerUI
 
