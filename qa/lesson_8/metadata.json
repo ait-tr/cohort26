@@ -1,0 +1,18 @@
+{
+  "plan": "plan.md",
+  "homework": "homework.md",
+  "code": [
+    "code/QA26_Phonebook/src/test/java/com/ait/phonebook/TestBase.java",
+    "code/QA26_Phonebook/src/test/java/com/ait/phonebook/HomePageTests.java",
+    "code/QA26_Phonebook/src/test/java/com/ait/phonebook/CreateNewUserTests.java",
+    "code/QA26_Phonebook/src/test/java/com/ait/phonebook/LoginTests.java",
+    "code/QA26_Phonebook/src/test/java/com/ait/phonebook/AddNewContactTests.java",
+    "code/QA26_Phonebook/src/test/java/com/ait/phonebook/RemoveContactTests.java",
+    "code/QA26_Phonebook/src/test/resources/logback.xml",
+    "code/QA26_Phonebook/src/test/resources/testng.xml",
+    "code/QA26_Phonebook/src/test/resources/regr.xml",
+    "code/QA26_Phonebook/build.gradle",
+    "code/QA26_Phonebook/.gitignore"
+  ],
+  "video": ""
+}

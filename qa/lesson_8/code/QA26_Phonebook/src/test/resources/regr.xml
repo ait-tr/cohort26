@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression" verbose="1" >
+    <test name="Regression" >
+        <classes>
+            <class name="com.ait.phonebook.HomePageTests"/>
+            <class name="com.ait.phonebook.LoginTests">
+                <methods>
+                    <exclude name=".*Negative.*"/>
+                </methods>
+            </class>
+            <class name="com.ait.phonebook.AddNewContactTests"/>
+            <class name="com.ait.phonebook.RemoveContactTests"/>
+        </classes>
+    </test>
+
+</suite>
