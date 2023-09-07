@@ -2,6 +2,13 @@
   "plan": "plan.md",
   "homework": "homework.md",
   "code": [
+    "code/QA26_Phonebook/src/main/java/com/ait/phonebook/fw/ApplicationManager.java",
+    "code/QA26_Phonebook/src/main/java/com/ait/phonebook/fw/HelperBase.java",
+    "code/QA26_Phonebook/src/main/java/com/ait/phonebook/fw/UserHelper.java",
+    "code/QA26_Phonebook/src/main/java/com/ait/phonebook/fw/ContactHelper.java",
+    "code/QA26_Phonebook/src/main/java/com/ait/phonebook/fw/HomePageHelper.java",
+    "code/QA26_Phonebook/src/main/java/com/ait/phonebook/models/Contact.java",
+    "code/QA26_Phonebook/src/main/java/com/ait/phonebook/models/User.java",
     "code/QA26_Phonebook/src/test/java/com/ait/phonebook/TestBase.java",
     "code/QA26_Phonebook/src/test/java/com/ait/phonebook/HomePageTests.java",
     "code/QA26_Phonebook/src/test/java/com/ait/phonebook/CreateNewUserTests.java",
