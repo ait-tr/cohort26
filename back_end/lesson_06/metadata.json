@@ -1,0 +1,14 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "code/pom.xml",
+    "code/src/main/java/lesson6/User.java",
+    "code/src/main/java/lesson6/UserDAO.java",
+    "code/src/main/java/lesson6/UserDAODemo.java",
+    "code/src/main/java/lesson6/MyDataSource.java",
+    "code/src/main/java/lesson6/spring/AppConfig.java",
+    "code/src/main/java/lesson6/spring/UserDAOSpringDemo.java"
+  ]
+}
