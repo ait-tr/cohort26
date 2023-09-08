@@ -1,4 +1,5 @@
 ## Homework
 
 - Повторить код, написанный на занятии
-- Прочитать статью [Что такое Spring Framework? От внедрения зависимостей до Web MVC](https://habr.com/ru/articles/490586/) до раздела Spring AOP
+- Реализовать пустые методы в классе UserDAO, проверить их работу.
+- Читать статью [Что такое Spring Framework? От внедрения зависимостей до Web MVC](https://habr.com/ru/articles/490586/) до раздела Spring AOP
