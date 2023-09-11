@@ -1,0 +1,28 @@
+{
+  "plan": "plan.md",
+  "homework": "homework.md",
+  "code": [
+    "code/QA26_Phonebook/src/main/java/com/ait/phonebook/fw/ApplicationManager.java",
+    "code/QA26_Phonebook/src/main/java/com/ait/phonebook/fw/HelperBase.java",
+    "code/QA26_Phonebook/src/main/java/com/ait/phonebook/fw/UserHelper.java",
+    "code/QA26_Phonebook/src/main/java/com/ait/phonebook/fw/ContactHelper.java",
+    "code/QA26_Phonebook/src/main/java/com/ait/phonebook/fw/HomePageHelper.java",
+    "code/QA26_Phonebook/src/main/java/com/ait/phonebook/fw/DataProviders.java",
+    "code/QA26_Phonebook/src/main/java/com/ait/phonebook/fw/Recorder.java",
+    "code/QA26_Phonebook/src/main/java/com/ait/phonebook/models/Contact.java",
+    "code/QA26_Phonebook/src/main/java/com/ait/phonebook/models/User.java",
+    "code/QA26_Phonebook/src/test/java/com/ait/phonebook/TestBase.java",
+    "code/QA26_Phonebook/src/test/java/com/ait/phonebook/HomePageTests.java",
+    "code/QA26_Phonebook/src/test/java/com/ait/phonebook/CreateNewUserTests.java",
+    "code/QA26_Phonebook/src/test/java/com/ait/phonebook/LoginTests.java",
+    "code/QA26_Phonebook/src/test/java/com/ait/phonebook/AddNewContactTests.java",
+    "code/QA26_Phonebook/src/test/java/com/ait/phonebook/RemoveContactTests.java",
+    "code/QA26_Phonebook/src/test/resources/logback.xml",
+    "code/QA26_Phonebook/src/test/resources/testng.xml",
+    "code/QA26_Phonebook/src/test/resources/regr.xml",
+    "code/QA26_Phonebook/src/test/resources/contact.csv",
+    "code/QA26_Phonebook/build.gradle",
+    "code/QA26_Phonebook/.gitignore"
+  ],
+  "video": ""
+}
