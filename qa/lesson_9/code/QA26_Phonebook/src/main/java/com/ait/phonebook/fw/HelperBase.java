@@ -87,7 +87,7 @@ public class HelperBase {
         int width = screenSize.width;
         int height = screenSize.height;
 
-        java.awt.Rectangle captureSize = new Rectangle(0,0,width,height);
+        Rectangle captureSize = new Rectangle(0,0,width,height);
         GraphicsConfiguration gc = GraphicsEnvironment
                 .getLocalGraphicsEnvironment()
                 .getDefaultScreenDevice()
