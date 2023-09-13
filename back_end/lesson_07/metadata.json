@@ -1,0 +1,11 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "code/pom.xml",
+    "code/src/main/java/hibernate/domain/Event.java",
+    "code/src/main/java/hibernate/EntityManagerDemo.java",
+    "code/src/main/resoruces/hibernate.cfg.xml"
+  ]
+}
