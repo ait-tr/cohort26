@@ -6,6 +6,7 @@
             <class name="com.ait.phonebook.LoginTests">
                 <methods>
                     <exclude name=".*Negative.*"/>
+                    <exclude name=".*ScreenCast.*"/>
                 </methods>
             </class>
         </classes>
