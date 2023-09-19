@@ -15,7 +15,7 @@ public interface EventRepository extends JpaRepository<Event, Integer> {
 
 То нам будет “из коробки” доступен набор CRUD-операций по работе с сущностью Event: save(...), saveAll(...), findAll(), findById(...), count(), delete(...), deleteById(...), deleteAll(), deleteAll(...) и т.д. Из названий методов должно быть понятно что они позволяют делать. То есть мы можем заинжектить подобный репозиторий в сервис и спокойно с ним работать, весь код, реализующий эти методы подготовит сам Spring.
 
-Подробнее: в методичке (Spring Data JPA)[https://docs.google.com/document/d/1J8TrVCqt5qq5RMdaKEqPsqV-0pyW0_iiFWUMznJaw68/]
+Подробнее: в методичке [Spring Data JPA](https://docs.google.com/document/d/1J8TrVCqt5qq5RMdaKEqPsqV-0pyW0_iiFWUMznJaw68/)
 
 А также: книга “Spring Boot по-быстрому” Марк Хеклер, Гл 4. Добавление в приложение Spring Boot доступа к базе данных
 
