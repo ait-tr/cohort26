@@ -1,0 +1,28 @@
+{
+  "plan": "plan.md",
+  "homework": "homework.md",
+  "code": [
+    "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/data/BookData.java",
+    "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/data/UserData.java",
+   "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/pages/BasePage.java",
+   "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/pages/HomePage.java",
+   "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/pages/SidePanel.java",
+   "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/pages/JSExecutor.java",
+   "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/pages/alertWindows/AlertsPage.java",
+   "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/pages/alertWindows/WindowsPage.java",
+   "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/pages/bookStore/LoginPage.java",
+   "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/pages/bookStore/ProfilePage.java",
+   "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/pages/bookStore/BookStorePage.java",
+    "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/pages/links/BrokenImages.java",
+    "code/QA26_Demoqa_POM/src/test/java/com/ait/demoqa/tests/TestBase.java",
+    "code/QA26_Demoqa_POM/src/test/java/com/ait/demoqa/tests/JavaScriptExecutorTests.java",
+    "code/QA26_Demoqa_POM/src/test/java/com/ait/demoqa/tests/bookStore/LoginPageTests.java",
+    "code/QA26_Demoqa_POM/src/test/java/com/ait/demoqa/tests/bookStore/BookStorePageTests.java",
+    "code/QA26_Demoqa_POM/src/test/java/com/ait/demoqa/tests/alertWindows/AlertTests.java",
+    "code/QA26_Demoqa_POM/src/test/java/com/ait/demoqa/tests/alertWindows/NewWindowsTests.java",
+    "code/QA26_Demoqa_POM/src/test/java/com/ait/demoqa/tests/links/BrokenLinksTests.java",
+    "code/QA26_Demoqa_POM/.gitignore",
+    "code/QA26_Demoqa_POM/pom.xml"
+  ],
+  "video": ""
+}
