@@ -12,7 +12,7 @@
 
 	<groupId>hello.dto</groupId>
 	<artifactId>hello-dto</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>HelloDTO</name>
 	<description>HelloDTO Spring Application</description>
 

@@ -11,15 +11,15 @@
 
 ```
 CREATE TABLE cities (
-	id SERIAL PRIMARY key,
-	name VARCHAR(255)
+  city_id SERIAL PRIMARY KEY,
+  name VARCHAR(255)
 );
 CREATE TABLE events (
-	id SERIAL PRIMARY key,
-	name VARCHAR(255),
-	city_id INTEGER,
-	CONSTRAINT fk_event_city FOREIGN KEY(city_id) REFERENCES cities(id)
-)
+    event_id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    city_id INTEGER,
+    CONSTRAINT fk_event_city FOREIGN KEY(city_id) REFERENCES cities(city_id)
+);
 ```
 
 Подробнее: методичка [Spring Data. Часть 1](https://docs.google.com/document/d/1zfyyFQLulaBa3IU9RXv9PBL7vvdZsWdf9zn2WVJy204/)
