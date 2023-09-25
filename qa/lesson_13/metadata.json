@@ -11,7 +11,7 @@
     "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/pages/widgets/AutoCompletePage.java",
     "code/QA26_Demoqa_POM/src/test/java/com/ait/demoqa/tests/widgets/AutoCompleteTests.java",
     "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/pages/widgets/SliderPage.java",
-    "code/QA26_Demoqa_POM/src/test/java/com/ait/demoqa/tests/widgets/SliderTests.java",
+    "code/QA26_Demoqa_POM/src/test/java/com/ait/demoqa/tests/widgets/SliderTests.java"
   ],
   "video": ""
 }
