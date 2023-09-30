@@ -116,6 +116,12 @@ SuccessExitStatus=143
 WantedBy=multi-user.target
 ```
 
+Обращаем внимание на изменения в pom.xml файле проекта (create jar executable, exclude application.yaml from jar), пересобираем jar проекта с этими изменениями и загружаем его на наш сервер. По умолчанию файл попадает в папку /home/<linux-user-name>. Устанавливаем признаки execute для нашего jar файла (744):
+
+```
+chmod u+x hello-liquibase-0.0.1-SNAPSHOT.jar
+```
+
 Перемещаем наш jar файл в папку /opt/hello-liquibase/ (не забываем про папку config с содержимым) и создаём символическую ссылку:
 
 ```
