@@ -129,3 +129,13 @@ sudo systemctl start hello-liquibase.service
 ```
 
 Сервис также можно останавливать (команда stop), перезапускать (restart) и проверять его статус (status)
+
+## Использование ssh ключей для доступа
+
+Согласно google документации https://cloud.google.com/compute/docs/connect/create-ssh-keys генерируем пару ключей, например для Windows 10 команда такая (в командной строке):
+
+```
+ssh-keygen -t rsa -f C:\Users\<windows-user>\.ssh\<ssh-key-name> -C <google-user> -b 2048
+```
+
+Затем заходим в консоль, находим нашу VM, переходим в режим редактирования и добавляем публичный ключ из сгенерированной нами пары. Теперь мы можем использовать сторонний ssh-клиент (PuTTY, MobaXterm и другие) для ssh доступа к нашему серверу
