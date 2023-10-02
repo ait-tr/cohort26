@@ -1,0 +1,20 @@
+{
+  "plan": "plan.md",
+  "homework": "homework.md",
+  "code": [
+    "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/pages/BasePage.java",
+    "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/utils/DataProviders.java",
+    "code/QA26_Demoqa_POM/src/test/resources/data.csv",
+    "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/pages/form/PracticeFormPage.java",
+    "code/QA26_Demoqa_POM/src/test/java/com/ait/demoqa/tests/form/PracticeFormTests.java",
+    "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/pages/widgets/MenuPage.java",
+    "code/QA26_Demoqa_POM/src/test/java/com/ait/demoqa/tests/widgets/MenuTest.java",
+    "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/pages/widgets/ToolTipsPage.java",
+    "code/QA26_Demoqa_POM/src/test/java/com/ait/demoqa/tests/widgets/ToolTipsTest.java",
+    "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/pages/interactions/DroppablePage.java",
+    "code/QA26_Demoqa_POM/src/test/java/com/ait/demoqa/tests/interactions/DroppableTests.java",
+    "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/pages/elements/TextBoxPage.java",
+    "code/QA26_Demoqa_POM/src/test/java/com/ait/demoqa/tests/elements/TextBoxTest.java"
+  ],
+  "video": ""
+}
