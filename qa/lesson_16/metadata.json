@@ -1,0 +1,14 @@
+{
+  "plan": "plan.md",
+  "homework": "homework.md",
+  "code": [
+    "code/QA26_Demoqa_POM/pom.xml",
+    "code/QA26_Demoqa_POM/src/test/java/com/ait/demoqa/tests/TestBase.java",
+    "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/utils/MyListener.java",
+    "code/QA26_Demoqa_POM/src/main/java/com/ait/demoqa/pages/elements/UploadPage.java",
+    "code/QA26_Demoqa_POM/src/test/java/com/ait/demoqa/tests/elements/UploadRobotTests.java",
+    "code/QA26_Demoqa_POM/src/test/resources/logback.xml",
+    "code/QA26_Demoqa_POM/src/test/resources/testng.xml"
+  ],
+  "video": ""
+}
