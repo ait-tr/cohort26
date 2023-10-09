@@ -16,6 +16,9 @@
     "code/src/main/java/spring/Application.java",
     "code/src/main/resources/db/changelog/db.changelog-master.yaml",
     "code/src/main/resources/db/changelog/db.changelog.xml",
-    "code/src/main/resources/application.yaml"
+    "code/src/main/resources/application.yaml",
+    "code/src/test/java/spring/DtoClassesTest.java",
+    "code/src/test/java/spring/EventServiceTest.java",
+    "code/src/test/resources/application.yaml"
   ]
 }
