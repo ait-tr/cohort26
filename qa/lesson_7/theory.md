@@ -32,9 +32,9 @@
 * Голосовой
 * Материальный(осязательный)
 
-Презентации
+[Презентации
 
 [UI vs Usability](https://docs.google.com/presentation/d/16F6Rc981L8XTu2k6RywnhGZ4qY1Y7Ups/edit?usp=sharing&ouid=116447005932578256378&rtpof=true&sd=true)
 
 [VOM](https://docs.google.com/presentation/d/1koZw0cbphBGXVNeJOtfy9yRUG95VH23g/edit?usp=sharing&ouid=116447005932578256378&rtpof=true&sd=true)
-
+]()
