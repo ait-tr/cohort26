@@ -1,0 +1,16 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "code": [
+    "code/QA26_CucumberProject/build.gradle",
+    "code/QA26_CucumberProject/src/test/java/com/ilcarro/TestRunner.java",
+    "code/QA26_CucumberProject/src/main/java/com/ilcarro/pages/BasePage.java",
+    "code/QA26_CucumberProject/src/test/resources/features/navigate.feature",
+    "code/QA26_CucumberProject/src/test/java/com/ilcarro/stepDefinitions/HomePageSteps.java",
+    "code/QA26_CucumberProject/src/main/java/com/ilcarro/pages/HomePage.java",
+    "code/QA26_CucumberProject/src/test/resources/features/login.feature",
+    "code/QA26_CucumberProject/src/test/java/com/ilcarro/stepDefinitions/LoginSteps.java",
+    "code/QA26_CucumberProject/src/main/java/com/ilcarro/pages/LoginPage.java"
+  ],
+  "video": ""
+}
