@@ -14,6 +14,6 @@
 
 ## План работ, день #3
 
-1. Завершение написание db.changelog.xml
+1. Завершение changeSet #1 db.changelog.xml
 2. Заполнение таблиц БД с помощью Liquibase
 3. Оптимизация таблицы PizzaBase
