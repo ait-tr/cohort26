@@ -38,5 +38,5 @@
 ## План работ, день #7 четверг
 
 1. Разбираемся с ошибкой при работе UserOrderSevice.create
-2. Изменяем имена таблиц user -> users, order -> orders
+2. Переименовываем таблицы: user -> users, order -> orders
 3. Пишем UserOrderController + UserOrderService
