@@ -1,0 +1,20 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "code/pom.xml",
+    "code/src/main/java/spring/config/JwtAuthorizationFilter.java",
+    "code/src/main/java/spring/config/JwtUtil.java",
+    "code/src/main/java/spring/config/SecurityConfig.java",
+    "code/src/main/java/spring/controller/dto/ErrorResponse.java",
+    "code/src/main/java/spring/controller/dto/LoginRequest.java",
+    "code/src/main/java/spring/controller/dto/LoginResponse.java",
+    "code/src/main/java/spring/controller/AuthController.java",
+    "code/src/main/java/spring/controller/HelloController.java",
+    "code/src/main/java/spring/domain/User.java",
+    "code/src/main/java/spring/repository/UserRepository.java",
+    "code/src/main/java/spring/service/CustomUserDetailsService.java",
+    "code/src/main/java/spring/Application.java"
+  ]
+}
